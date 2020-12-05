@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin: http://retroscene.org');
+
 /*-------------------------------------------------------
 *
 *   LiveStreet Engine Social Networking
@@ -14,14 +16,11 @@
 *
 ---------------------------------------------------------
 */
-
-// Debugging stuffs
-require_once('/persistent/chromephp/l.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-//header('Content-Type: text/html; charset=utf-8');
-//header('X-Powered-By: LiveStreet CMS');
+header('Content-Type: text/html; charset=utf-8');
+header('X-Powered-By: LiveStreet CMS');
 
 set_include_path(get_include_path().PATH_SEPARATOR.dirname(__FILE__));
 chdir(dirname(__FILE__));
