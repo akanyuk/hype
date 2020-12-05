@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">Hyperadio Block</lang>
+	</name>
+	<author><lang name="default">nyuk</lang></author>
+	<homepage>https://hype.retroscene.org</homepage>
+	<version>1.0.0</version>
+	<requires>
+		<livestreet>1.0.3</livestreet>
+		<plugins></plugins>
+	</requires>
+	<description>
+		<lang name="default">Display block of hyperadio.</lang>
+		<lang name="russian">Отображает блок Hyperadio.</lang>
+	</description>
+</plugin>

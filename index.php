@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: http://retroscene.org');
+header('Access-Control-Allow-Origin: https://retroscene.org');
 
 /*-------------------------------------------------------
 *
@@ -16,6 +16,7 @@ header('Access-Control-Allow-Origin: http://retroscene.org');
 *
 ---------------------------------------------------------
 */
+@include('/persistent/chromephp/l.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 

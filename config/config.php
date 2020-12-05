@@ -419,10 +419,9 @@ $config['block']['rule_index_blog'] = array(
 	),
 	'blocks'  => array(
 		'right' => array(
-			'stream'=>array('priority'=>100),
+			'stream'=>array('priority'=>150),
 			'blocks/block.events.tpl' => array('priority'=>90),
 			'blocks/block.advert.tpl' => array('priority'=>80),
-			'blocks/block.radio.tpl' => array('priority'=>70),
 			'tags'=>array('priority'=>50),
 			'blogs'=>array('params'=>array(),'priority'=>2),
 		)
