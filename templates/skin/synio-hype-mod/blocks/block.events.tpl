@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 <div class="block" style="display: none;">
 	<header class="block-header sep">
-		<h3><a href="http://events.retroscene.org">
+		<h3><a href="https://events.retroscene.org">
 			<img src="{cfg name='path.static.skin'}/images/events-icon-16x16px.png" style="position: relative; top: 2px;"/>
 			events
 		</a></h3>
