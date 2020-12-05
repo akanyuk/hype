@@ -3,7 +3,7 @@
 
 	<div class="site-name">
 		<a href="{cfg name='path.root.web'}" title="{cfg name='view.name'}">
-			<img alt="" src="{cfg name='path.static.skin'}/images/hypelogo5_87x28.png" />
+            <img src="/rnd-logo.php" />
 		</a>
 	</div>
 

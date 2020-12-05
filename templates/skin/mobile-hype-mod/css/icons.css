@@ -99,18 +99,18 @@
 .icon-rating-grey              { width: 10px; height: 10px; background-position: -50px -250px; }
 .icon-strength                 { width: 12px; height: 10px; background-position: -60px -250px; }
 
-/* icons2-3.png */
-.icon-news-lg					{ width: 44px; height: 44px; background-position: -0px -0px; background-image: url("../images/icons2-3.png"); }
+/* icons2-4.png */
+.icon-news-lg					{ width: 44px; height: 48px; background-position: -0px -0px; background-image: url("../images/icons2-4.png"); }
 .icon-news-lg.unread			{ background-position: -176px -0px; }
-.icon-stream-lg					{ width: 44px; height: 44px; background-position: -44px -0px; background-image: url("../images/icons2-3.png"); }
+.icon-stream-lg					{ width: 44px; height: 48px; background-position: -44px -0px; background-image: url("../images/icons2-4.png"); }
 .icon-stream-lg.unread			{ background-position: -220px -0px; }
 
-.icon-userbar-new-mail			{ width: 44px; height: 44px; background-position: -88px -0px; background-image: url("../images/icons2-3.png"); }
+.icon-userbar-new-mail			{ width: 44px; height: 48px; background-position: -88px -0px; background-image: url("../images/icons2-4.png"); }
 .icon-userbar-new-mail.active	{ background-position: -132px -0px;  }
 
-.icon-blog-white				{ width: 16px; height: 16px; background-position: -0px -44px; background-image: url("../images/icons2-3.png"); }
-.icon-calendar-white			{ width: 16px; height: 16px; background-position: -16px -44px; background-image: url("../images/icons2-3.png"); }
-.icon-faq-white					{ width: 16px; height: 16px; background-position: -32px -44px; background-image: url("../images/icons2-3.png"); }
-.icon-news-white				{ width: 16px; height: 16px; background-position: -48px -44px; background-image: url("../images/icons2-3.png"); }
+.icon-blog-white				{ width: 16px; height: 16px; background-position: -0px -46px; background-image: url("../images/icons2-4.png"); }
+.icon-calendar-white			{ width: 16px; height: 16px; background-position: -16px -46px; background-image: url("../images/icons2-4.png"); }
+.icon-faq-white					{ width: 16px; height: 16px; background-position: -32px -46px; background-image: url("../images/icons2-4.png"); }
+.icon-news-white				{ width: 16px; height: 16px; background-position: -48px -46px; background-image: url("../images/icons2-4.png"); }
 
-.icon-new-mail              	{ width: 10px; height: 10px; background-position: -0px -60px; background-image: url("../images/icons2-3.png"); }
+.icon-new-mail              	{ width: 10px; height: 10px; background-position: -0px -62px; background-image: url("../images/icons2-4.png"); }

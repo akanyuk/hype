@@ -10,7 +10,7 @@
 	z-index: 0;
 	overflow: hidden;
 }
-#header         { height: 44px; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
+#header         { height: 48px; position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
 #wrapper 		{ padding-top: 50px; }
 #nav            { margin-bottom: 4px; margin-left: 4px; }
 #content { 
