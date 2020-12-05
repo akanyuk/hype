@@ -44,16 +44,16 @@
 </style>
 <div class="block block-type-blogs">
 	<header class="block-header sep">
-		<h3><a href="http://hyperadio.retroscene.org">Hyperadio</a></h3>
+		<h3><a href="https://hyperadio.retroscene.org">Hyperadio</a></h3>
 	</header>
 	<div class="block-content hype-radio">
 		<div align="center" class="inner">
 			<div id="hype-radio-off">
-				<a href="http://hyperadio.retroscene.org" title="HYPERADIO"><img src="{cfg name='path.static.skin'}/images/hyperadio-icon.gif" /></a>
+				<a href="https://hyperadio.retroscene.org" title="HYPERADIO"><img src="{cfg name='path.static.skin'}/images/hyperadio-icon.gif" /></a>
 			</div>
 			<div id="hype-radio-info">
 				<div style="float: left; margin-right:5px;">
-					<a href="http://hyperadio.retroscene.org" title="HYPERADIO"><img src="{cfg name='path.static.skin'}/images/hyperadio-icon.gif" /></a>
+					<a href="https://hyperadio.retroscene.org" title="HYPERADIO"><img src="{cfg name='path.static.skin'}/images/hyperadio-icon.gif" /></a>
 				</div>
 				<div>
 					<div id="track"></div>
