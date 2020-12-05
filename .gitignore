@@ -1,0 +1,8 @@
+.idea
+
+/uploads/
+/templates/cache/
+/templates/compiled/
+/logs/
+/tmp/
+/config/config.local.php
