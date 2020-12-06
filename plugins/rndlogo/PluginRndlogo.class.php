@@ -1,8 +1,8 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Random logo in header
-*   Copyright © 2015 nyuk
+*   Random logo choose
+*   Copyright © 2015-2020 nyuk
 *
 ---------------------------------------------------------
 */
@@ -14,11 +14,9 @@ if (!class_exists('Plugin')) {
 	die('Hacking attempt!');
 }
 
-class PluginRndLogo extends Plugin {
-
-
+class PluginRndlogo extends Plugin {
 	/**
-	 * Активация плагина "Статические страницы".
+	 * Активация плагина
 	 */
 	public function Activate() {
 		return true;
@@ -31,4 +29,3 @@ class PluginRndLogo extends Plugin {
 
 	}
 }
-?>

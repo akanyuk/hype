@@ -65,4 +65,3 @@ $config['head']['default']['css'] = array(
 
 
 return $config;
-?>

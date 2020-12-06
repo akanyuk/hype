@@ -2,9 +2,7 @@
 	<div class="{if $iUserCurrentCountTalkNew}icon-userbar-new-mail{else}icon-userbar{/if} userbar-trigger" id="userbar-trigger"></div>
 
 	<div class="site-name">
-		<a href="{cfg name='path.root.web'}" title="{cfg name='view.name'}">
-            <img src="/rnd-logo.php" />
-		</a>
+        {hook run='header_random_logo'}
 	</div>
 
 	{hook run='userbar_nav'}

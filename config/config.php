@@ -444,7 +444,7 @@ $config['block']['rule_people'] = array(
 );
 $config['block']['rule_personal_blog'] = array(
 	'action'  => array( 'personal_blog' ),
-	'blocks'  => array( 'right' => array('stream','tags','blocks/block.radio.tpl')),
+	'blocks'  => array( 'right' => array('stream','tags')),
 );
 $config['block']['rule_profile'] = array(
 	'action'  => array( 'profile', 'talk', 'settings' ),
@@ -456,7 +456,7 @@ $config['block']['rule_tag'] = array(
 );
 $config['block']['rule_blogs'] = array(
 	'action'  => array( 'blogs' ),
-	'blocks'  => array( 'right' => array('stream','blocks/block.radio.tpl') ),
+	'blocks'  => array( 'right' => array('stream') ),
 );
 
 $config['block']['userfeedBlogs'] = array(
@@ -577,6 +577,4 @@ date_default_timezone_set('Europe/Moscow'); // See http://php.net/manual/en/time
  */
 $config['jevix']=require(dirname(__FILE__).'/jevix.php');
 
-
 return $config;
-?>

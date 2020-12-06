@@ -49,7 +49,6 @@ $config['head']['default']['js']  = array(
 	"https://yandex.st/share/share.js" => array('merge'=>false),
 );
 
-
 $config['head']['default']['css'] = array(
 	"___path.static.skin___/css/reset.css",
 	"___path.static.skin___/css/base.css?v=2",
@@ -75,6 +74,5 @@ $config['head']['default']['css'] = array(
 	"___path.static.skin___/themes/___view.theme___/style.css",
 	"___path.static.skin___/css/print.css",
 );
-
 
 return $config;
