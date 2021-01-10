@@ -58,17 +58,5 @@
 
 {hook run='body_end'}
 
-{if !defined('DEBUG')}{literal}
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-5151104-5', 'auto');
-  ga('send', 'pageview');
-</script>
-{/literal}{/if}
-
 </body>
 </html>
