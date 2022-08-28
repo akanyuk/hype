@@ -16,7 +16,7 @@
 */
 
 require_once(Config::Get('path.root.engine').'/lib/external/Smarty/libs/Smarty.class.php');
-require_once(Config::Get('path.root.engine').'/lib/external/CSSTidy-1.3/class.csstidy.php');
+require_once(Config::Get('path.root.engine').'/lib/external/CSSTidy-1.7.1/class.csstidy.php');
 require_once(Config::Get('path.root.engine').'/lib/external/JSMin-1.1.1/jsmin.php');
 
 /**
@@ -222,6 +222,11 @@ class ModuleViewer extends Module {
 		 */
 		$this->InitFileParams();
 		$this->sCacheDir = Config::Get('path.smarty.cache');
+        /**
+         * Класс для переопределения файлов шаблона
+         */
+        require_once(Config::Get('path.root.engine').'/modules/viewer/plugs/resource.file.php');
+        $this->oSmarty->registerResource('file', new Smarty_Resource_File());
 	}
 	/**
 	 * Получает локальную копию модуля
@@ -937,13 +942,17 @@ class ModuleViewer extends Module {
 		 */
 		$aBlocks['js'] = array_unique(
 			array_map(
-				create_function('$sJs','return isset($sJs["block"]) ? $sJs["block"] : null;'),
+                function ($sJs) {
+                    return isset($sJs["block"]) ? $sJs["block"] : null;
+                },
 				$this->aFilesParams['js']
 			)
 		);
 		$aBlocks['css'] = array_unique(
 			array_map(
-				create_function('$sCss','return isset($sCss["block"]) ? $sCss["block"] : null;'),
+                function ($sCss) {
+                    return isset($sCss["block"]) ? $sCss["block"] : null;
+                },
 				$this->aFilesParams['css']
 			)
 		);
@@ -960,10 +969,9 @@ class ModuleViewer extends Module {
 			 */
 			$aFilesHack = array_filter(
 				$this->aFilesParams[$sType],
-				create_function(
-					'$aParams',
-					'return array_key_exists("browser",(array)$aParams);'
-				)
+                function ($aParams) {
+                    return array_key_exists("browser", (array)$aParams);
+                }
 			);
 			$aFilesHack = array_intersect(array_keys($aFilesHack),$aResult[$sType]);
 			/**
@@ -977,10 +985,9 @@ class ModuleViewer extends Module {
 			 */
 			$aFilesNoMerge = array_filter(
 				$this->aFilesParams[$sType],
-				create_function(
-					'$aParams',
-					'return array_key_exists("merge",(array)$aParams) and !$aParams["merge"];'
-				)
+                function ($aParams) {
+                    return array_key_exists("merge", (array)$aParams) and !$aParams["merge"];
+                }
 			);
 			$aFilesNoMerge = array_intersect(array_keys($aFilesNoMerge),$aResult[$sType]);
 			$aResult[$sType] = array_diff($aResult[$sType],$aFilesNoMerge);
@@ -991,10 +998,13 @@ class ModuleViewer extends Module {
 			if($aBlocks[$sType] && count($aBlocks[$sType])) {
 				foreach ($aBlocks[$sType] as $sBlock) {
 					if(!$sBlock) continue;
-					/**
-					 * Выбираем все файлы, входящие в данный блок
-					 */
-					$aFiles = array_filter($this->aFilesParams[$sType],create_function('$aParams','return (isset($aParams)&&($aParams["block"]=="'.$sBlock.'"));'));
+                    $fBlocks = function ($aParams) use ($sBlock) {
+                        return (isset($aParams) && ($aParams["block"] == "'.$sBlock.'"));
+                    };
+                    /**
+                     * Выбираем все файлы, входящие в данный блок
+                     */
+                    $aFiles = array_filter($this->aFilesParams[$sType], $fBlocks($aBlocks));
 					$aFiles = array_intersect(array_keys($aFiles),$aResult[$sType]);
 					if($aFiles && count($aFiles)) {
 						$aHeadFiles[$sType][] = $this->Compress($aFiles,$sType);

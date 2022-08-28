@@ -113,7 +113,9 @@ class ActionProfile extends Action {
 		if (!$this->CheckUserProfile()) {
 			return parent::EventNotFound();
 		}
-		// Читаем события
+		/**
+		 * Читаем события
+		 */
 		$aEvents = $this->Stream_ReadByUserId($this->oUserProfile->getId());
 		$this->Viewer_Assign('bDisableGetMoreButton', $this->Stream_GetCountByUserId($this->oUserProfile->getId()) < Config::Get('module.stream.count_default'));
 		$this->Viewer_Assign('aStreamEvents', $aEvents);
@@ -123,7 +125,6 @@ class ActionProfile extends Action {
 		}
 		$this->SetTemplateAction('stream');
 	}
-	
 	/**
 	 * Список друзей пользователей
 	 */
@@ -455,6 +456,7 @@ class ActionProfile extends Action {
 		$oWall->setUserId($this->oUserCurrent->getId());
 		$oWall->setText(getRequestStr('sText'));
 		$oWall->setPid(getRequestStr('iPid'));
+		$oWall->setLastReply('');
 
 		$this->Hook_Run('wall_add_validate_before', array('oWall'=>$oWall));
 		if ($oWall->_Validate()) {

@@ -120,14 +120,7 @@ class ModuleText extends Module {
 		/**
 		 * youtube.com
 		 */
-		// $sText = preg_replace('/<video>http:\/\/(?:www\.|)youtube\.com\/watch\?v=([a-zA-Z0-9_\-]+)(&.+)?<\/video>/Ui', '<iframe width="560" height="315" src="http://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>', $sText);
-		// nyuk: improved parser from http://livestreet.ru/blog/tips_and_tricks/18041.html#cut
-		$sText = preg_replace(
-			'/<video>(?:http(?:s|):|)(?:\/\/|)(?:www\.|)youtu(?:\.|)be(?:-nocookie|)(?:\.com|)\/(?:e(?:mbed|)\/|v\/|watch\?(?:.+&|)v=|)([a-zA-Z0-9_\-]+?)(&.+)?<\/video>/Ui',
-			'<iframe width="560" height="315" src="https://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>',
-			$sText
-		);		
-		
+		$sText = preg_replace('/<video>http:\/\/(?:www\.|)youtube\.com\/watch\?v=([a-zA-Z0-9_\-]+)(&.+)?<\/video>/Ui', '<iframe width="560" height="315" src="http://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>', $sText);
 		/**
 		 * vimeo.com
 		 */
@@ -204,18 +197,8 @@ class ModuleText extends Module {
 	 * @return mixed
 	 */
 	public function CodeSourceParser($sText) {
-		// z80 and 6502 asm support (added by nyuk)
-		$sText=str_replace('<z80>','<pre class="prettyprint lang-z80"><code data-hlrpl="1">',$sText);
-		$sText=str_replace("</z80>",'</code>',$sText);
-
-		$sText=str_replace('<m6502>','<pre class="prettyprint lang-6502"><code data-hlrpl="1">',$sText);
-		$sText=str_replace("</m6502>",'</code>',$sText);
-		
 		$sText=str_replace("<code>",'<pre class="prettyprint"><code>',$sText);
 		$sText=str_replace("</code>",'</code></pre>',$sText);
-		
-		$sText=str_replace(' data-hlrpl="1"','',$sText);
-		
 		return $sText;
 	}
 	/**

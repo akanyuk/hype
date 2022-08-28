@@ -6,7 +6,7 @@ return array(
 		'cfgAllowTags' => array(
 			// вызов метода с параметрами
 			array(
-				array('ls','cut','a', 'img', 'i', 'b', 'u', 's', 'audio', 'video', 'source', 'em',  'strong', 'nobr', 'li', 'ol', 'ul', 'sup', 'abbr', 'sub', 'acronym', 'h4', 'h5', 'h6', 'br', 'hr', 'pre', 'code', 'object', 'param', 'embed', 'blockquote', 'iframe', 'table', 'th', 'tr', 'td', 'z80','m6502'),
+				array('ls','cut','a', 'img', 'i', 'b', 'u', 's', 'video', 'em',  'strong', 'nobr', 'li', 'ol', 'ul', 'sup', 'abbr', 'sub', 'acronym', 'h4', 'h5', 'h6', 'br', 'hr', 'pre', 'code', 'object', 'param', 'embed', 'blockquote', 'iframe','table','th','tr','td'),
 			),			
 		),
 		// Коротие теги типа
@@ -18,7 +18,7 @@ return array(
 		// Преформатированные теги
 		'cfgSetTagPreformatted' => array(
 			array(
-				array('pre','code','video','z80','m6502')
+				array('pre','code','video')
 			),
 		),
 		// Разрешённые параметры тегов
@@ -60,8 +60,7 @@ return array(
 			),
 			array(
 				'iframe',
-				array('width' => '#text', 'height' => '#int', 'scrolling' => '#text', 'frameborder' => '#text', 
-					'src' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com','bandcamp.com','soundcloud.com','vk.com')))
+				array('width' => '#int', 'height' => '#int', 'src' => array('#domain'=>array('youtube.com','rutube.ru','vimeo.com')))
 			),
 			array(
 				'ls',
@@ -69,17 +68,11 @@ return array(
 			),
 			array(
 				'td',
-				array('bgcolor' => '#text', 'bordercolor'=>'#text', 'colspan'=>'#int','rowspan'=>'#int','align'=>array('right', 'left', 'center', 'justify'),'height'=>'#int','width'=>'#int')
+				array('colspan'=>'#int','rowspan'=>'#int','align'=>array('right', 'left', 'center', 'justify'),'height'=>'#int','width'=>'#int')
 			),
 			array(
 				'table',
-				array('bgcolor' => '#text', 'border'=>'#int', 'bordercolor'=>'#text','cellpadding'=>'#int','cellspacing'=>'#int','align'=>array('right', 'left', 'center'),'height'=>'#int','width'=>'#text')
-			),
-			array(
-				'audio', array('controls'=>'#text', 'src'=>'#text', 'type'=>'#text', 'preload'=>'#text')
-			),
-			array(
-				'source', array('src'=>'#text', 'type'=>'#text')
+				array('border'=>'#int','cellpadding'=>'#int','cellspacing'=>'#int','align'=>array('right', 'left', 'center'),'height'=>'#int','width'=>'#int')
 			),
 		),
 		// допустимые комбинации значений у параметров
@@ -104,9 +97,6 @@ return array(
 						'value'=>true,
 					),
 					'border' => array(
-						'value'=>true,
-					),
-					'bordercolor' => array(
 						'value'=>true,
 					),
 					'devicefont' => array(
@@ -197,23 +187,11 @@ return array(
 				false,
 				true
 			),
-			array(
-				'video',
-				array('source'),
-				false,
-				true
-			),
-			array(
-				'audio',
-				array('source'),
-				false,
-				true
-			),
 		),
 		// Если нужно оставлять пустые не короткие теги
 		'cfgSetTagIsEmpty' => array(
 			array(
-				array('param','embed','a','iframe', 'audio', 'video', 'source')
+				array('param','embed','a','iframe')
 			),
 		),
 		// Не нужна авто-расстановка <br>
@@ -240,8 +218,8 @@ return array(
 		// Автозамена
 		'cfgSetAutoReplace' => array(
 			array(
-				array('+/-', '(с)', '(С)', '(r)', '(R)'),
-				array('±', '©', '©', '®', '®')
+				array('+/-', '(c)', '(с)', '(r)', '(C)', '(С)', '(R)'),
+				array('±', '©', '©', '®', '©', '©', '®')
 			)
 		),
 		// Список допустимых протоколов для ссылок
@@ -252,7 +230,7 @@ return array(
 		),
 		'cfgSetTagNoTypography' => array(			
 			array(
-				array('code', 'audio', 'video', 'source', 'object')
+				array('code','video','object')
 			),
 		),
 		// Теги, после которых необходимо пропускать одну пробельную строку
