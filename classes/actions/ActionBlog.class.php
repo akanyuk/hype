@@ -799,7 +799,6 @@ class ActionBlog extends Action {
 		$this->Viewer_Assign('aBlogUsers',$aBlogUsers);
 		$this->Viewer_Assign('iCountBlogUsers',$aBlogUsersResult['count']);
 		$this->Viewer_Assign('oBlog',$oBlog);
-		
 		/**
 		 * Устанавливаем title страницы
 		 */

@@ -16,7 +16,6 @@ header('Access-Control-Allow-Origin: https://retroscene.org');
 *
 ---------------------------------------------------------
 */
-@include('/persistent/chromephp/l.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -37,4 +36,3 @@ $oRouter=Router::getInstance();
 $oRouter->Exec();
 
 $oProfiler->Stop($iTimeId);
-?>

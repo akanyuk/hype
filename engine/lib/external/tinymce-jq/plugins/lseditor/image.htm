@@ -13,7 +13,7 @@
         <base target="_self" />
 </head>
 <body id="advimage" style="display: none">
-    <form method="post" onsubmit="lsImageDialog.ajaxUploadImg('form_upload_img');return false;" action="#" id="form_upload_img" enctype="multipart/form-data"> 
+    <form onsubmit="lsImageDialog.ajaxUploadImg('form_upload_img');return false;" action="#" id="form_upload_img" enctype="multipart/form-data"  method="POST" > 
 		<div class="tabs">
 			<ul>
 				<li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#lseditor.image_upload}</a></span></li>				

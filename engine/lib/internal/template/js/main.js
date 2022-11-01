@@ -582,23 +582,5 @@ ls.ie = (function ($) {
 }).call(ls.ie || {},jQuery);
 
 
-/**
- * Фикс перехода jquery 1.7 -> 1.8 
- * by nyuk
- */
 
-var oldOuterHeight =  $.fn.outerHeight;
-$.fn.outerHeight = function () { 
-    return oldOuterHeight.apply(this, [true]);
-};
-
-var oldOuterWidth =  $.fn.outerWidth;
-$.fn.outerWidth = function () { 
-    return oldOuterWidth.apply(this, [true]);
-};
-
-jQuery.curCSS = function(element, prop, val) {
-	return jQuery(element).css(prop, val);
-};
-
-(ls.options || {}).debug=0;
+(ls.options || {}).debug=1;
