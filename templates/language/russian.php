@@ -195,6 +195,7 @@ return array(
 	'topic_tags_empty' => 'нет',
 	'topic_user' => 'авторский текст',
 	'topic_share' => 'Поделиться',
+    'topic_views' => 'просмотров',
 	'topic_time_limit' => 'Вам нельзя создавать топики слишком часто',
 	'topic_comment_read' => 'читать комментарии',
 	'topic_comment_add' => 'Оставить комментарий',

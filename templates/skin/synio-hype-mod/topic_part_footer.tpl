@@ -40,7 +40,6 @@
 			<div class="close" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"></div>
 		</div>
 
-
 		<ul class="topic-info">
 			<li class="topic-info-author">
 				<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(24)}" alt="avatar" class="avatar" /></a>
@@ -50,14 +49,16 @@
 				<time datetime="{date_format date=$oTopic->getDateAdd() format='c'}" title="{date_format date=$oTopic->getDateAdd() format='j F Y, H:i'}">
 					{date_format date=$oTopic->getDateAdd() hours_back="12" minutes_back="60" now="60" day="day H:i" format="j F Y, H:i"}
 				</time>
+                [{$aLang.topic_views}: {$oTopic->getCountRead()}]
 			</li>
+
 			<li class="topic-info-share" data-topic-id="{$oTopic->getId()}" onclick="jQuery('#topic_share_{$oTopic->getId()}').slideToggle(); return false;"><i class="icon-synio-share-blue" title="{$aLang.topic_share}"></i></li>
 			
 			<li class="topic-info-favourite" onclick="return ls.favourite.toggle({$oTopic->getId()},$('#fav_topic_{$oTopic->getId()}'),'topic');">
 				<i id="fav_topic_{$oTopic->getId()}" class="favourite {if $oUserCurrent && $oTopic->getIsFavourite()}active{/if}"></i>
 				<span class="favourite-count" id="fav_count_topic_{$oTopic->getId()}">{if $oTopic->getCountFavourite()>0}{$oTopic->getCountFavourite()}{/if}</span>
 			</li>
-		
+
 			{if $bTopicList}
 				<li class="topic-info-comments">
 					{if $oTopic->getCountCommentNew()}
@@ -73,7 +74,6 @@
 							{else}
 								<i class="icon-synio-comments-blue"></i>
 							{/if}
-							
 							<span>{$oTopic->getCountComment()}</span>
 						</a>
 					{/if}

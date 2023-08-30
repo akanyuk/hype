@@ -195,6 +195,7 @@ return array(
 	'topic_tags_empty' => 'empty',
 	'topic_user' => "Author's  text",
 	'topic_share' => 'Share',
+    'topic_views' => 'views',
 	'topic_time_limit' => "Can't create topics in such a frequent rate",
 	'topic_comment_read' => 'Read comments',
 	'topic_comment_add' => 'Add comment',
