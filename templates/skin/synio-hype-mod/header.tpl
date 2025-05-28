@@ -34,9 +34,13 @@
 	<meta name="theme-color" content="#000000">
 	<meta name="msapplication-config" content="/browserconfig.xml"/>
 
-	<meta property="og:title" content="HYPE">
-	<meta property="og:description" content="{$sHtmlTitle}">
 	<meta property="og:image" content="https://hype.retroscene.org/favicon/apple-touch-icon-180x180.png">
+	<meta property="og:title" content="HYPE">
+	{if $aHtmlRssAlternate}
+	<meta property="og:description" content="{$aHtmlRssAlternate.title}">
+	{else}
+	<meta property="og:description" content="{$sHtmlTitle}">
+	{/if}
 
 	{if $aHtmlRssAlternate}
 		<link rel="alternate" type="application/rss+xml" href="{$aHtmlRssAlternate.url}" title="{$aHtmlRssAlternate.title}">
