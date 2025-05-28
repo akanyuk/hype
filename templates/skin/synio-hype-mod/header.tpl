@@ -35,7 +35,6 @@
 	<meta name="msapplication-config" content="/browserconfig.xml"/>
 
 	<meta property="og:image" content="https://hype.retroscene.org/favicon/apple-touch-icon-180x180.png">
-	<meta property="og:title" content="HYPE">
 	{if $aHtmlRssAlternate}
 	<meta property="og:description" content="{$aHtmlRssAlternate.title}">
 	{/if}
