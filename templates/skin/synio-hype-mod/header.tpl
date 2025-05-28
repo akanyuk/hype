@@ -38,8 +38,6 @@
 	<meta property="og:title" content="HYPE">
 	{if $aHtmlRssAlternate}
 	<meta property="og:description" content="{$aHtmlRssAlternate.title}">
-	{else}
-	<meta property="og:description" content="{$sHtmlTitle}">
 	{/if}
 
 	{if $aHtmlRssAlternate}
