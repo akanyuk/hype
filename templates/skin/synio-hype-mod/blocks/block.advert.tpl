@@ -1,9 +1,9 @@
+{*
 <div style="text-align: center; padding-bottom: 40px;">
-	<ins data-revive-zoneid="13" data-revive-id="7b21834437781b35285bb6ea887b8b50"></ins>
-	<script async src="//zxbn.maros.pri.ee/www/delivery/asyncjs.php"></script>
+    <ins data-revive-zoneid="13" data-revive-id="7b21834437781b35285bb6ea887b8b50"></ins>
+    <script async src="//zxbn.maros.pri.ee/www/delivery/asyncjs.php"></script>
 </div>
 
-{*
 <div style="text-align: center; padding-bottom: 40px;">
 	<a href="https://vk.com/zxmemes" title="ZX Spectrum Russian Demoscene Top Quality Memes"><img alt="" src="{cfg name='path.static.skin'}/banners/zx-memas-200.jpg" /></a>
 </div>

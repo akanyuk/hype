@@ -10,7 +10,7 @@ return array(
 	'footer_menu_project_title' => 'LiveStreet CMS',
 	'footer_menu_project_about' => 'About',
 	'footer_menu_project_contact' => 'Contacts',
-	'footer_menu_project_advert' => 'Edvert',
+	'footer_menu_project_advert' => 'Advert',
 	'footer_menu_project_help' => 'Help',
 
 	'blog_leave' => 'Leave',
