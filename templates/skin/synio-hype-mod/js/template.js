@@ -365,15 +365,6 @@ jQuery(document).ready(function($){
 	});
 
 
-	$('.topic').each(function(i){
-		var share=$(this).find('.topic-info-share');
-		if (share.length) {
-			var left = $(this).find('.topic-info-share').position().left;
-			$(this).find('.topic-share .arrow').css('left', left + 1);
-		}
-	});
-
-
 	// Фикс бага с z-index у встроенных видео
 	$("iframe").each(function(){
 		var ifr_source = $(this).attr('src');

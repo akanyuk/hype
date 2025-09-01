@@ -109,10 +109,6 @@
 					<span class="favourite-count" id="fav_count_topic_{$oTopic->getId()}">{if $oTopic->getCountFavourite() > 0}{$oTopic->getCountFavourite()}{/if}</span>
 				</li>
 			{/if}
-
-			<li class="topic-info-share" onclick="ls.tools.slide($('#topic_share_{$oTopic->getId()}'), $(this));">
-				<i class="icon-share"></i>
-			</li>
 		</ul>
 
 		{if $bVoteInfoShow}
