@@ -35,7 +35,7 @@
 </style>
 <div class="block block-type-blogs">
     <header class="block-header sep">
-        <h3><a href="https://hyperadio.retroscene.org">Hyperadio</a></h3>
+        <h3><a href="https://stream.hyperadio.ru">Hyperadio</a></h3>
     </header>
     <div class="block-content hype-radio">
         <div style="text-align:center" class="inner">
