@@ -23,7 +23,7 @@
 - IE не поддерживается: фолбэки перед `var()` не пишем.
 - Не трогаем: админку, `print.css`, `hype-hl.css`, файлы в `engine/lib/external/`, файлы логотипов.
 - Склеенный CSS/JS кешируется в `public_html/templates/cache/<skin>/` по хешу списка файлов без учёта mtime: после любой правки CSS/JS/конфига скина выполнять `rm -f public_html/templates/cache/*/*` (скрипт `tools/display-settings/clear-cache.sh`).
-- `$config['compress']['css']['use']` должен оставаться `false`: CSSTidy с `css_level = CSS2.1` вырежет `var()`/`calc()`. Проверить это и на проде перед выкладкой (см. Task 10).
+- `$config['compress']['css']['use']` должен оставаться `false`: CSSTidy с `css_level = CSS2.1` вырежет `var()`/`calc()`. Проверить это и на проде перед выкладкой (см. Task 11).
 - Мобильный скин выбирается плагином `mobiletpl` по User-Agent: для мобильных проверок использовать UA iPhone.
 - Подписи кнопок — ключи языковых файлов скинов: `display_theme_dark` («Тёмная тема» / «Dark theme»), `display_theme_light` («Светлая тема» / «Light theme»), `display_font_large` («Крупный шрифт» / «Large font»), `display_font_normal` («Обычный шрифт» / «Normal font»). Подпись описывает действие кнопки (что включится по клику).
 
@@ -31,8 +31,8 @@
 
 1. **`localStorage` бросает исключение** (Safari private, запрет cookies) — страница открывается в системной теме, кнопки переключают тему в рамках страницы, в консоли нет ошибок. Тест: Task 2, `storage-blocked`.
 2. **Мусорное значение в хранилище** (`hype-theme = "blue"`, осталось от старой версии) — трактуется как отсутствие выбора. Тест: Task 2, `invalid-stored-value`.
-3. **Шапка пользователя с индикатором новых сообщений `+N` и длинным логином** — кнопки не перекрывают `.new-messages`, `dropdown-user`, `ul.auth`. Тест: Task 3, `header-no-overlap` с подставленным `+99`.
-4. **Динамически подгружаемый контент** (новые комментарии по «обновить», модальные окна логина/избранного, всплывающие уведомления `jquery.notifier`, выпадающее меню пользователя) в тёмной теме — без белых пятен. Тест: Task 6/7, сценарии `dark-dynamic` в `shoot.mjs`.
+3. **Шапка пользователя с индикатором новых сообщений `+N` и длинным логином** — кнопки не перекрывают `.new-messages`, `dropdown-user`, `ul.auth`. Тест: Task 4, `header-no-overlap` с подставленным `+99`.
+4. **Динамически подгружаемый контент** (новые комментарии по «обновить», модальные окна логина/избранного, всплывающие уведомления `jquery.notifier`, выпадающее меню пользователя) в тёмной теме — без белых пятен. Тест: Task 7/8, сценарии `dark-dynamic` в `shoot.mjs`.
 5. **Редактор и виджеты на странице создания топика** (markitup, автокомплит тегов jQuery UI) в тёмной теме и крупном шрифте. Тест: страница `topic-add` в матрице + сценарий `dark-dynamic`.
 
 ---
@@ -128,7 +128,7 @@ git commit -m "Add display settings verification tools"
     - `hypeDisplay.get(name: 'theme'|'font'): string` — текущее применённое значение;
     - `hypeDisplay.set(name, value: string): void` — применяет, сохраняет в `localStorage` (без исключений наружу), обновляет кнопки и `theme-color`;
     - `hypeDisplay.toggle(name): void`.
-  - Делегированный обработчик кликов на `document` по `[data-display-toggle="theme"|"font"]` → `toggle`. Кнопкам выставляется `aria-pressed` (`true` при `dark`/`large`), `title` и `aria-label` берутся из атрибутов `data-label-on`/`data-label-off` кнопки (их заполняет Task 3).
+  - Делегированный обработчик кликов на `document` по `[data-display-toggle="theme"|"font"]` → `toggle`. Кнопкам выставляется `aria-pressed` (`true` при `dark`/`large`), `title` и `aria-label` берутся из атрибутов `data-label-on`/`data-label-off` кнопки (их заполняет Task 4).
   - `<meta name="theme-color">`: `#000000` в светлой теме (как сейчас), в тёмной — значение `--bg-header` тёмной темы, вычисленное через `getComputedStyle`.
 
 Head-скрипт — без jQuery, ES5 (код до загрузки jQuery), ≤ 25 строк.
@@ -183,13 +183,58 @@ cd .. && git add tools/display-settings/test && git commit -m "Add display setti
 
 ---
 
-### Task 3: Кнопки в шапке обоих скинов
+### Task 3: Мобильная шапка — перенос «Прямой эфир», «Новости», «Поиск» в боковое меню
+
+**Files:**
+- Modify: `public_html/templates/skin/mobile-hype-mod/header_top.tpl` — удалить `li.icon-stream-lg`, `li.icon-news-lg`, `li#item-search`
+- Modify: `public_html/templates/skin/mobile-hype-mod/userbar_menu.tpl` — в начало `ul.userbar-menu-items` (первый список) три пункта; удалить старый пункт «Новости» (ссылка `{router page='blog'}news`)
+- Modify: `public_html/templates/skin/mobile-hype-mod/js/template.js` — подсветка непрочитанного переключается с `.icon-stream-lg`/`.icon-news-lg` на пункты меню и `#userbar-trigger`
+- Modify: `public_html/templates/skin/mobile-hype-mod/css/base.css` — стили `.unread` у пунктов и у `#userbar-trigger`
+- Modify: `public_html/templates/skin/mobile-hype-mod/settings/language/russian.php` — ключ `userbar_live` («Прямой эфир»); «Новости» — `{$oConfig->GetValue('plugin.newsblock.header')}`, «Поиск» — `{$aLang.search}`
+- Test: `tools/display-settings/test/mobile-menu.test.mjs`
+
+**Interfaces:**
+- Produces: пункты меню `<li class="userbar-item-live">`, `<li class="userbar-item-news">`, `<li class="userbar-item-search">`, каждый с иконкой в `.holder` (`icon-profile-activity-white`, `icon-news-white`, иконка поиска из `icons2-4.png`/`icons.png` белого набора, если есть; иначе без иконки) и ссылкой `href="#"` с обработчиком `ls.tools.slide($('#stream-block'|'#news-block'|'#search'), $(this).closest('li'), false)` после `$(document).scrollTop(0)`; `ls.tools.slide` уже вызывает `ls.tools.hideuserbar()`.
+- Класс `unread`: на `li.userbar-item-live` при `#unread-stream`, на `li.userbar-item-news` при `#unread-news`, на `#userbar-trigger` при любом из них.
+- В `nav-userbar` после задачи остаются: `#next-comment-toolbar` (user, если есть), `li#item-auth` (guest); Task 4 добавляет кнопки перед `item-auth` / в конец.
+
+- [ ] **Step 1: Написать падающие тесты `mobile-menu.test.mjs`** (skin mobile, guest и user)
+
+```js
+test('header-icons-moved', ...)   // в #header нет .icon-stream-lg, .icon-news-lg, #item-search
+test('menu-items-present', ...)   // в #userbar: .userbar-item-live, .userbar-item-news, .userbar-item-search — по одному,
+                                  // идут первыми в первом ul.userbar-menu-items; ссылки на блог новостей (href$="/blog/news") в меню нет
+test('menu-opens-panel', ...)     // для каждого пункта: открыть меню (#userbar-trigger click), клик по пункту →
+                                  // через 600 мс соответствующая панель видима (#stream-block / #news-block / #search),
+                                  // меню закрыто (#userbar left < 0), остальные .slide скрыты
+test('unread-highlight', ...)     // вставить в DOM до ready нельзя — проверяем по факту страницы: если есть #unread-stream,
+                                  // то .userbar-item-live и #userbar-trigger имеют .unread; иначе нет;
+                                  // плюс синтетический случай: page.evaluateOnNewDocument добавляет на DOMContentLoaded
+                                  // (до jQuery ready) <span id="unread-news"> в body → .userbar-item-news.unread и #userbar-trigger.unread
+```
+
+- [ ] **Step 2: Запустить — FAIL**
+
+Run: `node --test test/mobile-menu.test.mjs`
+
+- [ ] **Step 3: Реализовать изменения шаблонов, `template.js`, CSS, языкового ключа**
+- [ ] **Step 4: Тесты**
+
+Run: `./clear-cache.sh && node --test --test-concurrency=1 test/`
+Expected: PASS все.
+
+- [ ] **Step 5: Регрессия** — `node shoot.mjs t3 --skin mobile && node diff.mjs baseline t3`; отличия только в шапке и (на скриншотах не видно) в меню; десктоп не затронут: `node shoot.mjs t3d --skin desktop && node diff.mjs baseline t3d` → identical. Скриншот открытого меню гостя и пользователя осмотреть глазами.
+- [ ] **Step 6: Commit**
+
+---
+
+### Task 4: Кнопки в шапке обоих скинов
 
 **Files:**
 - Create: `public_html/templates/common/display-settings-buttons.tpl`
 - Create: `public_html/templates/skin/{synio-hype-mod,mobile-hype-mod}/css/display-settings.css` (подключить в `config.php` после `navs.css`)
 - Modify: `public_html/templates/skin/synio-hype-mod/header_top.tpl` — include перед `{if $oUserCurrent}` (вне условия)
-- Modify: `public_html/templates/skin/mobile-hype-mod/header_top.tpl` — include внутри `ul.nav-userbar` непосредственно перед `li#item-search`
+- Modify: `public_html/templates/skin/mobile-hype-mod/header_top.tpl` — include внутри `ul.nav-userbar`: у гостя непосредственно перед `li#item-auth`, у пользователя в конце списка (одно место в разметке: перед `{if !$oUserCurrent}` блока `item-auth`)
 - Modify: `settings/language/russian.php` обоих скинов, `synio-hype-mod/settings/language/english.php` — ключи из Global Constraints
 - Test: `tools/display-settings/test/header.test.mjs`
 
@@ -217,7 +262,7 @@ Run: `node --test test/header.test.mjs`
 
 - [ ] **Step 3: Реализовать шаблон, CSS, языковые ключи, include в шапках**
 
-Цвет иконок в шапке — как у соседних ссылок шапки (в десктопе `#cfcfcf` на тёмной шапке; в мобильном — как иконки `nav-userbar`); в этой задаче цвета пишутся литералами, переводятся на переменные в Task 4/5.
+Цвет иконок в шапке — как у соседних ссылок шапки (в десктопе `#cfcfcf` на тёмной шапке; в мобильном — как иконки `nav-userbar`); в этой задаче цвета пишутся литералами, переводятся на переменные в Task 5/6.
 
 - [ ] **Step 4: Прогнать тесты**
 
@@ -226,14 +271,14 @@ Expected: PASS `behavior` и `header`.
 
 - [ ] **Step 5: Регрессия**
 
-Run: `node shoot.mjs t3 && node diff.mjs baseline t3`
+Run: `node shoot.mjs t4 && node diff.mjs baseline t4`
 Expected: отличия только в области шапки (проверить diff-картинки глазами); вне шапки 0.
 
 - [ ] **Step 6: Commit** (`public_html`: шаблоны, CSS, конфиги, языки; `hype-dev-environment`: `test/header.test.mjs`)
 
 ---
 
-### Task 4: Десктоп — цвета на переменные (светлая тема без изменений)
+### Task 5: Десктоп — цвета на переменные (светлая тема без изменений)
 
 **Files:**
 - Modify: `public_html/templates/skin/synio-hype-mod/css/theme.css` — блок `:root` со светлыми значениями
@@ -242,7 +287,7 @@ Expected: отличия только в области шапки (провер
 - Test: `diff.mjs`
 
 **Interfaces:**
-- Produces: имена переменных (используются в Task 5–7, единые для обоих скинов): `--bg-page`, `--bg-surface`, `--bg-surface-alt`, `--bg-input`, `--bg-hover`, `--bg-header`, `--text`, `--text-muted`, `--text-faint`, `--text-inverse`, `--link`, `--link-hover`, `--accent`, `--border`, `--border-strong`, `--shadow`, `--positive`, `--positive-bg`, `--negative`, `--negative-bg`, `--warning`, `--warning-bg`, `--info`, `--info-bg`, `--comment-new`, `--comment-self`, `--code-bg`, `--btn-bg-from`, `--btn-bg-to`, `--btn-border`, `--btn-text`, `--btn-primary-from`, `--btn-primary-to`, `--btn-primary-text`. Добавлять новые можно только для цвета с особой ролью; добавленные имена дописать в шапку `theme.css` комментарием с ролью.
+- Produces: имена переменных (используются в Task 6–9, единые для обоих скинов): `--bg-page`, `--bg-surface`, `--bg-surface-alt`, `--bg-input`, `--bg-hover`, `--bg-header`, `--text`, `--text-muted`, `--text-faint`, `--text-inverse`, `--link`, `--link-hover`, `--accent`, `--border`, `--border-strong`, `--shadow`, `--positive`, `--positive-bg`, `--negative`, `--negative-bg`, `--warning`, `--warning-bg`, `--info`, `--info-bg`, `--comment-new`, `--comment-self`, `--code-bg`, `--btn-bg-from`, `--btn-bg-to`, `--btn-border`, `--btn-text`, `--btn-primary-from`, `--btn-primary-to`, `--btn-primary-text`. Добавлять новые можно только для цвета с особой ролью; добавленные имена дописать в шапку `theme.css` комментарием с ролью.
 - Правило сведения оттенков (из спеки): близкие оттенки одной роли → одна переменная; каждое сведение, дающее видимое отличие, — в `docs/superpowers/reports/display-settings-light-diff.md` (hype-dev-environment): переменная, исходные цвета, файл:строка, скриншот diff.
 
 - [ ] **Step 1: Инвентаризация**
@@ -252,7 +297,7 @@ Run: `grep -noiE '#[0-9a-f]{3,6}\b|rgba?\([^)]*\)' templates/skin/synio-hype-mod
 
 - [ ] **Step 2: По одному файлу (порядок: `base`, `common`, `grid`, `text`, `forms`, `buttons`, `navs`, `icons`, `tables`, `topic`, `comments`, `blocks`, `modals`, `blog`, `profile`, `wall`, `infobox`, `jquery.notifier`, `smoothness/jquery-ui`, `display-settings`): заменить цвета, затем проверить**
 
-Run после каждого файла: `./clear-cache.sh && node shoot.mjs t4 --skin desktop && node diff.mjs baseline t4`
+Run после каждого файла: `./clear-cache.sh && node shoot.mjs t5 --skin desktop && node diff.mjs t4 t5` (эталон после изменения шапок — снимок `t4` из Task 4)
 Expected: 0% либо отличия, занесённые в отчёт как осознанные.
 
 - [ ] **Step 3: Контроль полноты**
@@ -269,13 +314,13 @@ Expected: PASS.
 
 ---
 
-### Task 5: Мобильный — цвета на переменные
+### Task 6: Мобильный — цвета на переменные
 
-Как Task 4 для `templates/skin/mobile-hype-mod/` (порядок файлов: `base`, `common`, `grid`, `text`, `forms`, `buttons`, `navs`, `icons`, `tables`, `topic`, `comments`, `blocks`, `modals`, `blog`, `profile`, `wall`, `jquery.notifier`, `smoothness/jquery-ui`, `tinymce`, `display-settings`), с теми же именами переменных из Task 4 и своими значениями. Проверка: `node shoot.mjs t5 --skin mobile && node diff.mjs baseline t5`; контрольный grep; `node --test test/`; отчёт дополняется разделом «Мобильный».
+Как Task 5 для `templates/skin/mobile-hype-mod/` (порядок файлов: `base`, `common`, `grid`, `text`, `forms`, `buttons`, `navs`, `icons`, `tables`, `topic`, `comments`, `blocks`, `modals`, `blog`, `profile`, `wall`, `jquery.notifier`, `smoothness/jquery-ui`, `tinymce`, `display-settings`), с теми же именами переменных из Task 5 и своими значениями. Проверка: `node shoot.mjs t6 --skin mobile && node diff.mjs t4 t6`; контрольный grep; `node --test test/`; отчёт дополняется разделом «Мобильный».
 
 ---
 
-### Task 6: Десктоп — тёмная тема
+### Task 7: Десктоп — тёмная тема
 
 **Files:**
 - Modify: `public_html/templates/skin/synio-hype-mod/css/theme.css` — блок `html[data-theme="dark"]` (значения всех переменных + `color-scheme: dark`); в конце файла — переопределения под `html[data-theme="dark"]` для `engine/lib/external/jquery/markitup/skins/synio/style.css`, `markitup/sets/synio/style.css`, `jcrop/jquery.Jcrop.css`, `prettify/prettify.css`
@@ -283,7 +328,7 @@ Expected: PASS.
 - Modify: `tools/display-settings/shoot.mjs` — флаг `--dynamic` (см. ниже)
 
 **Interfaces:**
-- Consumes: переменные из Task 4.
+- Consumes: переменные из Task 5.
 - Produces: `node contrast.mjs <skin> <role> <pageId> [--theme dark]` → для всех видимых текстовых узлов считает контраст `color` к эффективному фону (первый непрозрачный `background-color` вверх по дереву), печатает нарушения `< 4.5` для основного текста (`--text`) и `< 3` для `--text-muted`/`--text-faint`/крупного текста; exit 1 при нарушениях.
 - `--dynamic` в `shoot.mjs`: на странице `topic` — открыть модальное окно избранного/логина, вызвать `ls.msg.notice('Тест','Тест')` (jquery.notifier), раскрыть `#dropdown-user-menu` (user), нажать «обновить комментарии»; на `topic-add` — фокус в редакторе markitup и ввод в поле тегов для показа автокомплита jQuery UI. Скриншоты с суффиксом `-dyn`.
 
@@ -304,25 +349,25 @@ Expected: FAIL — фон в тёмной теме ещё белый.
 
 - [ ] **Step 3: Проверка**
 
-Run: `./clear-cache.sh && node --test test/theme.test.mjs && node shoot.mjs dark6 --skin desktop --theme dark --dynamic` и для каждой страницы матрицы `node contrast.mjs desktop <role> <page> --theme dark`
-Expected: `dark-bg-applied` PASS; контраст — exit 0; на скриншотах (смотреть все, включая `-dyn`) нет светлых участков, кроме иконок-спрайтов и нарисованных фонов (Task 8).
+Run: `./clear-cache.sh && node --test test/theme.test.mjs && node shoot.mjs dark7 --skin desktop --theme dark --dynamic` и для каждой страницы матрицы `node contrast.mjs desktop <role> <page> --theme dark`
+Expected: `dark-bg-applied` PASS; контраст — exit 0; на скриншотах (смотреть все, включая `-dyn`) нет светлых участков, кроме иконок-спрайтов и нарисованных фонов (Task 9).
 
 - [ ] **Step 4: Регрессия светлой темы и тесты**
 
-Run: `node shoot.mjs t6 --skin desktop && node diff.mjs t4 t6 && node --test test/`
-Expected: 0% отличий от Task 4; PASS.
+Run: `node shoot.mjs t7 --skin desktop && node diff.mjs t5 t7 && node --test test/`
+Expected: 0% отличий от Task 5; PASS.
 
 - [ ] **Step 5: Commit**
 
 ---
 
-### Task 7: Мобильный — тёмная тема
+### Task 8: Мобильный — тёмная тема
 
-Как Task 6 для `mobile-hype-mod`; сторонние переопределения — для `markitup/skins/simple/style.css` и `markitup/sets/default/style.css`; значения тёмных переменных согласованы с десктопными (те же роли — те же цвета), если мобильная светлая палитра не требует иного. Тест `dark-bg-applied` в `test/theme.test.mjs` расширить на `skin='mobile'` (сначала FAIL). Проверка: `shoot.mjs dark7 --skin mobile --theme dark --dynamic`, `contrast.mjs mobile …`, `diff.mjs t5 t7` для светлой, `node --test test/`.
+Как Task 7 для `mobile-hype-mod`; сторонние переопределения — для `markitup/skins/simple/style.css` и `markitup/sets/default/style.css`; значения тёмных переменных согласованы с десктопными (те же роли — те же цвета), если мобильная светлая палитра не требует иного. Тест `dark-bg-applied` в `test/theme.test.mjs` расширить на `skin='mobile'` (сначала FAIL). Проверка: `shoot.mjs dark8 --skin mobile --theme dark --dynamic`, `contrast.mjs mobile …`, `diff.mjs t6 t8` для светлой, `node --test test/`.
 
 ---
 
-### Task 8: Спрайты и нарисованные фоны
+### Task 9: Спрайты и нарисованные фоны
 
 **Files:**
 - Create: `tools/display-settings/darken-sprite.mjs`
@@ -340,17 +385,17 @@ Expected: 0% отличий от Task 4; PASS.
 
 Селекторы для подмены: `grep -rn "icons-synio.png\|icons.png\|icons2-4.png\|icons-white.png" templates/skin/<skin>/css/` — в `theme.css` перечислить те же селекторы с `background-image: url(../images/<name>-dark.png)`.
 
-- [ ] **Step 5: Логотипы и лоадеры** — на скриншотах `dark6`/`dark7` проверить `rndlogo`, `hypelogo5_87x28.png`, `loader.gif`, `update.gif`; при сливании логотипа — подложка/обводка CSS в `theme.css`; GIF с белым фоном — тёмная версия и подмена.
+- [ ] **Step 5: Логотипы и лоадеры** — на скриншотах `dark7`/`dark8` проверить `rndlogo`, `hypelogo5_87x28.png`, `loader.gif`, `update.gif`; при сливании логотипа — подложка/обводка CSS в `theme.css`; GIF с белым фоном — тёмная версия и подмена.
 - [ ] **Step 6: Проверка**
 
-Run: `./clear-cache.sh && node shoot.mjs dark8 --theme dark --dynamic && node shoot.mjs t8 && node diff.mjs t7 t8 && node --test test/`
-Expected: иконки видимы в тёмной теме; светлая — 0% отличий от `t7` (кроме мест замены нарисованных фонов на CSS — занести в отчёт, если видны); PASS.
+Run: `./clear-cache.sh && node shoot.mjs dark9 --theme dark --dynamic && node shoot.mjs t9 && node diff.mjs t8 t9 && node --test test/`
+Expected: иконки видимы в тёмной теме; светлая — 0% отличий от `t8` (кроме мест замены нарисованных фонов на CSS — занести в отчёт, если видны); PASS.
 
 - [ ] **Step 7: Commit**
 
 ---
 
-### Task 9: Крупный шрифт в зоне контента
+### Task 10: Крупный шрифт в зоне контента
 
 **Files:**
 - Modify: CSS обоих скинов — `font-size` и текстовые `line-height` в зоне контента → `calc(Npx * var(--font-scale))`
@@ -376,15 +421,15 @@ test('no-overflow', ...)         // large: в #content нет элементов
 - [ ] **Step 3: Перевести `font-size`/`line-height` в зоне контента на `calc()`** — пофайлово, оба скина. Где шрифт задан у общего предка (например, `body` 12px) и наследуется в контент — масштабировать на корне зоны (`#content`, `#sidebar`, `.modal`), а не у `body`.
 - [ ] **Step 4: Тесты и регрессия**
 
-Run: `./clear-cache.sh && node --test test/ && node shoot.mjs t9 && node diff.mjs t8 t9`
-Expected: PASS; текущий шрифт — 0% отличий от `t8`.
+Run: `./clear-cache.sh && node --test test/ && node shoot.mjs t10 && node diff.mjs t9 t10`
+Expected: PASS; текущий шрифт — 0% отличий от `t9`.
 
-- [ ] **Step 5: Скриншоты крупного режима, осмотр** — `node shoot.mjs large9 --font large` и `node shoot.mjs dlarge9 --font large --theme dark --dynamic`; ничего не наезжает и не обрезается.
+- [ ] **Step 5: Скриншоты крупного режима, осмотр** — `node shoot.mjs large10 --font large` и `node shoot.mjs dlarge10 --font large --theme dark --dynamic`; ничего не наезжает и не обрезается.
 - [ ] **Step 6: Commit**
 
 ---
 
-### Task 10: Финальный проход и подготовка к выкладке
+### Task 11: Финальный проход и подготовка к выкладке
 
 **Files:**
 - Create: `docs/superpowers/reports/display-settings-final.md` (hype-dev-environment)
