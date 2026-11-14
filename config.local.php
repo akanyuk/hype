@@ -77,4 +77,7 @@ $config['sys']['mail']['smtp']['password'] = '';             		// Настрой
 $config['sys']['mail']['smtp']['secure']   = 'ssl';                  	// Настройки SMTP - протокол шифрования: tls, ssl
 $config['sys']['mail']['smtp']['auth']     = true;                   	// Использовать авторизацию при отправке
 
+// Manticore runs in the searchd docker service
+$config['module']['search']['sphinx']['host'] = 'searchd';
+
 return $config;

@@ -35,7 +35,9 @@ services:
       - "1080:80"
 
   searchd:
-    image: manticoresearch/manticore
+    image: manticoresearch/manticore:29.9.0
+    # Newer images default to manticore.conf.sh; our config is plain manticore.conf
+    command: searchd -c /etc/manticoresearch/manticore.conf --nodetach
     volumes:
       - ./docker/manticoresearch:/etc/manticoresearch
       - manticoresearch-storage:/var/lib/manticore
