@@ -95,6 +95,26 @@ for (const skin of SKINS) {
 				}));
 			}
 
+			if (skin === 'mobile') {
+				for (const font of ['normal', 'large']) test(`toggles-pushed-right ${font}`, () => withPage({ skin, role, font }, async (p) => {
+					// Space between the end of "A+" and what follows: the login icon or the header edge
+					const space = await p.evaluate(() => {
+						const font = document.querySelector('#header [data-display-toggle="font"]');
+						const left = font.getBoundingClientRect().left + parseFloat(getComputedStyle(font).paddingLeft);
+						const probe = font.cloneNode(true);
+						probe.style.cssText = 'position:absolute;visibility:hidden;width:max-content;padding:0';
+						font.parentNode.appendChild(probe);
+						const glyphRight = left + probe.getBoundingClientRect().width;
+						probe.remove();
+						const next = font.closest('li').nextElementSibling;
+						const limit = next ? next.getBoundingClientRect().left : document.querySelector('#header').getBoundingClientRect().right;
+						return limit - glyphRight;
+					});
+					// Moved back left by half of the earlier shift to the edge (padding-right 9px)
+					assert.ok(space >= 8 && space <= 10, `space ${space.toFixed(1)}px`);
+				}));
+			}
+
 			test('header-height-same', () => withPage({ skin, role }, async (p) => {
 				const h = await p.$eval('#header', (e) => Math.round(e.getBoundingClientRect().height));
 				assert.equal(h, HEADER_HEIGHT[skin]);
