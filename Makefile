@@ -1,9 +1,15 @@
-.PHONY: all up down help
+RUNTIME_DIRS := tmp logs templates/cache templates/compiled uploads
+
+.PHONY: all up down dirs help
 
 all: up
 
-up: ## Docker compose run
+up: dirs ## Docker compose run
 	docker compose up --build -d
+
+dirs: ## Create writable runtime directories in public_html
+	mkdir -p $(addprefix public_html/,$(RUNTIME_DIRS))
+	chmod 777 $(addprefix public_html/,$(RUNTIME_DIRS))
 
 down: ## Docker compose run
 	docker compose down
