@@ -22,7 +22,7 @@
 
 
 /* Nav Tabs */
-.nav.nav-tabs                  { margin-bottom: 25px; font-size: 13px; }
+.nav.nav-tabs                  { margin-bottom: 25px; font-size: calc(13px * var(--font-scale)); }
 .nav.nav-tabs li               { margin-right: 3px; }
 .nav.nav-tabs li:first-child a { padding-left: 0; }
 .nav.nav-tabs li:last-child a  { padding-right: 0; border: none; }
@@ -42,7 +42,7 @@
 .nav.nav-filter li.active a.new 		{ background: var(--bg-gray-29); }
 .nav.nav-filter li.active a.new:hover 	{ background: var(--bg-gray-36); }
 
-.nav.nav-filter.nav-filter-sub li a 		{ padding: 5px 10px; font-size: 11px; color: var(--text-gray-50); }
+.nav.nav-filter.nav-filter-sub li a 		{ padding: 5px 10px; font-size: calc(11px * var(--font-scale)); color: var(--text-gray-50); }
 .nav.nav-filter.nav-filter-sub li.active a 	{ color: var(--text-gray-100); }
 
 .nav-filter-wrapper { margin-bottom: 40px; }
@@ -50,7 +50,7 @@
 
 /* Nav Main */
 .nav.nav-main 					{ overflow: hidden; height: 30px; }
-.nav.nav-main li 				{ font-size: 13px; height: 30px; line-height: 30px; color: var(--text-gray-80);  }
+.nav.nav-main li 				{ font-size: calc(13px * var(--font-scale)); height: 30px; line-height: calc(30px * var(--font-scale)); color: var(--text-gray-80);  }
 .nav.nav-main li a 				{ color: var(--text-gray-21); padding: 0 10px; height: 30px; text-decoration: underline; }
 .nav.nav-main li a:hover 		{  }
 .nav.nav-main li.active a 		{ text-decoration: none; background: var(--bg-gray-100); color: var(--text-gray-72); }
@@ -87,7 +87,7 @@
 	box-shadow: 0 0 5px var(--shadow-black-0-a20);
 	border-radius: 3px;
 }
-.dropdown-menu li 					{ font-size: 14px; line-height: 1em; }
+.dropdown-menu li 					{ font-size: calc(14px * var(--font-scale)); line-height: 1em; }
 .dropdown-menu li a 				{ display: block; padding: 10px 15px; }
 .dropdown-menu li a:hover 			{ background: var(--bg-gray-98); }
 .dropdown-menu li.active a 			{ color: var(--text-gray-70); }
@@ -126,7 +126,7 @@
 .nav-foldable-wrapper .nav-foldable-trigger.nav-foldable-primary.active:before { background: var(--sprite-icons) -30px -250px no-repeat /* icon: arrow-blue-active.png */; }
 .nav-foldable-wrapper .slide                                     { padding: 5px 0; border: 1px solid var(--border-gray-94); border-top: none; }
 .nav-foldable-wrapper .slide li                                  { padding: 10px 15px; margin: 0; }
-.nav-foldable-wrapper .slide li a                                { display: block; font-size: 17px; text-decoration: underline; color: var(--text-blue-42); }
+.nav-foldable-wrapper .slide li a                                { display: block; font-size: calc(17px * var(--font-scale)); text-decoration: underline; color: var(--text-blue-42); }
 .nav-foldable-wrapper .slide li a:hover,
 .nav-foldable-wrapper .slide li a:active                         {  }
 

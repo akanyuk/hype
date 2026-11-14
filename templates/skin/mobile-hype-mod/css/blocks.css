@@ -7,11 +7,11 @@
 .sidebar-left .block 	{ margin-bottom: 10px; }
 
 .block .block-header 					{ padding: 13px 20px; background: var(--bg-gray-97-4); border-top: 1px solid var(--border-gray-94); position: relative; }
-.block .block-header h3 				{ font-size: 16px; line-height: 1em; font-weight: normal; margin-bottom: 0px; }
+.block .block-header h3 				{ font-size: calc(16px * var(--font-scale)); line-height: 1em; font-weight: normal; margin-bottom: 0px; }
 .block .block-header h3 a 				{ text-decoration: none; color: var(--text-gray-21); }
 .block .block-header h3 a.link-dotted 	{ color: var(--text-blue-40); }
 .block .block-content 					{ padding: 20px; }
-.block footer 							{ margin-top: 15px; font-size: 12px; }
+.block footer 							{ margin-top: 15px; font-size: calc(12px * var(--font-scale)); }
 
 .block .max-height-200 		{ overflow: auto; max-height: 200px; _height: expression( this.scrollHeight > 200 ? "200px" : "auto" ); position: relative; }
 
@@ -33,7 +33,7 @@
 .block.block-type-profile 							{ background: none; border: none; padding: 0; }
 .block.block-type-profile .profile-photo-wrapper 	{ position: relative; min-height: 50px; }
 .block.block-type-profile .profile-photo 			{ vertical-align: top; }
-.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; padding: 0 5px; border-radius: 2px; font-size: 11px; }
+.block.block-type-profile .status 					{ position: absolute; top: 5px; left: 5px; padding: 0 5px; border-radius: 2px; font-size: calc(11px * var(--font-scale)); }
 .block.block-type-profile .status.status-online 	{ background: var(--bg-green-74); color: var(--text-gray-100); }
 .block.block-type-profile .status.status-offline 	{ background: var(--bg-gray-21); color: var(--text-gray-100); opacity: .5; filter: alpha(opacity=50); }
 .block.block-type-profile .upload-photo 			{ padding: 7px 10px 10px; background: var(--bg-gray-97-3); }
@@ -58,6 +58,6 @@
 .block.block-type-talk-search { margin-bottom: 10px; }
 .block.block-type-talk-friends { margin-bottom: 10px; }
 .block-events-date {
-    font-size: 11px;
+    font-size: calc(11px * var(--font-scale));
     color: var(--text-gray-54);
 }

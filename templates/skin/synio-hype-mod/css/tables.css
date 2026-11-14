@@ -31,17 +31,17 @@
 .table.table-blogs .cell-name { padding-left: 3px; }
 .table.table-blogs .cell-name .avatar 	{ float: left; margin-right: 10px; clear: right; }
 .table.table-blogs .cell-name p		 	{ overflow: hidden; margin-bottom: 5px; }
-.table.table-blogs .cell-name p .blog-name	{ font-size: 16px; color: var(--text-blue-42); }
+.table.table-blogs .cell-name p .blog-name	{ font-size: calc(16px * var(--font-scale)); color: var(--text-blue-42); }
 .table.table-blogs .cell-name p i { vertical-align: middle; position: relative; top: -1px }
-.table.table-blogs tbody .cell-rating 	{ width: 70px; font-weight: bold; font-size: 11px; color: var(--text-green-61); }
+.table.table-blogs tbody .cell-rating 	{ width: 70px; font-weight: bold; font-size: calc(11px * var(--font-scale)); color: var(--text-green-61); }
 .table.table-blogs .cell-readers 		{ width: 90px; text-align: center; vertical-align: middle; }
-.table.table-blogs tbody .cell-readers 	{ text-align: center; vertical-align: middle; font-size: 11px; }
+.table.table-blogs tbody .cell-readers 	{ text-align: center; vertical-align: middle; font-size: calc(11px * var(--font-scale)); }
 .table.table-blogs .cell-join 			{ width: 130px; text-align: center; vertical-align: middle; }
 .table.table-blogs .cell-rating 		{ width: 90px; text-align: center; vertical-align: middle; }
 
 /* Table Plugins */
 .table.table-plugins .cell-checkbox 	{ width: 20px; padding: 12px 0 10px 10px; }
-.table.table-plugins h3 				{ font-weight: bold; font-size: 17px; line-height: 20px; margin-bottom: 5px; }
+.table.table-plugins h3 				{ font-weight: bold; font-size: calc(17px * var(--font-scale)); line-height: calc(20px * var(--font-scale)); margin-bottom: 5px; }
 
 /* Table Profile Notes */
 .table.table-profile-notes 					{ border-top: 1px solid var(--border-gray-94); }
@@ -65,13 +65,13 @@
 .table.table-users .cell-name .name		{ margin-top: 2px; }
 .table.table-users .cell-name .name.no-realname		{ margin-top: 11px; }
 .table.table-users .cell-name .username { width: 125px; position: relative; top: 1px; margin-bottom: 3px; }
-.table.table-users .cell-name .realname { font-size: 11px; }
-.table.table-users tbody .cell-date 	{ font-size: 11px; }
+.table.table-users .cell-name .realname { font-size: calc(11px * var(--font-scale)); }
+.table.table-users tbody .cell-date 	{ font-size: calc(11px * var(--font-scale)); }
 .table.table-users .cell-rating			{ text-align: center; width: 70px; }
 .table.table-users .cell-skill 			{ text-align: center; width: 70px; }
 .table.table-users .cell-date 			{ text-align: center; width: 130px; }
-.table.table-users tbody .cell-skill 	{ color: var(--text-blue-57); font-size: 11px; font-weight: bold; }
-.table.table-users tbody .cell-rating	{ color: var(--text-green-61); font-size: 11px; }
+.table.table-users tbody .cell-skill 	{ color: var(--text-blue-57); font-size: calc(11px * var(--font-scale)); font-weight: bold; }
+.table.table-users tbody .cell-rating	{ color: var(--text-green-61); font-size: calc(11px * var(--font-scale)); }
 .table.table-users button				{ float: left; margin-right: 5px; }
 
 /* Table Talk */
@@ -80,9 +80,9 @@
 .table.table-talk .cell-favourite 			{ text-align: center; }
 .table.table-talk tbody .cell-favourite 	{ padding: 17px 0; }
 .table.table-talk .cell-recipients 			{ width: 130px; }
-.table.table-talk tbody .cell-recipients 	{ font-size: 11px; }
+.table.table-talk tbody .cell-recipients 	{ font-size: calc(11px * var(--font-scale)); }
 .table.table-talk tbody .cell-recipients a 	{ color: var(--text-gray-0); }
-.table.table-talk tbody .cell-date 			{ font-size: 11px; width: 115px; }
+.table.table-talk tbody .cell-date 			{ font-size: calc(11px * var(--font-scale)); width: 115px; }
 .table.table-talk tbody .cell-title 		{  }
 .table.table-talk tbody .cell-title a 		{ color: var(--text-blue-42); }
 .table.table-talk tbody .cell-title a:hover	{ color: var(--text-orange-53); }

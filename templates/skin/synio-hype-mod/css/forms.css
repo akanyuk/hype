@@ -30,13 +30,13 @@ textarea { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizi
 select 		{ padding: 4px; border: 1px solid var(--border-gray-88); border-radius: 3px; }
 
 fieldset { margin-bottom: 30px; padding-top: 20px; border-top: 1px solid var(--border-gray-93-2); }
-fieldset legend { color: var(--text-gray-0); font-size: 18px; padding-right: 10px; }
+fieldset legend { color: var(--text-gray-0); font-size: calc(18px * var(--font-scale)); padding-right: 10px; }
 
 form p { margin-bottom: 20px; }
 form label { display: block; margin-bottom: 3px; }
 form .icon-question-sign { cursor: help; }
 
-.note { display: block; margin-top: 3px; font-size: 11px; line-height: 16px; color: var(--text-gray-70); }
+.note { display: block; margin-top: 3px; font-size: calc(11px * var(--font-scale)); line-height: calc(16px * var(--font-scale)); color: var(--text-gray-70); }
 .note.note-header { margin-bottom: 20px; }
 
 .captcha-image { vertical-align: top; }
@@ -56,7 +56,7 @@ dl.form-item dt { float: left; width: 125px; padding-top: 4px; padding-right: 15
 dl.form-item dd { float: left; width: 250px; }
 
 .form-profile { position: relative; }
-.form-profile .avatar-change { position: absolute; top: 20px; right: 20px; font-size: 11px; }
+.form-profile .avatar-change { position: absolute; top: 20px; right: 20px; font-size: calc(11px * var(--font-scale)); }
 .form-profile .avatar-change .avatar { width: 80px; border-radius: 5px; margin-bottom: 10px; background: var(--bg-gray-100); padding: 5px; -webkit-box-shadow: 0 0 5px var(--shadow-black-0-a20); box-shadow: 0 0 5px var(--shadow-black-0-a20); }
 .form-profile .avatar-change img { width: 80px; vertical-align: top; }
 .form-profile .avatar-change a { color: var(--text-blue-51); border-color: var(--border-blue-51); }
@@ -84,13 +84,13 @@ dl.form-item dd { float: left; width: 250px; }
 .validate-error-hide { display: none; }
 .validate-error-show { 	
 	display: block;
-	line-height: 16px;
+	line-height: calc(16px * var(--font-scale));
 	position: relative; 
 	padding: 10px 15px 12px 38px;
 	background: var(--bg-gray-99-2) url(../images/error.png) 15px 12px no-repeat;
 	color: var(--text-gray-23); 
 	margin-top: 13px; 
-	font-size: 12px; 
+	font-size: calc(12px * var(--font-scale)); 
 	border-radius: 3px; 
 	-webkit-box-shadow: 0 1px 5px var(--shadow-green-91) inset; box-shadow: 0 1px 5px var(--shadow-green-91) inset; 
 }

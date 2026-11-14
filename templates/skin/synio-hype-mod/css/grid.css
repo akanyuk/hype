@@ -25,7 +25,7 @@
 #wrapper 	{ overflow: hidden; zoom: 1; padding: 20px 16px 20px 27px; margin-bottom: 60px; background: var(--bg-gray-100) url(../images/sidebar-border.png) 100% 0px repeat-y; border-bottom: 1px solid var(--border-gray-94); -webkit-box-shadow: 0 0 5px var(--shadow-black-0-a5); box-shadow: 0 0 5px var(--shadow-black-0-a5); border-radius: 10px; }
 #content 	{ min-height: 1px; margin-right: 295px; background: var(--bg-gray-100); position: relative; }
 #sidebar	{ float: right; width: 240px; }
-#footer 	{ overflow: hidden; zoom: 1; margin-bottom: 20px; padding: 0 0 50px 30px; font-size: 11px; }
+#footer 	{ overflow: hidden; zoom: 1; margin-bottom: 20px; padding: 0 0 50px 30px; font-size: calc(11px * var(--font-scale)); }
 
 
 #wrapper.no-sidebar				{ background-image: none; }

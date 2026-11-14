@@ -2,7 +2,7 @@
 	ФОРМАТИРОВАННЫЙ ТЕКСТ
 ------------------------------------------------------------------- */
 
-.text    { font-size: 11px; font-family: Verdana, sans-serif; line-height: 1.6em; overflow: hidden; zoom: 1; }
+.text    { font-size: calc(11px * var(--font-scale)); font-family: Verdana, sans-serif; line-height: 1.6em; overflow: hidden; zoom: 1; }
 
 .text a  { text-decoration: underline; }
 
@@ -10,9 +10,9 @@
 .text h5,
 .text h6 { font-family: 'Open Sans', sans-serif; margin-bottom: 7px; font-weight: 600; }
 
-.text h4 { font-size: 17px; }
-.text h5 { font-size: 15px; }
-.text h6 { font-size: 14px; }
+.text h4 { font-size: calc(17px * var(--font-scale)); }
+.text h5 { font-size: calc(15px * var(--font-scale)); }
+.text h6 { font-size: calc(14px * var(--font-scale)); }
 
 .text p               { margin-bottom: 1em; }
 .text abbr[title]     { border-bottom: 1px dotted; }
@@ -28,7 +28,7 @@
 	padding: 9px 12px;
 	border: 1px dotted var(--border-cyan-76);
 	background: var(--bg-gray-98-2);
-	font-size: 11px;
+	font-size: calc(11px * var(--font-scale));
 	line-height: 1.6em;
 	overflow: auto;
 	width: 100%;

@@ -9,7 +9,7 @@
 .blog-mini { 
 	padding: 15px;
 	margin-bottom: 17px;
-	font-size: 11px;
+	font-size: calc(11px * var(--font-scale));
 	overflow: hidden; zoom: 1;
 	border-radius: 5px;
 
@@ -42,16 +42,16 @@
 
 /* Header */
 .blog .blog-header 			{ position: relative; padding: 10px 0 13px 78px; border-bottom: 1px solid var(--border-gray-94-2); min-height: 16px; }
-.blog .blog-header h2 		{ font-size: 20px; font-weight: bold; line-height: 1em; margin-top: 3px; margin-bottom: 7px; }
+.blog .blog-header h2 		{ font-size: calc(20px * var(--font-scale)); font-weight: bold; line-height: 1em; margin-top: 3px; margin-bottom: 7px; }
 .blog .blog-header h2 i 	{ position: relative; top: 5px; }
-.blog .blog-header .close	{ position: absolute; top: 0; right: 0; font-size: 11px; cursor: pointer; }
+.blog .blog-header .close	{ position: absolute; top: 0; right: 0; font-size: calc(11px * var(--font-scale)); cursor: pointer; }
 .blog .blog-header .close i	{ margin-left: 5px; }
 .blog .blog-header .close a	{ color: var(--text-blue-51); border-color: var(--border-blue-51); }
 .blog .blog-header .close a:hover { color: var(--text-orange-53); border-color: var(--border-orange-53); }
 .blog .blog-header .avatar 	{ position: absolute; top: -10px; left: 7px; width: 39px; height: 39px; }
 
-.blog .blog-header .vote-label	{ text-transform: uppercase; text-align: right; font-size: 11px; color: var(--text-gray-70); }
-.blog .blog-header .count 		{ font-size: 34px; line-height: 1em; font-weight: bold; text-align: right; }
+.blog .blog-header .vote-label	{ text-transform: uppercase; text-align: right; font-size: calc(11px * var(--font-scale)); color: var(--text-gray-70); }
+.blog .blog-header .count 		{ font-size: calc(34px * var(--font-scale)); line-height: 1em; font-weight: bold; text-align: right; }
 
 .blog .blog-header .vote 									{ position: absolute; top: 15px; right: 15px; }
 .blog .blog-header .vote .vote-count 						{ padding-left: 25px; display: block; color: var(--text-gray-21); }
@@ -80,7 +80,7 @@
 
 
 /* Footer */
-.blog .blog-footer { padding: 22px 26px; background: var(--bg-gray-97-3); font-size: 11px; }
+.blog .blog-footer { padding: 22px 26px; background: var(--bg-gray-97-3); font-size: calc(11px * var(--font-scale)); }
 .blog .blog-footer button { margin-right: 10px; }
 .blog .blog-footer a { color: var(--text-blue-51); }
 .blog .blog-footer .admin { float: right; }

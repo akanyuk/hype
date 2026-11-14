@@ -4,8 +4,8 @@
 
 /* Блок с комментариями */
 .comments-header                     { margin-bottom: 20px; }
-.comments-header h3                  { font-size: 19px; margin-bottom: 5px; font-weight: 600; }
-.comments-header .comments-subscribe { color: var(--text-gray-53); font-size: 11px; }
+.comments-header h3                  { font-size: calc(19px * var(--font-scale)); margin-bottom: 5px; font-weight: 600; }
+.comments-header .comments-subscribe { color: var(--text-gray-53); font-size: calc(11px * var(--font-scale)); }
 .comments-header .comments-subscribe input { top: 3px; }
 
 .comments                            { margin-bottom: 30px; }
@@ -14,7 +14,7 @@
 .comment-wrapper .comment-wrapper    { padding-left: 20px; }
 
 .comment-preview                     { padding: 5px 10px 6px; margin-bottom: 10px; background: var(--bg-gray-98); border: 1px solid var(--border-gray-94); border-radius: 3px; }
-.comment-preview                     { font-size: 13px; line-height: 18px; }
+.comment-preview                     { font-size: calc(13px * var(--font-scale)); line-height: calc(18px * var(--font-scale)); }
 
 .comment-new-mark                    { display: none; position: relative; top: 1px; margin-left: 5px; background: var(--bg-blue-65); width: 10px; height: 10px; border-radius: 50%; }
 
@@ -61,8 +61,8 @@
 	margin-bottom: 7px;
 	padding-left: 6px;
 	padding-right: 30px;
-	font-size: 11px;
-	line-height: 13px;
+	font-size: calc(11px * var(--font-scale));
+	line-height: calc(13px * var(--font-scale));
 }
 .comment .comment-info.comment-topic-author                    {
 	background: var(--bg-green-98-2);
@@ -76,13 +76,13 @@
 .comment .comment-info li:first-child                          { margin-bottom: 3px; }
 .comment .comment-info li a                                    { text-decoration: none; }
 .comment .comment-info li.comment-author a                     { color: var(--text-blue-33); text-decoration: underline; }
-.comment .comment-info li.comment-author .comment-topic-author { background: var(--bg-yellow-69); color: var(--text-gray-100); font-size: 11px; border-radius: 3px; padding: 1px 7px; margin-right: 5px; }
+.comment .comment-info li.comment-author .comment-topic-author { background: var(--bg-yellow-69); color: var(--text-gray-100); font-size: calc(11px * var(--font-scale)); border-radius: 3px; padding: 1px 7px; margin-right: 5px; }
 .comment .comment-info li.comment-date a                       { color: var(--text-gray-55); }
 .comment .comment-info li.goto-comment-child                   { display: none; }
 
 
 /* Vote */
-.vote-result-comment       { width: auto; position: absolute; top: 18px; right: 0; margin: 0; font-weight: bold; font-size: 11px; }
+.vote-result-comment       { width: auto; position: absolute; top: 18px; right: 0; margin: 0; font-weight: bold; font-size: calc(11px * var(--font-scale)); }
 
 .vote-result-comment.voted                   { padding-right: 18px; }
 .vote-result-comment.voted:before            { content: ""; position: absolute; top: 2px; right: 0; width: 14px; height: 14px; }
@@ -97,12 +97,12 @@
 
 
 /* Content */
-.comment .comment-content.text            { font-size: 11px; line-height: 15px; }
+.comment .comment-content.text            { font-size: calc(11px * var(--font-scale)); line-height: calc(15px * var(--font-scale)); }
 .comment .comment-content.text blockquote { background: var(--bg-gray-100); border-color: var(--border-gray-82); padding: 5px 10px; margin-bottom: 5px; }
 
 
 /* Actions */
-.comment .comment-actions                      { padding-top: 5px; font-size: 11px; font-family: Verdana; }
+.comment .comment-actions                      { padding-top: 5px; font-size: calc(11px * var(--font-scale)); font-family: Verdana; }
 .comment .comment-actions li                   { float: left; margin-right: 20px; margin-bottom: 5px; }
 .comment .comment-actions li:last-child        { margin-right: 0; }
 .comment .comment-actions li.comment-favourite { cursor: pointer; }
@@ -112,7 +112,7 @@
 
 
 /* Форма комментирования */
-.reply-header { font-size: 20px; line-height: 1.3em; margin-bottom: 15px; }
+.reply-header { font-size: calc(20px * var(--font-scale)); line-height: 1.3em; margin-bottom: 15px; }
 
 .reply {
 	margin: 10px 0;

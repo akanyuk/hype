@@ -4,8 +4,8 @@
 
 /* Блок с комментариями */
 .comments-header { margin-bottom: 10px; position: relative; }
-.comments-header h3 { font-size: 27px; margin-bottom: 5px; }
-.comments-header .subscribe { position: absolute; top: 15px; right: 0; font-size: 11px; color: var(--text-gray-55); }
+.comments-header h3 { font-size: calc(27px * var(--font-scale)); margin-bottom: 5px; }
+.comments-header .subscribe { position: absolute; top: 15px; right: 0; font-size: calc(11px * var(--font-scale)); color: var(--text-gray-55); }
 .comments-header .subscribe input { top: 2px; }
 
 .comments { margin-bottom: 30px; }
@@ -13,7 +13,7 @@
 .comment-wrapper { position: relative; }
 .comment-wrapper .comment-wrapper { padding-left: 40px; }
 
-.comment-preview { padding: 5px 10px 6px; margin-bottom: 10px; background: var(--bg-gray-98-3); border: 1px solid var(--border-gray-94); border-radius: 3px; font-size: 13px; line-height: 1.6em; }
+.comment-preview { padding: 5px 10px 6px; margin-bottom: 10px; background: var(--bg-gray-98-3); border: 1px solid var(--border-gray-94); border-radius: 3px; font-size: calc(13px * var(--font-scale)); line-height: 1.6em; }
 
 
 /* Комментарий */
@@ -31,7 +31,7 @@
 .comments.comment-list .comment .comment-info li.vote .vote-count { margin-right: 0; }
 .comments.comment-list .comment .comment-content:after { top: -12px; left: 25px; border-color: transparent transparent var(--border-gray-93); }
 .comments.comment-list .comment .comment-content:before { top: -11px; left: 25px; border-color: transparent transparent var(--border-gray-100); }
-.comments.comment-list .comment-path { font-size: 11px; color: var(--text-blue-73); }
+.comments.comment-list .comment-path { font-size: calc(11px * var(--font-scale)); color: var(--text-blue-73); }
 .comments.comment-list .comment-path .blog-name,
 .comments.comment-list .comment-path .comment-path-comments { color: var(--text-gray-0); }
 .comments.comment-list .comment-path .comment-path-topic { color: var(--text-blue-42); }
@@ -66,7 +66,7 @@
 
 
 /* Info Block */
-.comment .comment-info { padding: 0 70px 7px 0; line-height: 12px; position: relative; top: -2px; overflow: hidden; zoom: 1; font-size: 11px; }
+.comment .comment-info { padding: 0 70px 7px 0; line-height: calc(12px * var(--font-scale)); position: relative; top: -2px; overflow: hidden; zoom: 1; font-size: calc(11px * var(--font-scale)); }
 .comment .comment-info li { float: left; height: 18px; padding-top: 3px; margin-right: 13px; }
 .comment .comment-info li a {  }
 .comment .comment-info li a.link-dotted 		{ color: var(--text-blue-51); text-decoration: none; border-bottom: 1px dotted var(--border-blue-51); }
@@ -88,7 +88,7 @@
 .comment .comment-info li.comment-favourite { position: relative; top: 1px; }
 .comment .comment-info li.comment-link { position: relative; top: 1px; }
 .comment .comment-info li.goto a { color: var(--text-blue-73); text-decoration: none; }
-.comment .comment-info li .favourite-count { font-size: 10px; color: var(--text-blue-73); position: relative; top: -2px; }
+.comment .comment-info li .favourite-count { font-size: calc(10px * var(--font-scale)); color: var(--text-blue-73); position: relative; top: -2px; }
 
 
 .comment .comment-info li.vote 					{ position: absolute; top: 0; right: 0; margin: 0; }
@@ -115,7 +115,7 @@
 
 /* Content */
 .comment .comment-content { margin-bottom: 10px; border: 1px solid var(--border-gray-93); padding: 9px 10px 10px; border-radius: 3px; position: relative; }
-.comment .comment-content.text { font-size: 13px; }
+.comment .comment-content.text { font-size: calc(13px * var(--font-scale)); }
 .comment .comment-content.text blockquote { background: var(--bg-gray-100); border-color: var(--border-gray-82); padding: 5px 10px; margin-bottom: 5px; }
 .comment .comment-content:after { display: block; content: ""; position: absolute; bottom: -12px; left: 10px; width: 0; height: 0; border-width: 6px; border-color: var(--border-gray-93) transparent transparent; border-style: solid; }
 .comment .comment-content:before { display: block; content: ""; position: absolute; bottom: -11px; left: 10px; width: 0; height: 0; border-width: 6px; border-color: var(--border-gray-100) transparent transparent; border-style: solid; z-index: 10; }
@@ -126,7 +126,7 @@
 
 
 /* Форма комментирования */
-.reply-header { font-size: 20px; line-height: 1.3em; margin-bottom: 15px; }
+.reply-header { font-size: calc(20px * var(--font-scale)); line-height: 1.3em; margin-bottom: 15px; }
 
 .reply { background: var(--bg-gray-98-2); padding: 15px; border-radius: 5px; }
 .reply textarea { height: 100px; }

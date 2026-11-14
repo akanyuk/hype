@@ -20,20 +20,20 @@
 .wall-item-wrapper:last-child 	{ border-bottom:none; }
 
 .wall-item .avatar 							{ width: 40px; height: 40px; position: absolute; top: 0; left: 0; }
-.wall-item .info 							{ color: var(--text-gray-78); font-size: 11px; line-height: 1em; margin-bottom: 8px; }
+.wall-item .info 							{ color: var(--text-gray-78); font-size: calc(11px * var(--font-scale)); line-height: 1em; margin-bottom: 8px; }
 .wall-item .info a 							{ color: var(--text-blue-42); }
 .wall-item .info .date 						{ color: var(--text-gray-54); }
 .wall-item .actions.wall-item-actions 		{ margin-top: 5px; margin-bottom: 0; }
 .wall-item .actions.wall-item-actions a 	{ color: var(--text-blue-51); border-color: var(--border-blue-51); }
 
-.wall-item-replies 			{ padding: 4px 5px 2px; background: var(--bg-gray-99-2); position: relative; color: var(--text-gray-23); margin-top: 15px; margin-bottom: 5px; font-size: 11px; border-radius: 5px; -webkit-box-shadow: 0 2px 4px var(--shadow-green-91) inset; box-shadow: 0 2px 4px var(--shadow-green-91) inset; }
+.wall-item-replies 			{ padding: 4px 5px 2px; background: var(--bg-gray-99-2); position: relative; color: var(--text-gray-23); margin-top: 15px; margin-bottom: 5px; font-size: calc(11px * var(--font-scale)); border-radius: 5px; -webkit-box-shadow: 0 2px 4px var(--shadow-green-91) inset; box-shadow: 0 2px 4px var(--shadow-green-91) inset; }
 .wall-item-replies:after 	{ display: block; content: ""; position: absolute; top: -12px; left: 15px; width: 0; height: 0; border-width: 6px; border-color: transparent transparent var(--border-green-94) transparent; border-style: solid; }
 
-.wall-item-reply 						{ padding: 4px 0 8px 40px; margin: 0 7px; position: relative; font-size: 11px; border-bottom: 1px solid var(--border-green-93); border-top: 1px solid var(--border-gray-100); }
+.wall-item-reply 						{ padding: 4px 0 8px 40px; margin: 0 7px; position: relative; font-size: calc(11px * var(--font-scale)); border-bottom: 1px solid var(--border-green-93); border-top: 1px solid var(--border-gray-100); }
 .wall-item-reply:first-child 			{ border-top: none; padding-top: 0; margin-top: 3px; }
 .wall-item-reply:first-child .avatar 	{ top: 4px; }
 .wall-item-reply:last-child 			{ border-bottom: none; }
-.wall-item-reply .text					{ font-size: 11px; }
+.wall-item-reply .text					{ font-size: calc(11px * var(--font-scale)); }
 .wall-item-reply .avatar 				{ position: absolute; top: 8px; left: 0; width: 30px; height: 30px; }
 .wall-item-reply .actions 				{ margin-bottom: 0; }
 .wall-item-reply .actions .date 		{ color: var(--text-gray-54); }
@@ -47,7 +47,7 @@
 	text-decoration: none; 
 	text-align: center;
 	padding: 7px 0; 
-	font-size: 11px; 
+	font-size: calc(11px * var(--font-scale)); 
 	margin-bottom: 10px; 
 	color: var(--text-green-56);
 	border: 1px solid var(--border-green-92-2);
@@ -66,4 +66,4 @@
 .wall-more.loader 					{ background: var(--bg-green-96-2) url(../images/loader.gif) 50% 50% no-repeat; }
 .wall-more.loader .wall-more-inner 	{ visibility: hidden; }
 
-.wall-note h3 { font-size: 15px; margin-bottom: 20px; font-family: Verdana, sans-serif; }
+.wall-note h3 { font-size: calc(15px * var(--font-scale)); margin-bottom: 20px; font-family: Verdana, sans-serif; }

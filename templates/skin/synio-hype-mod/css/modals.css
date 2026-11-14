@@ -28,7 +28,7 @@
 }
 .modal .close:hover { background-position: -131px -55px; }
 .modal .modal-header 		{ padding: 15px 30px 0; }
-.modal .modal-header h3 	{ font-size: 20px; font-weight: bold; margin-right: 20px; }
+.modal .modal-header h3 	{ font-size: calc(20px * var(--font-scale)); font-weight: bold; margin-right: 20px; }
 .modal .modal-content 		{ padding: 30px 30px; }
 
 .jqmOverlay { background-color: var(--bg-gray-0); }
@@ -42,7 +42,7 @@
 .modal.modal-login .nav { margin-bottom: 30px; }
 .modal.modal-login .modal-header { margin-bottom: 0; }
 .modal.modal-login .modal-content { padding-top: 15px; }
-.modal.modal-login .remember-label { font-size: 11px; color: var(--text-gray-48); }
+.modal.modal-login .remember-label { font-size: calc(11px * var(--font-scale)); color: var(--text-gray-48); }
 .modal.modal-login .remember-label input { top: 2px; }
 .modal.modal-login .icon-question-sign { position: relative; top: -3px; }
 .modal.modal-login .icon-ok-green { position: relative; top: -1px; }
@@ -54,7 +54,7 @@
 .modal.modal-write { width: 620px; margin-left: -310px; top: 70px; background: var(--bg-gray-94-2); }
 .modal.modal-write .modal-content { padding: 20px 10px 20px; *padding: 20px 10px 25px; }
 .modal.modal-write .write-list { *overflow: hidden; *zoom: 1; }
-.modal.modal-write .write-list li { width: 125px; margin: 0 10px 20px; font-size: 19px; font-family: 'PT Sans', sans-serif; text-align: center; overflow: hidden; display: inline-table; *float: left; }
+.modal.modal-write .write-list li { width: 125px; margin: 0 10px 20px; font-size: calc(19px * var(--font-scale)); font-family: 'PT Sans', sans-serif; text-align: center; overflow: hidden; display: inline-table; *float: left; }
 .modal.modal-write .write-list li a { color: var(--text-blue-51); }
 .modal.modal-write .write-list li:hover a { color: var(--text-blue-42); }
 .modal.modal-write .write-list li .write-item-image { display: block; margin: 0 auto; width: 115px; height: 115px; border-radius: 3px; text-align: center; background: url(../images/write.png) no-repeat; margin-bottom: 0; }
