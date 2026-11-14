@@ -117,9 +117,6 @@ h2.header-table span { color: var(--text-gray-63); }
 /* Футер
 ---------------------------------------------------- */
 #footer .copyright { float: right; width: 255px; }
-#footer .copyright .design-by { overflow: hidden; line-height: calc(15px * var(--font-scale)); margin-top: 30px; }
-#footer .copyright .design-by img { float: left; margin-right: 10px; margin-top: 3px; }
-#footer .copyright .design-by div { font-size: calc(10px * var(--font-scale)); color: var(--text-gray-60); margin-top: 1px; }
 #footer a { color: var(--text-gray-0); }
 #footer a:hover { color: var(--text-gray-21); }
 #footer .footer-list { float: left; width: 138px; padding-right: 20px; }

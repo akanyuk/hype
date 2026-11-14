@@ -22,13 +22,9 @@
 				</ul>
 				
 				<div class="copyright">
-					&copy; {cfg name='view.name'}
-					
-					<br />
-					<br />
-				
 					{hook run='copyright'}<br />
-					Дизайн от <a href="http://designmobile.ru">DesignMobile</a>
+					Design by DesignMobile<br />
+					<a href="https://github.com/akanyuk/hype">Sources</a>
 				</div>
 			</div>
 			

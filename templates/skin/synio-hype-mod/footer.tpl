@@ -41,13 +41,9 @@
 		</ul>
 	
 		<div class="copyright">
-			{hook run='copyright'}
-			
-			<div class="design-by">
-				<img src="{cfg name='path.static.skin'}/images/xeoart.png" alt="xeoart" />
-				Design by <a href="http://xeoart.com">xeoart</a>
-				<div>2012</div>
-			</div>
+			<div>{hook run='copyright'}</div>
+			<div>Design by xeoart</div>
+			<div><a href="https://github.com/akanyuk/hype">Sources</a></div>
 		</div>
 		
 		{hook run='footer_end'}
