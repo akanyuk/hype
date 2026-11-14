@@ -6,8 +6,10 @@ let browser;
 before(async () => { browser = await launch(); });
 after(async () => { await browser?.close(); });
 
-// Large font factor (theme.css --font-scale-large)
+// Large font factors (theme.css): --font-scale-large for the content zone,
+// --font-scale-text-large for the main text (topic body, comments)
 const LARGE = 1.35;
+const LARGE_TEXT = 1.6;
 const TOPIC = '/blog/dev/1092.html';
 const FIXED = {
 	desktop: ['#header', '#nav-main', '#header .auth', '#dropdown-user', '.nav-pills', '.vote', '.vote-count', '#footer'],
@@ -22,8 +24,10 @@ async function measure(skin, role, font, path) {
 		const box = (sel) => { const e = document.querySelector(sel); if (!e) return null; const b = e.getBoundingClientRect(); return [Math.round(b.width), Math.round(b.height)]; };
 		return {
 			topic: fs('.topic-content'),
-			comment: fs('.comment-content .text, .comment-content'),
+			comment: fs('.comment-content .text, .comment-content.text'),
 			sidebar: fs('#sidebar .block-content, #sidebar .block'),
+			title: fs('.topic-title'),
+			info: fs('.topic-info'),
 			fixed: Object.fromEntries(fixed.map((s) => [s, { fs: fs(s), box: box(s) }])),
 		};
 	}, FIXED[skin]);
@@ -40,9 +44,14 @@ for (const skin of SKINS) {
 				large = await measure(skin, role, 'large', TOPIC);
 			});
 
-			test('content-scaled', () => {
-				assert.ok(Math.abs(large.topic / normal.topic - LARGE) < 0.01, `topic ${normal.topic} → ${large.topic}`);
-				assert.ok(Math.abs(large.comment / normal.comment - LARGE) < 0.01, `comment ${normal.comment} → ${large.comment}`);
+			test('main-text-scaled', () => {
+				assert.ok(Math.abs(large.topic / normal.topic - LARGE_TEXT) < 0.01, `topic ${normal.topic} → ${large.topic}`);
+				assert.ok(Math.abs(large.comment / normal.comment - LARGE_TEXT) < 0.01, `comment ${normal.comment} → ${large.comment}`);
+			});
+
+			test('other-content-scaled', () => {
+				assert.ok(Math.abs(large.title / normal.title - LARGE) < 0.01, `title ${normal.title} → ${large.title}`);
+				assert.ok(Math.abs(large.info / normal.info - LARGE) < 0.01, `info ${normal.info} → ${large.info}`);
 			});
 
 			if (skin === 'desktop') {

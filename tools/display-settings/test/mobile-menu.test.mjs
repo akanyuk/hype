@@ -19,6 +19,12 @@ const ITEMS = [
 
 for (const role of ['guest', 'user']) {
 	describe(role, () => {
+		test('index-menu-without-discussed', () => withPage({ role }, async (p) => {
+			const links = await p.$$eval('#nav .nav-pills a', (as) => as.map((a) => a.getAttribute('href')));
+			assert.ok(links.length > 0, 'index menu is present');
+			assert.deepEqual(links.filter((h) => h.includes('/discussed')), []);
+		}));
+
 		test('header-icons-moved', () => withPage({ role }, async (p) => {
 			const found = await p.evaluate(() => ['.icon-stream-lg', '.icon-news-lg', '#item-search']
 				.filter((s) => document.querySelector(`#header ${s}`)));

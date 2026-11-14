@@ -3,6 +3,8 @@
 :root {
 	--font-scale: 1;
 	--font-scale-large: 1.35;
+	/* Main text (topic body, comments) grows more than the rest of the content */
+	--font-scale-text-large: 1.6;
 	--sprite-icons: url(../images/icons.png);
 	--sprite-icons2-4: url(../images/icons2-4.png);
 	--bg-header: #000000;
@@ -19,6 +21,10 @@ html[data-theme="dark"] {
 
 html[data-font="large"] {
 	--font-scale: var(--font-scale-large);
+}
+
+html[data-font="large"] .text {
+	--font-scale: var(--font-scale-text-large);
 }
 
 /* Large font: text in the content zone scales (its rules use calc(Npx * var(--font-scale))).

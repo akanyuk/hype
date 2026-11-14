@@ -7,7 +7,6 @@
 		{*if $iCountTopicsNew>0}
 			<li><a href="{router page='index'}new/" title="{$aLang.blog_menu_top_period_24h}">{$aLang.blog_menu_all_new_24h} ({$iCountTopicsNew})</a></li>
 		{/if*}
-		<li {if $sMenuSubItemSelect=='discussed'}class="active"{/if}><a href="{router page='index'}discussed/">{$aLang.blog_menu_all_discussed}</a></li>
 		<li {if $sMenuSubItemSelect=='top'}class="active"{/if}><a href="{router page='index'}top/">{$aLang.blog_menu_all_top}</a></li>
 	
 		{*if $oUserCurrent}
