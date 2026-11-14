@@ -2,12 +2,17 @@
 
 :root {
 	--font-scale: 1;
+	--sprite-icons: url(../images/icons.png);
+	--sprite-icons2-4: url(../images/icons2-4.png);
 	--bg-header: #000000;
 }
 
 html[data-theme="dark"] {
 	/* The header is black in both themes */
 	--bg-header: #000000;
+	/* Sprites with dark gray glyphs get lightened copies (tools/display-settings/darken-sprite.mjs) */
+	--sprite-icons: url(../images/icons-dark.png);
+	--sprite-icons2-4: url(../images/icons2-4-dark.png);
 	color-scheme: dark;
 }
 

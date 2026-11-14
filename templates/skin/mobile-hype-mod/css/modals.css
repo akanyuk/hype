@@ -25,7 +25,7 @@
 	right: 14px; 
 	width: 14px; 
 	height: 14px;
-	background: url(../images/icons.png) -312px 0 no-repeat;
+	background: var(--sprite-icons) -312px 0 no-repeat;
 	opacity: .3;
 	filter: alpha(opacity=30);
 }

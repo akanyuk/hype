@@ -86,8 +86,8 @@
 
 .vote-result-comment.voted                   { padding-right: 18px; }
 .vote-result-comment.voted:before            { content: ""; position: absolute; top: 2px; right: 0; width: 14px; height: 14px; }
-.vote-result-comment.voted.voted-up:before   { background: url(../images/icons.png) -28px -213px no-repeat /* icon: voted-up-comment.png */; }
-.vote-result-comment.voted.voted-down:before { background: url(../images/icons.png) -14px -213px no-repeat /* icon: voted-down-comment.png */; }
+.vote-result-comment.voted.voted-up:before   { background: var(--sprite-icons) -28px -213px no-repeat /* icon: voted-up-comment.png */; }
+.vote-result-comment.voted.voted-down:before { background: var(--sprite-icons) -14px -213px no-repeat /* icon: voted-down-comment.png */; }
 
 .vote-result-comment.vote-count-negative { color: var(--text-orange-51); }
 .vote-result-comment.vote-count-positive { color: var(--text-green-51); }

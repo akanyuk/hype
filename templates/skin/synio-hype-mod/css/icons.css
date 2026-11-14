@@ -19,7 +19,7 @@
 	width: 14px;
 	height: 14px;
 	line-height: 14px;
-	background: url(../images/icons.png) no-repeat;
+	background: var(--sprite-icons) no-repeat;
 }
 [class^="icon-synio-"],
 [class*=" icon-synio-"]  { 

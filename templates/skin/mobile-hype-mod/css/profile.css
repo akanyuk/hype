@@ -47,8 +47,8 @@
 .profile-contacts                          { overflow: hidden; padding-top: 5px; }
 .profile-contacts li                       { float: left; margin-right: 10px; margin-bottom: 13px; }
 .profile-contacts li a                     { display: block; width: 30px; height: 30px; text-indent: -9999px; }
-.profile-contacts li                       { background: url(../images/icons.png) -150px -82px no-repeat /* icon: contact-default.png */; }
-.profile-contacts li.contact-vkontakte     { background: url(../images/icons.png) -270px -82px no-repeat /* icon: contact-vkontakte.png */; }
-.profile-contacts li.contact-twitter       { background: url(../images/icons.png) -240px -82px no-repeat /* icon: contact-twitter.png */; }
-.profile-contacts li.contact-odnoklassniki { background: url(../images/icons.png) -210px -82px no-repeat /* icon: contact-odnoklassniki.png */; }
-.profile-contacts li.contact-facebook      { background: url(../images/icons.png) -180px -82px no-repeat /* icon: contact-facebook.png */; }
+.profile-contacts li                       { background: var(--sprite-icons) -150px -82px no-repeat /* icon: contact-default.png */; }
+.profile-contacts li.contact-vkontakte     { background: var(--sprite-icons) -270px -82px no-repeat /* icon: contact-vkontakte.png */; }
+.profile-contacts li.contact-twitter       { background: var(--sprite-icons) -240px -82px no-repeat /* icon: contact-twitter.png */; }
+.profile-contacts li.contact-odnoklassniki { background: var(--sprite-icons) -210px -82px no-repeat /* icon: contact-odnoklassniki.png */; }
+.profile-contacts li.contact-facebook      { background: var(--sprite-icons) -180px -82px no-repeat /* icon: contact-facebook.png */; }

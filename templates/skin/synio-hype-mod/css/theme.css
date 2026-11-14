@@ -2,12 +2,15 @@
 
 :root {
 	--font-scale: 1;
+	--sprite-icons: url(../images/icons.png);
 	--bg-header: #000000;
 }
 
 html[data-theme="dark"] {
 	/* The header is black in both themes */
 	--bg-header: #000000;
+	/* Sprites with dark gray glyphs get lightened copies (tools/display-settings/darken-sprite.mjs) */
+	--sprite-icons: url(../images/icons-dark.png);
 	color-scheme: dark;
 }
 
@@ -494,6 +497,15 @@ html[data-theme="dark"] {
 	--text-yellow-89: #f9de7e;
 }
 /* dark-tokens:end */
+
+/* Light-colored background images, redrawn with CSS in the dark theme only
+   (the light theme keeps the original images pixel for pixel) */
+html[data-theme="dark"] .block .block-header.sep { background: linear-gradient(var(--border-gray-94), var(--border-gray-94)) 0 100% / 242px 1px no-repeat; }
+html[data-theme="dark"] #wrapper { background-image: linear-gradient(var(--border-gray-94), var(--border-gray-94)); background-size: 1px 100%; background-position: right 276px top 0; background-repeat: no-repeat; }
+html[data-theme="dark"] .block.block-type-blogs .block-blog-list li,
+html[data-theme="dark"] .blog-info li,
+html[data-theme="dark"] .profile-dotted-list li,
+html[data-theme="dark"] .registration-form dl.form-item dd .form-item-help.active { background-image: linear-gradient(to right, var(--border-gray-90) 50%, transparent 50%); background-size: 2px 1px; }
 
 /* Third-party styles from engine/lib/external (not edited there) */
 
