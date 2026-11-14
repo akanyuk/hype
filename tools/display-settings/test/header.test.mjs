@@ -42,6 +42,14 @@ for (const skin of SKINS) {
 				assert.deepEqual(font, ['large', 'true', 'Обычный шрифт']);
 			}));
 
+			// Both toggles show the current state: sun in the light theme, moon in the dark one (like "A"/"A+")
+			for (const [theme, icon] of [['light', 'sun'], ['dark', 'moon']]) test(`theme-icon-shows-current ${theme}`, () => withPage({ skin, role, theme }, async (p) => {
+				const shown = await p.$$eval('#header [data-display-toggle="theme"] svg', (svgs) => svgs
+					.filter((s) => getComputedStyle(s).display !== 'none')
+					.map((s) => s.getAttribute('class').replace('display-icon-', '')));
+				assert.deepEqual(shown, [icon]);
+			}));
+
 			test('header-no-overlap', () => withPage({ skin, role }, async (p) => {
 				const overlaps = await p.evaluate((skin, role, boxSrc) => {
 					const box = new Function(`return ${boxSrc}`)();

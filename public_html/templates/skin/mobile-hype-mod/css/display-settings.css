@@ -52,12 +52,13 @@
     fill: currentColor;
 }
 
-.display-toggle .display-icon-sun,
-html[data-theme="dark"] .display-toggle .display-icon-moon {
+/* The icon shows the current theme, like "A"/"A+" shows the current size */
+.display-toggle .display-icon-moon,
+html[data-theme="dark"] .display-toggle .display-icon-sun {
     display: none;
 }
 
-html[data-theme="dark"] .display-toggle .display-icon-sun {
+html[data-theme="dark"] .display-toggle .display-icon-moon {
     display: block;
 }
 

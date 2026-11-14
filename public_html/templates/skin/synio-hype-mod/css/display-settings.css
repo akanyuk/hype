@@ -13,7 +13,8 @@
 .display-toggle:focus-visible 		{ outline: 2px solid var(--border-blue-75); outline-offset: 1px; }
 .display-toggle svg 				{ width: 16px; height: 16px; fill: currentColor; }
 
-.display-toggle .display-icon-sun,
-html[data-theme="dark"] .display-toggle .display-icon-moon 	{ display: none; }
-html[data-theme="dark"] .display-toggle .display-icon-sun 	{ display: block; }
+/* The icon shows the current theme, like "A"/"A+" shows the current size */
+.display-toggle .display-icon-moon,
+html[data-theme="dark"] .display-toggle .display-icon-sun 	{ display: none; }
+html[data-theme="dark"] .display-toggle .display-icon-moon 	{ display: block; }
 html[data-font="large"] .display-toggle-font::after { content: "+"; }
