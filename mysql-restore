@@ -1,2 +1,3 @@
 #! /bin/sh
-docker compose exec -T mysql mysql -uroot -proot hype < "$@"
+# Dump is made on MariaDB 11.x: replace uca1400 collations unknown to MySQL
+sed -E 's/(utf8mb[34])_uca1400_ai_ci/\1_unicode_ci/g' "$@" | docker compose exec -T mysql mysql -uroot -proot hype
