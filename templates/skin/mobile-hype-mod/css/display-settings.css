@@ -6,9 +6,13 @@
 }
 
 /* The two glyphs sit next to each other: theme icon to the right, "A" to the left */
-#header .nav-userbar li.display-toggle-item-theme,
-#header .nav-userbar li.display-toggle-item-font {
+#header .nav-userbar li.display-toggle-item-theme {
     width: 40px;
+}
+
+/* The font toggle hugs its glyph so the pair sits at the right edge */
+#header .nav-userbar li.display-toggle-item-font {
+    width: auto;
 }
 
 #header .nav-userbar li.display-toggle-item-theme .display-toggle {
@@ -18,9 +22,8 @@
 }
 
 #header .nav-userbar li.display-toggle-item-font .display-toggle {
-    width: 40px;
-    justify-content: flex-start;
-    padding-left: 4px;
+    width: auto;
+    padding: 0 9px 0 4px;
 }
 
 .display-toggle {
@@ -58,6 +61,12 @@ html[data-theme="dark"] .display-toggle .display-icon-sun {
     display: block;
 }
 
-html[data-font="large"] .display-toggle-font::after {
+/* "+" always takes its place, so switching does not change the toggle width */
+.display-toggle-font::after {
     content: "+";
+    visibility: hidden;
+}
+
+html[data-font="large"] .display-toggle-font::after {
+    visibility: visible;
 }
