@@ -9,6 +9,7 @@
 	{hook run='html_head_begin'}
 	
 	<meta charset="utf-8">
+	{include file="{cfg name='path.root.server'}/templates/common/display-settings-head.tpl"}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title>{$sHtmlTitle}</title>
@@ -31,7 +32,6 @@
 	<link rel="image_src" href="/favicon/image_src.png" />
 	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#777777"/>
 	<link rel="manifest" href="/manifest.json">
-	<meta name="theme-color" content="#000000">
 	<meta name="msapplication-config" content="/browserconfig.xml"/>
 
 	<meta property="og:image" content="https://hype.retroscene.org/favicon/apple-touch-icon-180x180.png">

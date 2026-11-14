@@ -46,10 +46,12 @@ $config['head']['default']['js']  = array(
 	"___path.static.skin___/js/libs/jquery.touchswipe.js",
 	"___path.static.skin___/js/libs/jquery.swipegallery.js",
 	"___path.static.skin___/js/libs/jquery.fitvids.js",
+	"___path.static.root___/templates/common/display-settings.js",
 );
 
 $config['head']['default']['css'] = array(
 	"___path.static.skin___/css/reset.css",
+	"___path.static.skin___/css/theme.css",
 	"___path.static.skin___/css/base.css?v=2",
 	"___path.root.engine_lib___/external/jquery/markitup/skins/simple/style.css",
 	"___path.root.engine_lib___/external/jquery/markitup/sets/default/style.css",

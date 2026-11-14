@@ -32,9 +32,11 @@ $config['head']['default']['js'][] = '___path.static.skin___/js/template.js';
 // Customize highlighter by nyuk
 $config['head']['default']['js'][] = '___path.static.skin___/js/lang-z80.js';
 $config['head']['default']['js'][] = '___path.static.skin___/js/lang-6502.js';
+$config['head']['default']['js'][] = '___path.static.root___/templates/common/display-settings.js';
 
 $config['head']['default']['css'] = array(
 	"___path.static.skin___/css/reset.css",
+	"___path.static.skin___/css/theme.css",
 	"___path.static.skin___/css/base.css",
 	"___path.root.engine_lib___/external/jquery/markitup/skins/synio/style.css",
 	"___path.root.engine_lib___/external/jquery/markitup/sets/synio/style.css",
