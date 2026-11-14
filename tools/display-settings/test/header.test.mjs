@@ -81,6 +81,20 @@ for (const skin of SKINS) {
 				assert.deepEqual(overlaps, []);
 			}));
 
+			if (skin === 'mobile') {
+				test('theme-icon-close-to-font-icon', () => withPage({ skin, role }, async (p) => {
+					// Gap between the moon glyph and the "A" glyph
+					const gap = await p.evaluate(() => {
+						const icon = [...document.querySelectorAll('#header [data-display-toggle="theme"] svg')].find((s) => getComputedStyle(s).display !== 'none');
+						const font = document.querySelector('#header [data-display-toggle="font"]');
+						const range = document.createRange();
+						range.selectNodeContents(font);
+						return range.getBoundingClientRect().left - icon.getBoundingClientRect().right;
+					});
+					assert.ok(gap >= 4 && gap <= 12, `gap ${gap.toFixed(1)}px`);
+				}));
+			}
+
 			test('header-height-same', () => withPage({ skin, role }, async (p) => {
 				const h = await p.$eval('#header', (e) => Math.round(e.getBoundingClientRect().height));
 				assert.equal(h, HEADER_HEIGHT[skin]);

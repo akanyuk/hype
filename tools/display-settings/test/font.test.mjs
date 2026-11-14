@@ -6,6 +6,8 @@ let browser;
 before(async () => { browser = await launch(); });
 after(async () => { await browser?.close(); });
 
+// Large font factor (theme.css --font-scale-large)
+const LARGE = 1.35;
 const TOPIC = '/blog/dev/1092.html';
 const FIXED = {
 	desktop: ['#header', '#nav-main', '#header .auth', '#dropdown-user', '.nav-pills', '.vote', '.vote-count', '#footer'],
@@ -39,13 +41,13 @@ for (const skin of SKINS) {
 			});
 
 			test('content-scaled', () => {
-				assert.ok(Math.abs(large.topic / normal.topic - 1.2) < 0.01, `topic ${normal.topic} → ${large.topic}`);
-				assert.ok(Math.abs(large.comment / normal.comment - 1.2) < 0.01, `comment ${normal.comment} → ${large.comment}`);
+				assert.ok(Math.abs(large.topic / normal.topic - LARGE) < 0.01, `topic ${normal.topic} → ${large.topic}`);
+				assert.ok(Math.abs(large.comment / normal.comment - LARGE) < 0.01, `comment ${normal.comment} → ${large.comment}`);
 			});
 
 			if (skin === 'desktop') {
 				test('sidebar-scaled', () => {
-					assert.ok(Math.abs(large.sidebar / normal.sidebar - 1.2) < 0.01, `sidebar ${normal.sidebar} → ${large.sidebar}`);
+					assert.ok(Math.abs(large.sidebar / normal.sidebar - LARGE) < 0.01, `sidebar ${normal.sidebar} → ${large.sidebar}`);
 				});
 			}
 
