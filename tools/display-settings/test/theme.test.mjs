@@ -7,7 +7,7 @@ let browser;
 before(async () => { browser = await launch(); });
 after(async () => { await browser?.close(); });
 
-const SKINS = (process.env.THEME_SKINS || 'desktop').split(',');
+const SKINS = (process.env.THEME_SKINS || 'desktop,mobile').split(',');
 const CONTENT = { desktop: '.topic-content, .text', mobile: '.topic-content, .text' };
 
 for (const skin of SKINS) {
