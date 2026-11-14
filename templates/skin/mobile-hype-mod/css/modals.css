@@ -34,7 +34,7 @@
 .modal .modal-header h3 	{ font-size: 20px; font-weight: bold; margin-right: 20px; }
 .modal .modal-content 		{ padding: 20px; }
 
-.jqmOverlay { background-color: var(--bg-header); }
+.jqmOverlay { background-color: var(--bg-gray-0); }
 
 * html .modal { position: absolute; top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px'); }
 

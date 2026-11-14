@@ -22,6 +22,7 @@ html[data-font="large"] {
 	--bg-blue-62: #3399ff;
 	--bg-blue-65: #05aae9;
 	--bg-cyan-94: #acfafe;
+	--bg-gray-0: #000000;
 	--bg-gray-13: #222222;
 	--bg-gray-21: #333333;
 	--bg-gray-29: #444444;
@@ -70,7 +71,6 @@ html[data-font="large"] {
 	--bg-green-98-3: #ffff99;
 	--bg-green-98-4: #fffbcd;
 	--bg-green-99: #ffffcc;
-	--bg-header: #000000;
 	--bg-orange-32: #9b0000;
 	--bg-orange-49: #d23e3e;
 	--bg-orange-51: #f21a09;

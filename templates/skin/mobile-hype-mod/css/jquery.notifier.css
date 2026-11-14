@@ -20,7 +20,7 @@
 	margin-bottom: 1px;
 	
 	color: var(--text-gray-100); 
-	background: var(--bg-header); 
+	background: var(--bg-gray-0); 
 	
 	cursor: pointer;
 }

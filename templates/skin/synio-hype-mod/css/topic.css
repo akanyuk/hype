@@ -103,14 +103,14 @@
 .topic.topic-type-photoset {  }
 .topic.topic-type-photoset .topic-photo-preview { position: relative; margin-bottom: 15px; cursor: pointer; }
 .topic.topic-type-photoset .topic-photo-preview img { vertical-align: top; }
-.topic.topic-type-photoset .topic-photo-preview .topic-photo-count { display: none; cursor: pointer; position: absolute; top: 5px; right: 5px; background: var(--bg-header); color: var(--text-green-76); padding: 4px 7px; background: var(--bg-black-0-a60); }
-.topic.topic-type-photoset .topic-photo-preview .topic-photo-desc { display: none; width: 96%; padding: 7px 2%; position: absolute; bottom: 0; left: 0; background: var(--bg-header); color: var(--text-green-76); color: var(--text-gray-100); line-height: 16px; background: var(--bg-black-0-a70); }
+.topic.topic-type-photoset .topic-photo-preview .topic-photo-count { display: none; cursor: pointer; position: absolute; top: 5px; right: 5px; background: var(--bg-gray-0); color: var(--text-green-76); padding: 4px 7px; background: var(--bg-black-0-a60); }
+.topic.topic-type-photoset .topic-photo-preview .topic-photo-desc { display: none; width: 96%; padding: 7px 2%; position: absolute; bottom: 0; left: 0; background: var(--bg-gray-0); color: var(--text-green-76); color: var(--text-gray-100); line-height: 16px; background: var(--bg-black-0-a70); }
 
 .topic.topic-type-photoset .topic-photo-images { padding-top: 10px; margin-bottom: 15px; }
 .topic.topic-type-photoset .topic-photo-images h2 { border-bottom: 1px solid var(--border-gray-82); padding-bottom: 4px; margin-bottom: 15px; font-size: 25px; }
 .topic.topic-type-photoset .topic-photo-images ul { overflow: hidden; zoom: 1; }
 .topic.topic-type-photoset .topic-photo-images ul li { float: left; margin: 0 9px 9px 0; position: relative; }
-.topic.topic-type-photoset .topic-photo-images ul li .image-number { display: none; position: absolute; top: 5px; right: 5px; background: var(--bg-header); color: var(--text-green-76); padding: 1px 6px; font-size: 11px; background: var(--bg-black-0-a60); }
+.topic.topic-type-photoset .topic-photo-images ul li .image-number { display: none; position: absolute; top: 5px; right: 5px; background: var(--bg-gray-0); color: var(--text-green-76); padding: 1px 6px; font-size: 11px; background: var(--bg-black-0-a60); }
 .topic.topic-type-photoset .topic-photo-images ul li:hover .image-number { display: block; }
 .topic.topic-type-photoset .topic-photo-images ul li img { vertical-align: top; }
 .topic.topic-type-photoset .topic-photo-images .topic-photo-more { display: block; border-top: 1px solid var(--border-gray-91); text-align: center; padding: 10px 0; margin-bottom: 15px; text-decoration: none; background: var(--bg-gray-97-8); color: var(--text-blue-59); }
