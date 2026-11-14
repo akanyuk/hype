@@ -1,0 +1,8 @@
+.lang-z80, .lang-6502 { background: #272822 !important; padding-top: 0px !important; max-height: 400px; }
+.lang-z80 .str, .lang-6502 .str { color: #E6DB74; }
+.lang-z80 .kwd, .lang-6502 .kwd { color: #FFFFFF; font-weight: bold; }
+.lang-z80 .com, .lang-6502 .com { color: #75715E; font-style: italic; }
+.lang-z80 .typ, .lang-6502 .typ { color: #ffff00; }
+.lang-z80 .lit, .lang-6502 .lit { color: #16e100; }
+.lang-z80 .pun, .lang-6502 .pun { color: #15deaa; font-weight: bold; }
+.lang-z80 .pln, .lang-6502 .pln { color: #ff0088; }

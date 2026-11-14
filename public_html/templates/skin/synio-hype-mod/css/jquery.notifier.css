@@ -1,0 +1,42 @@
+/* --------------------------------------------
+	ВСПЛЫВАЮЩИЕ УВЕДОМЛЕНИЯ
+-------------------------------------------- */
+
+#notifier { 
+	width: 250px; 
+	
+	position: fixed; 
+	top: 10px; 
+	right: 10px; 
+	
+	font-size: calc(11px * var(--font-scale));
+	line-height: calc(16px * var(--font-scale));
+	z-index: 9999; 
+	
+	/* IE 6 Fix */
+	_position: absolute; 
+	_top: expression( eval(document.documentElement.scrollBottom) + 10 +"px" );
+}
+
+#notifier .n-box { 
+	position: relative; 
+	
+	padding: 15px 20px 16px; 
+	margin-bottom: 10px;
+	
+	color: var(--text-gray-100); 
+	background: var(--bg-gray-0); 
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 5px var(--shadow-black-0-a30); box-shadow: 0 0 5px var(--shadow-black-0-a30);
+	opacity: 0.9; filter: alpha(opacity=80);
+	
+	cursor: pointer;
+}
+#notifier .n-box h3 { color: var(--text-gray-100); font-size: calc(12px * var(--font-scale)); font-weight: bold; margin-bottom: 3px; font-family: Verdana, sans-serif; }
+#notifier .n-box p { margin: 0; }
+
+#notifier .n-box.n-notice { background: var(--bg-blue-23); color: var(--text-gray-100); }
+#notifier .n-box.n-error { background: var(--bg-orange-27); color: var(--text-gray-100); }

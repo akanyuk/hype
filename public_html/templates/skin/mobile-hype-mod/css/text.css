@@ -1,0 +1,63 @@
+/* -------------------------------------------------------------------
+	ФОРМАТИРОВАННЫЙ ТЕКСТ
+------------------------------------------------------------------- */
+
+.text    { font-size: calc(11px * var(--font-scale)); font-family: Verdana, sans-serif; line-height: 1.6em; overflow: hidden; zoom: 1; }
+
+.text a  { text-decoration: underline; }
+
+.text h4,
+.text h5,
+.text h6 { font-family: 'Open Sans', sans-serif; margin-bottom: 7px; font-weight: 600; }
+
+.text h4 { font-size: calc(17px * var(--font-scale)); }
+.text h5 { font-size: calc(15px * var(--font-scale)); }
+.text h6 { font-size: calc(14px * var(--font-scale)); }
+
+.text p               { margin-bottom: 1em; }
+.text abbr[title]     { border-bottom: 1px dotted; }
+.text b, .text strong { font-weight: bold; }
+.text blockquote      { margin: 0; padding: 3px 10px; font-style: italic; clear: both; border-left: 3px solid var(--border-blue-74); }
+.text dfn             { font-style: italic; }
+.text hr              { display: block; height: 1px; border: 0; border-top: 1px solid var(--border-gray-82); margin: 1em 0; padding: 0; }
+.text ins             { background: var(--bg-green-98-3); color: var(--text-gray-0); text-decoration: none; }
+.text mark            { background: var(--bg-green-97); color: var(--text-gray-0); font-style: italic; font-weight: bold; }
+
+.text pre {
+	margin: 0;
+	padding: 9px 12px;
+	border: 1px dotted var(--border-cyan-76);
+	background: var(--bg-gray-98-2);
+	font-size: calc(11px * var(--font-scale));
+	line-height: 1.6em;
+	overflow: auto;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	clear: both;
+}
+.text q                  { quotes: none; clear: both; }
+.text q:before, q:after  { content: ""; content: none; }
+.text small              { font-size: 85%; }
+
+.text sub, .text sup     { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+.text sup                { top: -0.5em; }
+.text sub                { bottom: -0.25em; }
+
+.text ul, .text ol       { margin: 0; padding: 0 0 0 40px; }
+.text ul                 { list-style-type: disc; }
+.text ol                 { list-style-type: decimal; }
+.text dd                 { margin: 0 0 0 40px; }
+
+.text img[align="right"] { margin: 4px 0 5px 15px; }
+.text img[align="left"]  { margin: 4px 15px 10px 0; }
+.text img.image-center   { display: block; margin: 0 auto; }
+
+.text object,
+.text iframe { width: 100%; }
+.text img { max-width: 100%; }
+
+.text .ls-user           { color: var(--text-gray-21); }
+.text .ls-user:visited   { color: var(--text-gray-21); }
+.text .ls-user:hover     { color: var(--text-gray-36); }

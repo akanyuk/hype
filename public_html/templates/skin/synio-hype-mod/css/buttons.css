@@ -1,0 +1,171 @@
+/* -------------------------------------------------------------------
+	
+	КНОПКИ
+	
+	
+	Примеры использования:
+	
+	<button class="button">Preview</button>
+	<a href="#" class="button">Preview</a>
+	
+	<button class="button button-primary">Save</button>
+	
+------------------------------------------------------------------- */
+
+.button {
+	display: inline-block;
+	
+	padding: 3px 10px 6px;
+	*padding: 3px 10px 4px;
+	text-align: center;
+	
+	border: 1px solid var(--border-gray-90);
+	border-radius: 5px;
+	
+	font-size: calc(13px * var(--font-scale));
+	line-height: calc(15px * var(--font-scale));
+	
+	color: var(--text-gray-28);
+	
+	background: var(--bg-gray-99);
+	background: -moz-linear-gradient(top,  #fbfcfc 0%, #f0f2f5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--bg-gray-99)), color-stop(100%,var(--bg-gray-95)));
+	background: -webkit-linear-gradient(top,  var(--bg-gray-99) 0%,var(--bg-gray-95) 100%);
+	background: -o-linear-gradient(top,  #fbfcfc 0%,#f0f2f5 100%);
+	background: -ms-linear-gradient(top,  #fbfcfc 0%,#f0f2f5 100%);
+	background: linear-gradient(top,  #fbfcfc 0%,#f0f2f5 100%);
+
+	font-family: Verdana, sans-serif;
+	cursor: pointer;
+	text-decoration: none;
+	
+	*margin-right: 5px;
+}
+.button:hover { text-decoration: none; background: var(--bg-gray-95); }
+.button:active { 
+	-moz-box-shadow: 	0 0 3px rgba(0, 0, 0, .3) inset; 
+	-webkit-box-shadow: 0 0 3px var(--shadow-black-0-a30) inset; 
+	box-shadow: 		0 0 3px var(--shadow-black-0-a30) inset; 
+}
+.button.fl-r { *margin-right: 0; }
+
+.opera .button { padding-top: 4px; padding-bottom: 5px; }
+
+
+/* Button Primary */
+.button.button-primary { 
+	background: var(--bg-blue-79);
+	background: -moz-linear-gradient(top,  #66cfff 0%, #2abcfe 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--bg-blue-79)), color-stop(100%,var(--bg-blue-72)));
+	background: -webkit-linear-gradient(top,  var(--bg-blue-79) 0%,var(--bg-blue-72) 100%);
+	background: -o-linear-gradient(top,  #66cfff 0%,#2abcfe 100%);
+	background: -ms-linear-gradient(top,  #66cfff 0%,#2abcfe 100%);
+	background: linear-gradient(top,  #66cfff 0%,#2abcfe 100%);
+	
+	border: 1px solid var(--border-blue-66);
+	
+	color: var(--text-gray-100);
+}
+.button.button-primary:hover { background: var(--bg-blue-72); }
+
+
+/* Button Icon (Without text) */
+.button.button-icon 			{ padding: 7px 10px; }
+
+
+/* Button Write */
+.button.button-write { 
+	background: var(--bg-blue-79);
+	background: -moz-linear-gradient(top,  #66cfff 0%, #2abcfe 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--bg-blue-79)), color-stop(100%,var(--bg-blue-72)));
+	background: -webkit-linear-gradient(top,  var(--bg-blue-79) 0%,var(--bg-blue-72) 100%);
+	background: -o-linear-gradient(top,  #66cfff 0%,#2abcfe 100%);
+	background: -ms-linear-gradient(top,  #66cfff 0%,#2abcfe 100%);
+	background: linear-gradient(top,  #66cfff 0%,#2abcfe 100%);
+	
+	border: 1px solid var(--border-blue-66);
+	
+	padding: 2px 15px 4px;
+	border-radius: 15px;
+	line-height: calc(17px * var(--font-scale));
+	
+	color: var(--text-gray-100);
+	font-size: calc(11px * var(--font-scale));
+}
+.button.button-write:hover { 
+	background: var(--bg-blue-75);
+	background: -moz-linear-gradient(top,  #4ec4ff 0%, #22b3fe 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--bg-blue-75)), color-stop(100%,var(--bg-blue-69)));
+	background: -webkit-linear-gradient(top,  var(--bg-blue-75) 0%,var(--bg-blue-69) 100%);
+	background: -o-linear-gradient(top,  #4ec4ff 0%,#22b3fe 100%);
+	background: -ms-linear-gradient(top,  #4ec4ff 0%,#22b3fe 100%);
+	background: linear-gradient(top,  #4ec4ff 0%,#22b3fe 100%);
+
+	-webkit-box-shadow: 0 -1px 0 var(--shadow-gray-100-a50) inset; box-shadow: 0 -1px 0 var(--shadow-gray-100-a50) inset;  
+}
+
+
+/* Button Small */
+.button.button-small { font-size: calc(11px * var(--font-scale)); padding: 1px 7px 3px; }
+
+
+/* Button Action */
+.button.button-action {
+	border: none;
+	padding: 4px 4px 3px;
+	
+	background: var(--bg-cyan-94);
+	background: -moz-linear-gradient(top,  #c8f5ff 0%, #88c4ea 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--bg-cyan-94)), color-stop(100%,var(--bg-blue-76)));
+	background: -webkit-linear-gradient(top,  var(--bg-cyan-94) 0%,var(--bg-blue-76) 100%);
+	background: -o-linear-gradient(top,  #c8f5ff 0%,#88c4ea 100%);
+	background: -ms-linear-gradient(top,  #c8f5ff 0%,#88c4ea 100%);
+	background: linear-gradient(top,  #c8f5ff 0%,#88c4ea 100%);
+}
+.button.button-action span { display: none; }
+.button.button-action:hover span { display: inline; padding: 0 5px 0 5px; position: relative; top: -2px; color: var(--text-gray-100); }
+.button.button-action.active, 
+.button.button-action:hover { 
+	border: 1px solid var(--border-blue-49);
+	-webkit-box-shadow: 0 -1px 0 var(--shadow-blue-57) inset, 0 2px 2px var(--shadow-gray-88); box-shadow: 0 -1px 0 var(--shadow-blue-57) inset, 0 2px 2px var(--shadow-gray-88);
+	color: var(--text-gray-100);
+	padding: 3px 3px 2px;
+
+	background: var(--bg-blue-58);
+	background: -moz-linear-gradient(top,  #228dfa 0%, #0362eb 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--bg-blue-58)), color-stop(100%,var(--bg-blue-45)));
+	background: -webkit-linear-gradient(top,  var(--bg-blue-58) 0%,var(--bg-blue-45) 100%);
+	background: -o-linear-gradient(top,  #228dfa 0%,#0362eb 100%);
+	background: -ms-linear-gradient(top,  #228dfa 0%,#0362eb 100%);
+	background: linear-gradient(top,  #228dfa 0%,#0362eb 100%);
+}
+.button.button-action:hover i { vertical-align: top; position: relative; top: -1px; }
+
+.button.button-action.button-action-add-friend:hover i { background-position: -147px -39px; }
+.button.button-action.button-action-send-message:hover i { background-position: -163px -39px; }
+.button.button-action.button-action-join.active i,
+.button.button-action.button-action-join:hover i { background-position: -179px -39px; }
+
+.button.button-action.button-action-note {
+	background: var(--bg-green-93);
+	background: -webkit-linear-gradient(top,  var(--bg-green-97) 0%,var(--bg-green-93) 100%);
+	background: -moz-linear-gradient(top,  #e9fdea 0%,#ccf4d0 100%);
+	background: -o-linear-gradient(top,  #e9fdea 0%,#ccf4d0 100%);
+	background: -ms-linear-gradient(top,  #e9fdea 0%,#ccf4d0 100%);
+	background: linear-gradient(top,  #e9fdea 0%,#ccf4d0 100%);
+	padding: 6px 6px 6px 7px;
+}
+.button.button-action.button-action-note:hover {
+	background: var(--bg-green-74);
+	background: -webkit-linear-gradient(top,  var(--bg-green-83) 0%,var(--bg-green-74) 100%);
+	background: -moz-linear-gradient(top,  #6ce777 0%,#4ace56 100%);
+	background: -o-linear-gradient(top,  #6ce777 0%,#4ace56 100%);
+	background: -ms-linear-gradient(top,  #6ce777 0%,#4ace56 100%);
+	background: linear-gradient(top,  #6ce777 0%,#4ace56 100%);
+	border: none;
+	box-shadow: none; -webkit-box-shadow: none;
+	padding: 6px 6px 6px 7px;
+	cursor: default;
+}
+.button.button-action.button-action-note i { display: block; }
+.button.button-action.button-action-note:hover i { top: 0; background-position: -46px -65px; }

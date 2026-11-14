@@ -1,0 +1,85 @@
+/* --------------------------------------------
+	СТЕНА
+-------------------------------------------- */
+
+.wall-note h3 { font-size: calc(13px * var(--font-scale)); margin-top: 20px; }
+
+.wall-reply-link   { padding-top: 5px; font-size: calc(11px * var(--font-scale)); border-top: 1px solid var(--border-gray-100); }
+.wall-reply-link a { color: var(--text-gray-53); border-bottom: 1px dotted var(--border-gray-53); display: inline-block; line-height: calc(13px * var(--font-scale)); }
+
+
+/* More */
+.wall-more 							{ display: block; background: var(--bg-gray-97-3); text-align: center; padding: 7px 0; font-size: calc(11px * var(--font-scale)); margin-bottom: 2px; }
+.wall-more:hover 					{ background: var(--bg-gray-94); }
+.wall-more.loader 					{ background: var(--bg-gray-98) url(../images/loader.gif) 50% 50% no-repeat; }
+.wall-more.loader .wall-more-inner 	{ visibility: hidden; }
+.wall-more.wall-more-reply 			{ background: transparent; border-bottom: 1px solid var(--border-gray-91); margin-bottom: 0; }
+
+
+/* Wrapper */
+.wall-comment-wrapper { border-bottom: 1px solid var(--border-gray-91); margin-bottom: 10px; }
+.wall-comment-wrapper:last-child { margin-bottom: 0; }
+
+.wall-add-post { background: var(--bg-gray-98); padding: 8px; margin-top: 10px; }
+.wall-add-post .button { margin: 0; }
+
+.wall-submit 									{ display: none; }
+.wall-submit.wall-submit-reply 					{ padding: 10px; position: relative; background: var(--bg-gray-96-5); margin-top: 10px; }
+.wall-submit.wall-submit-reply:before {
+	content: "";
+	position: absolute;
+	top: -16px; left: 10px;
+	width: 0; height: 0;
+	border-color: var(--border-gray-100-a0) var(--border-gray-100-a0) var(--border-gray-96) var(--border-gray-100-a0);
+	border-width: 8px;
+	border-style: solid;
+}
+.wall-submit.wall-submit-reply textarea 		{ height: 80px; margin-bottom: 5px; }
+.wall-submit p 									{ margin-bottom: 5px; }
+
+
+/* Comment */
+.wall-comment {
+	min-height: 30px;
+	padding: 10px 0 10px 0;
+	font-size: calc(11px * var(--font-scale));
+	line-height: calc(13px * var(--font-scale));
+	position: relative;
+}
+.wall-comment:first-child                  { border-top: none; }
+.wall-comment:last-child                   { border-bottom: none; }
+.wall-comment .comment-avatar              { position: absolute; top: 10px; left: 0; width: 30px; height: 30px; }
+.wall-comment .comment-info                { min-height: 30px; color: var(--text-gray-53); margin-bottom: 3px; padding-left: 38px; margin-bottom: 7px; }
+.wall-comment .comment-info li:first-child { margin-bottom: 3px; }
+.wall-comment .comment-content.text        { font-size: calc(11px * var(--font-scale)); line-height: calc(15px * var(--font-scale)); }
+
+
+/* Replies */
+.comment-wrapper-replies { padding: 0 10px; background: var(--bg-gray-96-5); margin-top: 5px; position: relative; margin-top: 10px; margin-bottom: 2px; }
+.comment-wrapper-replies:before {
+	content: "";
+	position: absolute;
+	top: -16px; left: 10px;
+	width: 0; height: 0;
+	border-color: var(--border-gray-100-a0) var(--border-gray-100-a0) var(--border-gray-96) var(--border-gray-100-a0);
+	border-width: 8px;
+	border-style: solid;
+}
+
+.comment-wrapper-replies .wall-reply-link   { padding: 5px 0 10px; font-size: calc(11px * var(--font-scale)); border-top: 1px solid var(--border-gray-100); }
+.comment-wrapper-replies .wall-reply-link a { color: var(--text-gray-53); border-bottom: 1px dotted var(--border-gray-53); display: inline-block; line-height: calc(13px * var(--font-scale)); }
+
+.wall-comment-reply {
+	min-height: 30px;
+	padding: 10px 10px 10px 38px;
+	font-size: calc(11px * var(--font-scale));
+	line-height: calc(13px * var(--font-scale));
+	position: relative;
+	border-bottom: 1px solid var(--border-gray-91);
+	border-top: 1px solid var(--border-gray-100);
+}
+.wall-comment-reply:first-child           { border-top: none; }
+.wall-comment-reply .comment-avatar       { position: absolute; top: 10px; left: 0; width: 30px; height: 30px; }
+.wall-comment-reply .comment-info         { color: var(--text-gray-53); margin-bottom: 3px; }
+.wall-comment-reply .comment-info li      { float: left; margin-right: 10px; }
+.wall-comment-reply .comment-content.text { font-size: calc(11px * var(--font-scale)); line-height: calc(15px * var(--font-scale)); }

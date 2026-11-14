@@ -1,0 +1,31 @@
+<?php
+/*-------------------------------------------------------
+*
+*   Random logo choose
+*   Copyright © 2015-2020 nyuk
+*
+---------------------------------------------------------
+*/
+
+/**
+ * Запрещаем напрямую через браузер обращение к этому файлу.
+ */
+if (!class_exists('Plugin')) {
+	die('Hacking attempt!');
+}
+
+class PluginRndlogo extends Plugin {
+	/**
+	 * Активация плагина
+	 */
+	public function Activate() {
+		return true;
+	}
+
+	/**
+	 * Инициализация плагина
+	 */
+	public function Init() {
+
+	}
+}

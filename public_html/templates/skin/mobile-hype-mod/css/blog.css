@@ -1,0 +1,35 @@
+/* --------------------------------------------
+	БЛОГ
+-------------------------------------------- */
+
+.blog { 
+	background: var(--bg-gray-100); 
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 1px 3px var(--shadow-black-0-a20); 
+	   -moz-box-shadow: 0 1px 3px rgba(0,0,0,.2); 
+	        box-shadow: 0 1px 3px var(--shadow-black-0-a20); 
+}
+
+
+/* Header */
+.blog .blog-header                 { position: relative; min-height: 50px; padding: 10px 60px 10px 68px; }
+.blog .blog-header h2              { font-size: calc(16px * var(--font-scale)); line-height: calc(20px * var(--font-scale)); font-weight: 600; margin-top: 5px; margin-bottom: 2px; }
+.blog .blog-header .avatar         { width: 50px; height: 50px; position: absolute; top: 10px; left: 10px; }
+.blog .blog-header .icon-blog-more { position: absolute; top: 10px; right: 10px; }
+.blog .blog-header p		 	   { overflow: hidden; color: var(--text-gray-53); font-size: calc(11px * var(--font-scale)); }
+
+.blog .vote { margin: 0; border-top: 1px solid var(--border-gray-94); }
+.blog .vote .vote-item { float: right; margin-left: 15px; margin-right: 0; }
+
+.blog .actions { margin-bottom: 0; padding: 8px 9px; background: var(--bg-gray-98-2); }
+.blog .actions .vote-result { float: right; margin-right: 0; width: auto; padding: 0 10px 0 10px; }
+.blog .actions .vote-result.voted { padding: 0 40px 0 10px; }
+.blog .actions .vote-result.voted i { display: none; }
+
+
+/* Content */
+.blog .blog-content { padding: 10px; border-top: 1px solid var(--border-gray-94); border-bottom: 1px solid var(--border-gray-94); }
+
+
+/* Footer */
+.blog .blog-footer { padding: 10px; border-bottom: 1px solid var(--border-gray-94); }

@@ -1,0 +1,32 @@
+/* --------------------------------------------
+	ВСПЛЫВАЮЩИЕ УВЕДОМЛЕНИЯ
+-------------------------------------------- */
+
+#notifier { 
+	width: 250px; 
+	
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	
+	font-size: calc(12px * var(--font-scale));
+	z-index: 9999;
+}
+
+#notifier .n-box { 
+	position: relative; 
+	
+	padding: 10px 15px 11px; 
+	margin-bottom: 1px;
+	
+	color: var(--text-gray-100); 
+	background: var(--bg-gray-0); 
+	
+	cursor: pointer;
+}
+#notifier .n-box h3 { color: var(--text-gray-100); font-size: calc(14px * var(--font-scale)); font-weight: bold; margin-bottom: 3px; }
+#notifier .n-box p { margin: 0; }
+
+#notifier .n-box.n-notice { background: var(--bg-green-73); color: var(--text-gray-21); }
+#notifier .n-box.n-notice h3 { color: var(--text-gray-21); }
+#notifier .n-box.n-error { background: var(--bg-orange-32); color: var(--text-gray-100); }

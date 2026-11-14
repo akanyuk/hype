@@ -1,0 +1,58 @@
+/* -------------------------------------------------------------------
+	ТАБЛИЦЫ
+------------------------------------------------------------------- */
+
+.table 					{ width: 100%; }
+.table th 				{ text-align: left; background: var(--bg-gray-98); }
+.table td, .table th 	{ border-bottom: 1px solid var(--border-gray-94); padding: 10px; }
+.table tr.active td 	{ background: var(--bg-cyan-94); }
+
+.table a.asc:after		{ content: "▲"; }
+.table a.desc:after		{ content: "▼"; }
+
+/* Table Plugins */
+.table.table-plugins 	                { margin-bottom: 15px; }
+.table.table-plugins .cell-checkbox 	{ width: 20px; padding: 12px 0 10px 10px; vertical-align: top; }
+.table.table-plugins .cell-activate 	{ width: 40px; }
+.table.table-plugins h3 				{ font-weight: bold; font-size: calc(17px * var(--font-scale)); line-height: calc(20px * var(--font-scale)); margin-bottom: 5px; }
+
+/* Table Profile Notes */
+.table.table-profile-notes 					{ border-top: 1px solid var(--border-gray-94); }
+.table.table-profile-notes td 				{ vertical-align: top; }
+.table.table-profile-notes .cell-username 	{ width: 20%; font-weight: bold; }
+.table.table-profile-notes .cell-note 		{ width: 50%; }
+.table.table-profile-notes .cell-date 		{ text-align: right; }
+
+/* Table Profile Info */
+.table-profile-info-wrapper            { padding: 17px 0; border-bottom: 1px solid var(--border-gray-92); }
+.table-profile-info-wrapper:last-child { border: none; padding-bottom: 0; }
+
+.table.table-profile-info 				{ font-size: calc(11px * var(--font-scale)); }
+.table.table-profile-info td 			{ vertical-align: top; padding: 3px 3px 3px 0; border: none; }
+.table.table-profile-info .cell-label 	{ width: 120px; }
+.table.table-profile-info .cell-latest-post { padding-top: 20px; }
+.table.table-profile-info .cell-latest-post span { color: var(--text-gray-53); }
+.table.table-profile-info .cell-latest-post a { text-decoration: underline; }
+
+/* Table Users */
+.table.table-users td                         { padding: 13px 0; font-size: calc(11px * var(--font-scale)); }
+.table.table-users tr:last-child td           { border: none; padding-bottom: 0; }
+.table.table-users .cell-name                 {  }
+.table.table-users .cell-name .word-wrap      { width: 180px; }
+.table.table-users .cell-name h3              { font-size: calc(14px * var(--font-scale)); width: 100%; overflow: hidden; font-weight: 600; }
+.table.table-users .cell-name h3 a            { font-size: calc(10px * var(--font-scale)); border-bottom: 1px solid var(--border-blue-81-2); }
+.table.table-users .cell-name h3 a span       { font-size: calc(14px * var(--font-scale)); }
+.table.table-users .cell-name .user-info      { position: relative; top: -2px; padding-left: 50px; }
+.table.table-users .cell-name .user-info img  { position: absolute; top: 2px; left: 0; width: 40px; }
+.table.table-users .cell-name p .icon-note    { position: relative; top: 2px; }
+.table.table-users .cell-actions              { width: 69px; text-align: right; }
+.table.table-users .cell-actions a            { margin-right: 9px; }
+.table.table-users .cell-actions a:last-child { margin-right: 0; }
+
+/* Table Talk */
+.table.table-talk .cell-checkbox 		{ width: 20px; padding: 12px 0 10px 10px; }
+.table.table-talk thead .cell-checkbox 	{ padding: 10px 0 10px 10px; }
+.table.table-talk .cell-favourite 		{ width: 20px; padding: 10px 0; text-align: center; }
+.table.table-talk .cell-recipients 		{ width: 100px; }
+.table.table-talk tbody .cell-date 		{ font-size: calc(11px * var(--font-scale)); width: 130px; }
+.table.table-talk tbody td				{ vertical-align: top; }

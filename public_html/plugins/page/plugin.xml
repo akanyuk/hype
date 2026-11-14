@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">Static page</lang>
+	</name>
+	<author><lang name="default">nyuk</lang></author>
+	<homepage>http://hype.retroscene.org</homepage>
+	<settings></settings>
+	<version>1.0.0</version>
+	<requires>
+		<livestreet>1.0.3</livestreet>
+		<plugins>
+		</plugins>
+	</requires>
+	<description>
+		<lang name="default">Show topic as static page with URL /page/{$topic_id}.html</lang>
+		<lang name="russian">Отображение топика в виде страницы с адресом /page/{$topic_id}.html</lang>
+	</description>
+</plugin>

@@ -1,0 +1,59 @@
+/* --------------------------------------------
+	ВСПЛЫВАЮЩИЕ ПОДСКАЗКИ
+-------------------------------------------- */
+
+.infobox {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3500;
+	text-align: left;
+	padding: 15px;
+	min-width: 50px;
+	max-width: 300px;
+	color: var(--text-gray-100);
+	background: var(--bg-black-0-a80);
+	border-radius: 5px;
+}
+
+.infobox .tip-arrow 					{ position: absolute; width: 0; height: 0; border-width: 6px; border-style: solid; border-color: var(--border-black-0-a80); }
+.infobox .tip-arrow.tip-arrow-top 		{ top: -12px; left: 15px; border-top-color: transparent !important; border-left-color: transparent !important; border-right-color: transparent !important; }
+.infobox .tip-arrow.tip-arrow-bottom 	{ bottom: -12px; left: 15px; border-bottom-color: transparent !important; border-left-color: transparent !important; border-right-color: transparent !important; }
+.infobox .tip-arrow.tip-arrow-right 	{ top: 50%; margin-top: -6px; right: -12px; border-bottom-color: transparent !important; border-top-color: transparent !important; border-right-color: transparent !important; }
+.infobox .tip-arrow.tip-arrow-left 		{ top: 50%; margin-top: -6px; left: -12px; border-bottom-color: transparent !important; border-top-color: transparent !important; border-left-color: transparent !important; }
+
+.infobox a 			{ color: var(--text-blue-76); }
+.infobox a:hover 	{ color: var(--text-blue-67); }
+
+
+/* Default Tip */
+.infobox.infobox-standart 				{ background: var(--bg-black-0-a80); }
+.infobox.infobox-standart .tip-arrow 	{ border-color: var(--border-black-0-a80); }
+
+/* Yellow */
+.infobox.infobox-yellow 				{ background: var(--bg-green-98-2); color: var(--text-green-25); border-radius: 10px; padding: 15px 20px; font-size: calc(11px * var(--font-scale)); line-height: calc(16px * var(--font-scale)); -webkit-box-shadow: 0 0 15px var(--shadow-black-0-a30); box-shadow: 0 0 15px var(--shadow-black-0-a30); }
+.infobox.infobox-yellow .tip-arrow 		{ border-color: var(--border-green-98); }
+
+/* Topic */
+.infobox.infobox-topic 					{ font-size: calc(11px * var(--font-scale)); -webkit-box-shadow: 0 0 10px var(--shadow-black-0-a50); box-shadow: 0 0 10px var(--shadow-black-0-a50); background: var(--bg-gray-11); border-radius: 10px; }
+.infobox.infobox-topic i 				{ margin-right: 5px; }
+.infobox.infobox-topic .tip-arrow 		{ left: 50%; margin-left: -5px; border-color: var(--border-gray-11); }
+
+/* Help */
+.infobox.infobox-help 								{ background: var(--bg-gray-100); width: 300px; border: 3px solid var(--border-gray-97); color: var(--text-gray-0); border-radius: 10px; padding: 25px 30px; font-size: calc(12px * var(--font-scale)); line-height: calc(18px * var(--font-scale)); -webkit-box-shadow: 0 0 15px var(--shadow-black-0-a30); box-shadow: 0 0 15px var(--shadow-black-0-a30); }
+.infobox.infobox-help .tip-arrow 					{ border: none; width: 15px; height: 11px; background: url(../images/icons-synio.png) no-repeat; }
+.infobox.infobox-help .tip-arrow.tip-arrow-top 		{ background-position: -38px -107px; top: -11px; }
+.infobox.infobox-help .tip-arrow.tip-arrow-bottom 	{ background-position: -53px -107px; bottom: -11px; }
+.infobox.infobox-help a 							{ color: var(--text-blue-56); }
+.infobox.infobox-help .blog-info 					{ margin-bottom: 30px; }
+.infobox.infobox-help .blog-info li span 			{ background: var(--bg-gray-100); }
+.infobox.infobox-help .blog-info li strong 			{ background: var(--bg-gray-100); }
+.infobox.infobox-help .infobox-topic 				{ color: var(--text-blue-51); font-size: calc(11px * var(--font-scale)); }
+.infobox.infobox-help .infobox-actions 				{ font-size: calc(11px * var(--font-scale)); }
+
+/* Share */
+.infobox.infobox-share 								{ background: var(--bg-gray-100); width: 300px; border: 3px solid var(--border-gray-97); color: var(--text-gray-0); border-radius: 10px; padding: 10px 15px; font-size: calc(12px * var(--font-scale)); line-height: calc(18px * var(--font-scale)); -webkit-box-shadow: 0 0 15px var(--shadow-black-0-a30); box-shadow: 0 0 15px var(--shadow-black-0-a30); }
+.infobox.infobox-share .tip-arrow 					{ border: none; width: 15px; height: 11px; background: url(../images/icons-synio.png) no-repeat; }
+.infobox.infobox-share .tip-arrow.tip-arrow-top 	{ background-position: -38px -107px; top: -11px; left: 50%; margin-left: -7px;  }
+.infobox.infobox-share .tip-arrow.tip-arrow-bottom 	{ background-position: -53px -107px; bottom: -11px; left: 50%; margin-left: -7px;  }

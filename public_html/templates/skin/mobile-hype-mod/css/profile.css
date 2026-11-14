@@ -1,0 +1,54 @@
+/* --------------------------------------------
+	СТРАНИЦА ПОЛЬЗОВАТЕЛЯ
+-------------------------------------------- */
+
+.profile                                 { min-height: 48px; margin-bottom: 0; padding: 0 0 20px 72px; position: relative; }
+
+.profile .avatar                         { position: absolute; top: 0; left: 0; width: 60px; height: 60px; }
+.profile .status                         {
+	position: absolute;
+	top: 3px;
+	left: 50px;
+	width: 7px;
+	height: 7px;
+	background: var(--bg-green-79);
+	border-radius: 7px;
+}
+
+.vote.vote-blog                       { margin: 0 0 15px; }
+.vote.vote-blog .vote-item            { float: right; margin-right: 0; margin-left: 15px; }
+
+.vote-result.vote-result-blog         { float: right; margin-right: 0; width: auto; padding: 0 10px 0 10px; }
+.vote-result.vote-result-blog.voted   { padding: 0 40px 0 10px; }
+
+.profile .user-profile-rating-wrapper { width: 57px; position: absolute; top: 12px; right: 0; }
+.profile .user-profile-rating         { display: block; margin: 0; }
+
+.profile .user-login                  { width: 270px; font-size: calc(19px * var(--font-scale)); font-weight: 600; padding-top: 7px; margin-bottom: 7px; }
+.profile .user-login.no-user-name     { padding-top: 18px; }
+.profile .user-name                   { font-size: calc(14px * var(--font-scale)); color: var(--text-gray-53); }
+
+.profile-actions                      { padding: 9px; background: var(--bg-gray-98); margin-bottom: 10px; }
+.profile-actions li                   { float: left; margin-right: 9px; }
+.profile-actions li.vote-result       { float: right; margin-right: 0; }
+
+.profile-page-header                  { font-size: calc(12px * var(--font-scale)); font-weight: bold; margin-bottom: 20px; background: var(--bg-gray-97-4); border-top: 1px solid var(--border-gray-94); color: var(--text-gray-36); padding: 5px 10px 6px; }
+
+.profile-info-note                    { padding: 10px; background: var(--bg-green-98); color: var(--text-gray-0); font-size: calc(11px * var(--font-scale)); border-bottom: 1px solid var(--border-gray-92); }
+.profile-info-note h2                 { margin-bottom: 5px; }
+.profile-info-note .actions           { margin-bottom: 0; padding-top: 5px; font-size: calc(12px * var(--font-scale)); line-height: calc(18px * var(--font-scale)); }
+.profile-info-note .actions a         { color: var(--text-blue-40); border-color: var(--border-blue-40); }
+
+.profile-info-about                   { padding: 20px 0; color: var(--text-gray-0); font-size: calc(11px * var(--font-scale)); border-bottom: 1px solid var(--border-gray-92); }
+
+.profile-info-photo                   { text-align: center; border-bottom: 1px solid var(--border-gray-92); }
+.profile-info-photo img               { vertical-align: top; max-width: 100%; }
+
+.profile-contacts                          { overflow: hidden; padding-top: 5px; }
+.profile-contacts li                       { float: left; margin-right: 10px; margin-bottom: 13px; }
+.profile-contacts li a                     { display: block; width: 30px; height: 30px; text-indent: -9999px; }
+.profile-contacts li                       { background: var(--sprite-icons) -150px -82px no-repeat /* icon: contact-default.png */; }
+.profile-contacts li.contact-vkontakte     { background: var(--sprite-icons) -270px -82px no-repeat /* icon: contact-vkontakte.png */; }
+.profile-contacts li.contact-twitter       { background: var(--sprite-icons) -240px -82px no-repeat /* icon: contact-twitter.png */; }
+.profile-contacts li.contact-odnoklassniki { background: var(--sprite-icons) -210px -82px no-repeat /* icon: contact-odnoklassniki.png */; }
+.profile-contacts li.contact-facebook      { background: var(--sprite-icons) -180px -82px no-repeat /* icon: contact-facebook.png */; }

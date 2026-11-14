@@ -1,0 +1,19 @@
+/* Display settings toggles in the header (templates/common/display-settings-buttons.tpl) */
+
+/* Reserve room for the toggles: the main menu moves overflowing items into "More" */
+#header 							{ padding-right: 342px; }
+#header .new-messages 				{ right: 277px; }
+
+#header .display-settings 			{ position: absolute; top: 0; height: 51px; display: flex; align-items: center; gap: 4px; }
+#header .display-settings.is-guest 	{ right: 206px; }
+#header .display-settings.is-user 	{ right: 211px; }
+
+.display-toggle 					{ display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: var(--text-gray-83); font: bold 14px/1 "PT Sans", Arial, sans-serif; cursor: pointer; }
+.display-toggle:hover 				{ color: var(--text-gray-100); background: var(--bg-gray-11); }
+.display-toggle:focus-visible 		{ outline: 2px solid var(--border-blue-75); outline-offset: 1px; }
+.display-toggle svg 				{ width: 16px; height: 16px; fill: currentColor; }
+
+.display-toggle .display-icon-sun,
+html[data-theme="dark"] .display-toggle .display-icon-moon 	{ display: none; }
+html[data-theme="dark"] .display-toggle .display-icon-sun 	{ display: block; }
+html[data-font="large"] .display-toggle-font::after { content: "+"; }
