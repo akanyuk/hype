@@ -244,6 +244,37 @@ h2.header-table a {
     vertical-align: middle;
 }
 
+#userbar .userbar-menu-items LI .holder .icon-svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+#userbar .userbar-menu-items LI.unread a {
+    color: #05aae9;
+}
+
+#userbar .userbar-menu-items LI.unread a:after,
+#header .userbar-trigger.unread:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #05aae9;
+}
+
+#userbar .userbar-menu-items LI.unread a:after {
+    top: 16px;
+    right: 14px;
+}
+
+#header .userbar-trigger.unread:after {
+    top: 9px;
+    right: 7px;
+    box-shadow: 0 0 0 2px #000;
+}
+
 #userbar .userbar-menu-items .userbar-item.userbar-item-messages .userbar-item-messages-number {
     position: absolute;
     top: 10px;

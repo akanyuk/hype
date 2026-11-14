@@ -34,11 +34,11 @@ jQuery(document).ready(function($){
 
 	// Unread comments / unread news toolbar
 	if ($(document).find('#unread-stream').length) {
-		$('.icon-stream-lg').addClass('unread');
+		$('.userbar-item-live, #userbar-trigger').addClass('unread');
 	}
 	
 	if ($(document).find('#unread-news').length) {
-		$('.icon-news-lg').addClass('unread');
+		$('.userbar-item-news, #userbar-trigger').addClass('unread');
 	}
 	
 		 
