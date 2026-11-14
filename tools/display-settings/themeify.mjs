@@ -110,7 +110,7 @@ const themePath = join(skinDir, 'css', 'theme.css');
 const theme = await readFile(themePath, 'utf8');
 
 // Reuse tokens already defined in theme.css so reruns are stable
-for (const m of theme.matchAll(/\t(--(?:text|bg|border|shadow)-[a-z0-9-]+): ([^;]+);/g)) {
+for (const m of theme.matchAll(/\t(--(?:text|bg|border|shadow)-(?:gray|black|red|orange|yellow|green|cyan|blue|purple)-[a-z0-9-]+): ([^;]+);/g)) {
 	if (tokens.has(m[1])) continue;
 	const rgba = parseColor(m[2]);
 	const kind = m[1].split('-')[2];

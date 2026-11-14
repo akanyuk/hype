@@ -72,3 +72,12 @@ test('declarations the browser rejects stay literal', async () => {
 	run(dir);
 	assert.equal(await read(dir, 'a.css'), '.b { background: var(--bg-gray-99); background: linear-gradient(top, #fbfcfc 0%, #f0f2f5 100%); }\n');
 });
+
+test('hand-written variables in theme.css are not treated as tokens', async () => {
+	const dir = await skin({ 'a.css': '.x { color: #333; }\n' });
+	await writeFile(join(dir, 'css', 'theme.css'), ':root {\n\t--bg-header: #000000;\n}\n');
+	run(dir, '--dark');
+	run(dir, '--dark');
+	const theme = await read(dir, 'theme.css');
+	assert.equal(theme.match(/--bg-header:/g).length, 1);
+});
