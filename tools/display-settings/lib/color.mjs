@@ -86,11 +86,18 @@ export function darkTransform(kind, c) {
 	let s = 1;
 	switch (kind) {
 		case 'bg':
-			if (L > 50) { L = 9 + (100 - L) * 0.6; s = chroma > 40 ? 0.85 : 0.45; }
-			if (chroma > 40 && lab.L > 50) L = Math.max(L, lab.L * 0.62);
+			if (chroma > 20) {
+				// Saturated surfaces (highlights, notices, buttons) carry inverted light text:
+				// keep them dark, at most L* 22
+				L = Math.min(22, L > 50 ? 9 + (100 - L) * 0.33 : L);
+				s = 0.75;
+			} else if (L > 50) {
+				L = 9 + (100 - L) * 0.6;
+				s = 0.45;
+			}
 			break;
 		case 'text':
-			if (L < 60) { L = 92 - L * (0.45 * k + 0.3); s = 0.9; }
+			if (L < 60) { L = 94 - L * (0.45 * k + 0.3); s = 0.9; }
 			break;
 		case 'border':
 			if (L > 50) { L = 18 + (100 - L) * 0.55; s = chroma > 40 ? 0.8 : 0.4; }
