@@ -13,8 +13,8 @@
 		title="{$aLang.display_font_large}" aria-label="{$aLang.display_font_large}">A</button>
 {/capture}
 {if $tag == 'li'}
-	<li class="display-toggle-item">{$smarty.capture.display_toggles}</li>
-	<li class="display-toggle-item">{$smarty.capture.display_font}</li>
+	<li class="display-toggle-item display-toggle-item-theme">{$smarty.capture.display_toggles}</li>
+	<li class="display-toggle-item display-toggle-item-font">{$smarty.capture.display_font}</li>
 {else}
 	<div id="display-settings" class="display-settings {if $oUserCurrent}is-user{else}is-guest{/if}">
 		{$smarty.capture.display_toggles}

@@ -5,6 +5,24 @@
     height: 48px;
 }
 
+/* The two glyphs sit next to each other: theme icon to the right, "A" to the left */
+#header .nav-userbar li.display-toggle-item-theme,
+#header .nav-userbar li.display-toggle-item-font {
+    width: 40px;
+}
+
+#header .nav-userbar li.display-toggle-item-theme .display-toggle {
+    width: 40px;
+    justify-content: flex-end;
+    padding-right: 3px;
+}
+
+#header .nav-userbar li.display-toggle-item-font .display-toggle {
+    width: 40px;
+    justify-content: flex-start;
+    padding-left: 4px;
+}
+
 .display-toggle {
     display: flex;
     align-items: center;

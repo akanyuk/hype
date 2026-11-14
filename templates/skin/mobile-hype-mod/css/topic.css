@@ -7,7 +7,6 @@
 	zoom: 1;
 	margin-bottom: 10px;
 	background: var(--bg-gray-100);
-	border: 1px solid var(--border-gray-90-2);
 }
 .topic:last-child   { margin-bottom: 0; }
 .topic.topic-single { margin-bottom: 35px; }
