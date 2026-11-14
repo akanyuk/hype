@@ -5,6 +5,10 @@
 * Содержит текстовки шаблона.
 */
 return array(
+	'display_theme_dark' => 'Тёмная тема',
+	'display_theme_light' => 'Светлая тема',
+	'display_font_large' => 'Крупный шрифт',
+	'display_font_normal' => 'Обычный шрифт',
 	'footer_menu_user_profile' => 'Мой профиль',
 	'footer_menu_user_quest_title' => 'Вы можете',
 	'footer_menu_navigate_title' => 'Разделы',

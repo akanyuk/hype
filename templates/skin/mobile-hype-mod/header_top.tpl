@@ -13,6 +13,8 @@
 		{if $oUserCurrent}<div id="next-comment-toolbar"></div>{/if}
 
 		
+		{include file="{cfg name='path.root.server'}/templates/common/display-settings-buttons.tpl" tag='li'}
+
 		{if !$oUserCurrent}
 			<li class="item-auth item-primary slide-trigger" id="item-auth" onclick="$(document).scrollTop(0); ls.tools.slide($('#window_login_form'), $(this), true);"></li>
 		{/if}

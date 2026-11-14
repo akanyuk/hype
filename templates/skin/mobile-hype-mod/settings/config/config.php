@@ -61,6 +61,7 @@ $config['head']['default']['css'] = array(
 	"___path.static.skin___/css/forms.css",
 	"___path.static.skin___/css/buttons.css",
 	"___path.static.skin___/css/navs.css",
+	"___path.static.skin___/css/display-settings.css",
 	"___path.static.skin___/css/icons.css",
 	"___path.static.skin___/css/tables.css",
 	"___path.static.skin___/css/topic.css",

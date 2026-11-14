@@ -20,6 +20,8 @@
 	
 	{hook run='userbar_nav'}
 	
+	{include file="{cfg name='path.root.server'}/templates/common/display-settings-buttons.tpl"}
+	
 	{if $oUserCurrent}
 		<div class="dropdown-user" id="dropdown-user">
 			<a href="{$oUserCurrent->getUserWebPath()}"><img src="{$oUserCurrent->getProfileAvatarPath(48)}" alt="avatar" class="avatar" /></a>

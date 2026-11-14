@@ -1,6 +1,10 @@
 <?php
 
 return array(
+	'display_theme_dark' => 'Тёмная тема',
+	'display_theme_light' => 'Светлая тема',
+	'display_font_large' => 'Крупный шрифт',
+	'display_font_normal' => 'Обычный шрифт',
 	'userbar_live' => 'Прямой эфир',
 	'nav_select_item' => 'Выберите пункт',
 	'desktop_version' => 'Полная версия',

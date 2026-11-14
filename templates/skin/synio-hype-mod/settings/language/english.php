@@ -4,6 +4,10 @@
 * English language file.
 */
 return array(
+	'display_theme_dark' => 'Dark theme',
+	'display_theme_light' => 'Light theme',
+	'display_font_large' => 'Large font',
+	'display_font_normal' => 'Normal font',
 	'footer_menu_user_profile' => 'My profile',
 	'footer_menu_user_quest_title' => 'You do',
 	'footer_menu_navigate_title' => 'Categories',

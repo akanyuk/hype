@@ -1,0 +1,45 @@
+/* Display settings toggles in the header (templates/common/display-settings-buttons.tpl) */
+
+#header .nav-userbar li.display-toggle-item {
+    width: 44px;
+    height: 48px;
+}
+
+.display-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font: bold 17px/1 'Open Sans', Arial, sans-serif;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.display-toggle:focus-visible {
+    outline: 2px solid #05aae9;
+    outline-offset: -4px;
+}
+
+.display-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.display-toggle .display-icon-sun,
+html[data-theme="dark"] .display-toggle .display-icon-moon {
+    display: none;
+}
+
+html[data-theme="dark"] .display-toggle .display-icon-sun {
+    display: block;
+}
+
+html[data-font="large"] .display-toggle-font::after {
+    content: "+";
+}
