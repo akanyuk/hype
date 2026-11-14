@@ -79,8 +79,9 @@ async function login(browser, skin) {
  * storage: 'blocked' makes localStorage throw SecurityError.
  * system: 'light'|'dark' emulated prefers-color-scheme (default light).
  * raw: stored values written verbatim (for invalid-value tests): { 'hype-theme': 'blue' }.
+ * beforeLoad: async (page) => {} run before navigation, e.g. to add evaluateOnNewDocument scripts.
  */
-export async function openPage(browser, { skin = 'desktop', role = 'guest', theme, font, path = '/', storage, system = 'light', raw, volatile = true, context } = {}) {
+export async function openPage(browser, { skin = 'desktop', role = 'guest', theme, font, path = '/', storage, system = 'light', raw, volatile = true, context, beforeLoad } = {}) {
 	const ctx = context || (await browser.createBrowserContext());
 	const page = await ctx.newPage();
 	page.errors = [];
@@ -104,6 +105,7 @@ export async function openPage(browser, { skin = 'desktop', role = 'guest', them
 		sessionStorage.setItem('__seeded', '1');
 		for (const [k, v] of Object.entries(stored)) localStorage.setItem(k, v);
 	}, stored, storage === 'blocked');
+	if (beforeLoad) await beforeLoad(page);
 	await page.goto(BASE + path, { waitUntil: 'networkidle2', timeout: 30000 });
 	await page.evaluate(() => Promise.race([
 		Promise.all([document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => {}))]),
