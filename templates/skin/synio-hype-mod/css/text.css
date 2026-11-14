@@ -13,13 +13,13 @@
 .text p { margin-bottom: 1em; }
 .text abbr[title] { border-bottom: 1px dotted; }
 .text b, .text strong { font-weight: bold; }
-.text blockquote { margin: 0; background: #fbfbfc; color: #555; padding: 10px 15px; clear: both; border-left: 5px solid #EDEDF2; }
+.text blockquote { margin: 0; background: var(--bg-gray-99-3); color: var(--text-gray-36); padding: 10px 15px; clear: both; border-left: 5px solid var(--border-gray-94-3); }
 .text dfn { font-style: italic; }
-.text hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-.text ins { background: #ff9; color: #000; text-decoration: none; }
-.text mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+.text hr { display: block; height: 1px; border: 0; border-top: 1px solid var(--border-gray-82); margin: 1em 0; padding: 0; }
+.text ins { background: var(--bg-green-98-3); color: var(--text-gray-0); text-decoration: none; }
+.text mark { background: var(--bg-green-97-2); color: var(--text-gray-0); font-style: italic; font-weight: bold; }
 
-.text pre { margin: 0; padding: 10px 15px; border: none; background: #fafafa; font-size: 12px; line-height: 18px; overflow: auto; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; clear: both; }
+.text pre { margin: 0; padding: 10px 15px; border: none; background: var(--bg-gray-98-3); font-size: 12px; line-height: 18px; overflow: auto; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; clear: both; }
 .text q { quotes: none; clear: both; }
 .text q:before, q:after { content: ""; content: none; }
 .text small { font-size: 85%; }
@@ -40,6 +40,6 @@
 .text object,
 .text img { max-width: 100%; vertical-align: top; }
 
-.text .ls-user { color: #3F8AD7; }
-.text .ls-user:visited { color: #3F8AD7; }
-.text .ls-user:hover { color: #f00; }
+.text .ls-user { color: var(--text-blue-56); }
+.text .ls-user:visited { color: var(--text-blue-56); }
+.text .ls-user:hover { color: var(--text-orange-53); }

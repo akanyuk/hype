@@ -3,27 +3,27 @@
 -------------------------------------------- */
 
 #container 			{ margin: 0 auto; margin-bottom: 20px; padding: 0 48px; }
-#header-back 		{ position: absolute; top: 0; left: 0; width: 100%; height: 51px; background: #000000; }
-#header 			{ background-color: #000000; height: 51px; margin: 0 auto; position: relative; padding-right: 270px; }
+#header-back 		{ position: absolute; top: 0; left: 0; width: 100%; height: 51px; background: var(--bg-header); }
+#header 			{ background-color: var(--bg-header); height: 51px; margin: 0 auto; position: relative; padding-right: 270px; }
 #nav 		{ 
 	min-height: 26px;
 	margin-bottom: 32px; 
 	overflow: hidden; 
 	padding: 12px 17px 15px; 
-	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.15); box-shadow: 0 0 10px rgba(0,0,0,.15); 
+	-webkit-box-shadow: 0 0 10px var(--shadow-black-0-a15); box-shadow: 0 0 10px var(--shadow-black-0-a15); 
 	border-radius: 0 0 10px 10px;
 	position: relative;
 	
-	background: #fdfdfd;
+	background: var(--bg-gray-99-4);
 	background: -moz-linear-gradient(top,  #fdfdfd 0%, #f6f8f9 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f6f8f9));
-	background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,var(--bg-gray-99-4)), color-stop(100%,var(--bg-gray-97-5)));
+	background: -webkit-linear-gradient(top,  var(--bg-gray-99-4) 0%,var(--bg-gray-97-5) 100%);
 	background: -o-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 	background: -ms-linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 	background: linear-gradient(top,  #fdfdfd 0%,#f6f8f9 100%);
 }
-#wrapper 	{ overflow: hidden; zoom: 1; padding: 20px 16px 20px 27px; margin-bottom: 60px; background: #fff url(../images/sidebar-border.png) 100% 0px repeat-y; border-bottom: 1px solid #eee; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.05); box-shadow: 0 0 5px rgba(0,0,0,.05); border-radius: 10px; }
-#content 	{ min-height: 1px; margin-right: 295px; background: #fff; position: relative; }
+#wrapper 	{ overflow: hidden; zoom: 1; padding: 20px 16px 20px 27px; margin-bottom: 60px; background: var(--bg-gray-100) url(../images/sidebar-border.png) 100% 0px repeat-y; border-bottom: 1px solid var(--border-gray-94); -webkit-box-shadow: 0 0 5px var(--shadow-black-0-a5); box-shadow: 0 0 5px var(--shadow-black-0-a5); border-radius: 10px; }
+#content 	{ min-height: 1px; margin-right: 295px; background: var(--bg-gray-100); position: relative; }
 #sidebar	{ float: right; width: 240px; }
 #footer 	{ overflow: hidden; zoom: 1; margin-bottom: 20px; padding: 0 0 50px 30px; font-size: 11px; }
 

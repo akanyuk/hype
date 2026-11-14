@@ -52,7 +52,7 @@ $(document).ready(function(){
 	</div>
 	<div>
 		<a href="%url%"><strong>%title%</strong></a>
-		<p style="font-size: 11px; color: #818189;">%date%</p>				
+		<p class="block-events-date">%date%</p>				
 	</div>
 	<div style="clear: both; padding-bottom: 15px;"></div>
 </div>

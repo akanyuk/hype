@@ -8,9 +8,9 @@
 #header .display-settings.is-guest 	{ right: 206px; }
 #header .display-settings.is-user 	{ right: 211px; }
 
-.display-toggle 					{ display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: #cfcfcf; font: bold 14px/1 "PT Sans", Arial, sans-serif; cursor: pointer; }
-.display-toggle:hover 				{ color: #fff; background: #1d1d1d; }
-.display-toggle:focus-visible 		{ outline: 2px solid #4ec4ff; outline-offset: 1px; }
+.display-toggle 					{ display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; padding: 0; border: 0; border-radius: 4px; background: transparent; color: var(--text-gray-83); font: bold 14px/1 "PT Sans", Arial, sans-serif; cursor: pointer; }
+.display-toggle:hover 				{ color: var(--text-gray-100); background: var(--bg-gray-11); }
+.display-toggle:focus-visible 		{ outline: 2px solid var(--border-blue-75); outline-offset: 1px; }
 .display-toggle svg 				{ width: 16px; height: 16px; fill: currentColor; }
 
 .display-toggle .display-icon-sun,

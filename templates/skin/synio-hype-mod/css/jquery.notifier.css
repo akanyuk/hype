@@ -24,19 +24,19 @@
 	padding: 15px 20px 16px; 
 	margin-bottom: 10px;
 	
-	color: #fff; 
-	background: #000; 
+	color: var(--text-gray-100); 
+	background: var(--bg-header); 
 	
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3); box-shadow: 0 0 5px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 5px var(--shadow-black-0-a30); box-shadow: 0 0 5px var(--shadow-black-0-a30);
 	opacity: 0.9; filter: alpha(opacity=80);
 	
 	cursor: pointer;
 }
-#notifier .n-box h3 { color: #fff; font-size: 12px; font-weight: bold; margin-bottom: 3px; font-family: Verdana, sans-serif; }
+#notifier .n-box h3 { color: var(--text-gray-100); font-size: 12px; font-weight: bold; margin-bottom: 3px; font-family: Verdana, sans-serif; }
 #notifier .n-box p { margin: 0; }
 
-#notifier .n-box.n-notice { background: #063573; color: #fff; }
-#notifier .n-box.n-error { background: #850505; color: #fff; }
+#notifier .n-box.n-notice { background: var(--bg-blue-23); color: var(--text-gray-100); }
+#notifier .n-box.n-error { background: var(--bg-orange-27); color: var(--text-gray-100); }
