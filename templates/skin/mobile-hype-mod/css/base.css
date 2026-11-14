@@ -6,44 +6,44 @@ body {
     font-size: 13px;
     font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 18px;
-    color: #333;
-    background-color: #f6f8fa;
+    color: var(--text-gray-21);
+    background-color: var(--bg-gray-97);
     -webkit-text-size-adjust: 100%;
 }
 
 /* Ссылки
 ---------------------------------------------------- */
 a {
-    color: #5055b2;
+    color: var(--text-blue-40);
     text-decoration: none;
 }
 
 a:hover {
-    color: #06e;
+    color: var(--text-blue-47);
 }
 
 a.link-dashed {
-    border-bottom: 1px dashed #5055b2;
+    border-bottom: 1px dashed var(--border-blue-40);
 }
 
 a.link-dashed:hover {
-    border-color: #06e;
+    border-color: var(--border-blue-47);
 }
 
 a.link-dotted {
     text-decoration: none;
-    border-bottom: 1px dotted #5055b2;
+    border-bottom: 1px dotted var(--border-blue-40);
 }
 
 a.link-dotted:hover {
-    border-color: #06e;
+    border-color: var(--border-blue-47);
 }
 
 
 /* Заголовки
 ---------------------------------------------------- */
 h2.page-header {
-    color: #333;
+    color: var(--text-gray-21);
     font-size: 17px;
     line-height: 1.3em;
     font-weight: 600;
@@ -51,7 +51,7 @@ h2.page-header {
 }
 
 h2.page-header span {
-    color: #aaa;
+    color: var(--text-gray-70);
 }
 
 h2.header-table {
@@ -69,7 +69,7 @@ h2.header-table a {
 ---------------------------------------------------- */
 
 #header {
-    background-color: #000;
+    background-color: var(--bg-header);
 }
 
 #header a {
@@ -105,11 +105,11 @@ h2.header-table a {
 }
 
 #header .nav-userbar li.item-primary {
-    background-color: #05aae9 !important;
+    background-color: var(--bg-blue-65) !important;
 }
 
 #header .nav-userbar li.active {
-    background-color: #ddd !important;
+    background-color: var(--bg-gray-88) !important;
 }
 
 #header .nav-userbar li.item-auth {
@@ -141,8 +141,8 @@ h2.header-table a {
 }
 
 #header #next-comment-toolbar a {
-    background-color: #030;
-    color: #2c2;
+    background-color: var(--bg-green-17);
+    color: var(--text-green-72);
     display: block;
     font-weight: bold;
     line-height: 24px;
@@ -153,7 +153,7 @@ h2.header-table a {
 ---------------------------------------------------- */
 #userbar {
     width: 220px;
-    background: #333;
+    background: var(--bg-gray-21);
     z-index: 2;
     position: fixed;
     top: 44px;
@@ -162,7 +162,7 @@ h2.header-table a {
 
 #userbar .userbar-menu-inner {
     position: relative;
-    color: #fff;
+    color: var(--text-gray-100);
 }
 
 #userbar a.item-messages {
@@ -178,7 +178,7 @@ h2.header-table a {
     height: 44px;
     position: relative;
     padding-left: 49px;
-    background: #222;
+    background: var(--bg-gray-13);
     overflow: hidden;
 }
 
@@ -195,26 +195,26 @@ h2.header-table a {
 }
 
 #userbar .userbar-menu-user h3 a {
-    color: #e2e5e9;
+    color: var(--text-gray-91);
     font-size: 19px;
     font-weight: 600;
 }
 
 #userbar .userbar-menu-rating-wrapper {
     padding: 2px 9px 7px 9px;
-    border-bottom: 1px solid #333435;
+    border-bottom: 1px solid var(--border-gray-22);
 }
 
 #userbar .userbar-menu-rating-wrapper .user-profile-rating {
-    color: #788087;
+    color: var(--text-gray-53);
 }
 
 #userbar .userbar-menu-rating-wrapper .user-profile-new-mail {
-    color: #c00000;
+    color: var(--text-orange-40);
 }
 
 #userbar .userbar-menu-items {
-    border-top: 1px solid #48494a;
+    border-top: 1px solid var(--border-gray-31);
 }
 
 #userbar .userbar-menu-items LI {
@@ -225,12 +225,12 @@ h2.header-table a {
 
 #userbar .userbar-menu-items LI a {
     display: block;
-    color: #fff;
+    color: var(--text-gray-100);
     padding: 12px 9px 12px 47px;
 }
 
 #userbar .userbar-menu-items LI a:hover {
-    color: #ddd;
+    color: var(--text-gray-88);
 }
 
 #userbar .userbar-menu-items LI .holder {
@@ -251,7 +251,7 @@ h2.header-table a {
 }
 
 #userbar .userbar-menu-items LI.unread a {
-    color: #05aae9;
+    color: var(--text-blue-65);
 }
 
 #userbar .userbar-menu-items LI.unread a:after,
@@ -261,7 +261,7 @@ h2.header-table a {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #05aae9;
+    background: var(--bg-blue-65);
 }
 
 #userbar .userbar-menu-items LI.unread a:after {
@@ -272,15 +272,15 @@ h2.header-table a {
 #header .userbar-trigger.unread:after {
     top: 9px;
     right: 7px;
-    box-shadow: 0 0 0 2px #000;
+    box-shadow: 0 0 0 2px var(--shadow-gray-0);
 }
 
 #userbar .userbar-menu-items .userbar-item.userbar-item-messages .userbar-item-messages-number {
     position: absolute;
     top: 10px;
     right: 11px;
-    color: #fff;
-    border: 2px solid #d8b124;
+    color: var(--text-gray-100);
+    border: 2px solid var(--border-yellow-74);
     font: normal 12px/1em Verdana, Arial, sans-serif;
     padding: 2px 6px 3px;
     border-radius: 10px;
@@ -291,10 +291,10 @@ h2.header-table a {
     position: relative;
     padding: 14px;
     margin: 7px;
-    background: #474849;
-    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+    background: var(--bg-gray-31);
+    -webkit-box-shadow: 0 2px 3px var(--shadow-black-0-a50);
     -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 3px var(--shadow-black-0-a50);
 }
 
 .userbar-submit-menu:before {
@@ -304,7 +304,7 @@ h2.header-table a {
     left: 37px;
     width: 0;
     height: 0;
-    border-color: transparent transparent #474849 transparent;
+    border-color: transparent transparent var(--border-gray-31-2) transparent;
     border-width: 8px;
     border-style: solid;
 }
@@ -320,12 +320,12 @@ h2.header-table a {
 .userbar-submit-menu li a {
     display: inline-block !important;
     padding: 0 !important;
-    color: #fff;
+    color: var(--text-gray-100);
     font: normal 11px/1em Verdana, Arial, sans-serif;
 }
 
 .userbar-submit-menu li a:hover {
-    color: #ddd;
+    color: var(--text-gray-88);
 }
 
 .userbar-submit-menu li i {
@@ -361,7 +361,7 @@ h2.header-table a {
 }
 
 #footer .footer-inner {
-    border-top: 1px solid #e2e7ec;
+    border-top: 1px solid var(--border-gray-91);
     padding: 9px;
 }
 
@@ -398,9 +398,9 @@ h2.header-table a {
     display: none;
     margin: 0 auto 20px;
     padding: 15px 20px;
-    background: #fff;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    background: var(--bg-gray-100);
+    border-top: 1px solid var(--border-gray-94);
+    border-bottom: 1px solid var(--border-gray-94);
 }
 
 .stat-performance table {
@@ -428,11 +428,11 @@ h2.header-table a {
 }
 
 .userfeed-get-more:hover {
-    background: #f0f7fd;
+    background: var(--bg-gray-97-2);
 }
 
 .userfeed_loading {
-    background: #F7F7F7 url(../images/loader.gif) no-repeat center;
+    background: var(--bg-gray-97-3) url(../images/loader.gif) no-repeat center;
 }
 
 
@@ -442,23 +442,23 @@ h2.header-table a {
     display: block;
     text-align: center;
     padding: 12px 0;
-    background: #fafafa;
-    color: #aaa;
-    border-top: 1px solid #eee;
+    background: var(--bg-gray-98);
+    color: var(--text-gray-70);
+    border-top: 1px solid var(--border-gray-94);
     text-decoration: none;
 }
 
 .stream-get-more:hover {
-    background: #f0f7fd;
+    background: var(--bg-gray-97-2);
 }
 
 .stream_loading {
-    background: #f7f7f7 url(../images/loader.gif) no-repeat center;
+    background: var(--bg-gray-97-3) url(../images/loader.gif) no-repeat center;
 }
 
 .stream-comment-preview {
     padding: 7px 10px;
-    background: #fffcd6;
+    background: var(--bg-green-98);
     margin-top: 5px;
     position: relative;
     margin-top: 10px;
@@ -471,7 +471,7 @@ h2.header-table a {
     left: 10px;
     width: 0;
     height: 0;
-    border-color: transparent transparent #fffcd6 transparent;
+    border-color: transparent transparent var(--border-green-98) transparent;
     border-width: 8px;
     border-style: solid;
 }
@@ -486,7 +486,7 @@ h2.header-table a {
     position: relative;
     font-size: 11px;
     line-height: 15px;
-    border-bottom: 1px solid #e2e7ec;
+    border-bottom: 1px solid var(--border-gray-91);
 }
 
 .stream-list li.stream-item .avatar {
@@ -502,7 +502,7 @@ h2.header-table a {
 }
 
 .stream-list li.stream-item .date {
-    color: #999;
+    color: var(--text-gray-63);
 }
 
 .stream-list li.stream-header-date {
@@ -523,12 +523,12 @@ h2.header-table a {
 
 .userfield-list .userfield-item {
     position: relative;
-    background: #f7f7f7;
+    background: var(--bg-gray-97-3);
     margin-bottom: 1px;
     padding: 11px 100px 11px 10px;
     overflow: hidden;
     zoom: 1;
-    color: #777;
+    color: var(--text-gray-50);
 }
 
 .userfield-list .userfield-item .userfield-actions {
@@ -543,17 +543,17 @@ h2.header-table a {
 
 .userfield-list .userfield-item .userfield_admin_name {
     font-weight: bold;
-    color: #333;
+    color: var(--text-gray-21);
 }
 
 .userfield-add {
     text-decoration: none;
-    border-bottom: 1px dashed #70AAE0;
+    border-bottom: 1px dashed var(--border-blue-68);
 }
 
 .userfield-add:hover {
-    color: #333;
-    border-color: #333;
+    color: var(--text-gray-21);
+    border-color: var(--border-gray-21);
 }
 
 
@@ -565,7 +565,7 @@ h2.header-table a {
 .message-list li {
     position: relative;
     padding: 15px 10px 15px 27px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-gray-94);
 }
 
 .message-list li:last-child {
@@ -605,7 +605,7 @@ h2.header-table a {
 }
 
 .message-list li .message-info time {
-    color: #788087;
+    color: var(--text-gray-53);
 }
 
 .message-list li .message-info i {
@@ -618,7 +618,7 @@ h2.header-table a {
 .message-list li .message-user {
     font-family: Verdana;
     font-size: 11px;
-    color: #000;
+    color: var(--text-gray-0);
     text-decoration: underline;
 }
 
@@ -632,7 +632,7 @@ h2.header-table a {
     position: relative;
     min-height: 50px;
     padding: 10px;
-    border-bottom: 1px solid #e1e8ef;
+    border-bottom: 1px solid var(--border-gray-92);
     padding-left: 60px;
     padding-right: 60px;
 }
@@ -664,7 +664,7 @@ h2.header-table a {
 
 .blog-list li p {
     overflow: hidden;
-    color: #788087;
+    color: var(--text-gray-53);
     font-size: 11px;
 }
 
@@ -689,7 +689,7 @@ h2.header-table a {
 
 .swipegallery .sg-inner.loader {
     height: 200px !important;
-    background: #fafafa url(../images/loader.gif) 50% 50% no-repeat;
+    background: var(--bg-gray-98) url(../images/loader.gif) 50% 50% no-repeat;
 }
 
 .swipegallery .sg-inner.loader ul {
@@ -711,19 +711,19 @@ h2.header-table a {
 }
 
 .swipegallery .sg-item-desc {
-    background: #f6f8fa;
+    background: var(--bg-gray-97);
     font-size: 11px;
     padding: 10px 15px;
-    border-bottom: 1px solid #dde5ed;
+    border-bottom: 1px solid var(--border-gray-91-2);
 }
 
 .swipegallery .sg-nav {
-    background: #f6f8fa;
+    background: var(--bg-gray-97);
     height: 34px;
     position: relative;
     line-height: 34px;
     text-align: center;
-    color: #9da9b5;
+    color: var(--text-gray-69);
     font-size: 11px;
 }
 
@@ -764,7 +764,7 @@ h2.header-table a {
 .poll-create {
     padding: 15px 20px;
     margin-bottom: 20px;
-    background: #f7f7f7;
+    background: var(--bg-gray-97-3);
 }
 
 .question-list {
@@ -784,14 +784,14 @@ h2.header-table a {
     display: none;
     position: relative;
     padding: 10px 7px 13px;
-    background: #fafafa;
-    color: #363636;
+    background: var(--bg-gray-98);
+    color: var(--text-gray-23);
     margin-top: 13px;
     font-size: 11px;
     line-height: 16px;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 5px #eaeaea inset;
-    box-shadow: 0 0 5px #eaeaea inset;
+    -webkit-box-shadow: 0 0 5px var(--shadow-gray-93) inset;
+    box-shadow: 0 0 5px var(--shadow-gray-93) inset;
 }
 
 .help:before {
@@ -803,7 +803,7 @@ h2.header-table a {
     width: 0;
     height: 0;
     border-width: 6px;
-    border-color: transparent transparent #eee transparent;
+    border-color: transparent transparent var(--border-gray-94) transparent;
     border-style: solid;
 }
 
@@ -839,8 +839,8 @@ h2.header-table a {
 }
 
 .help .help-item h4 a {
-    color: #5055B2;
-    border-bottom: 1px dotted #727a90;
+    color: var(--text-blue-40);
+    border-bottom: 1px dotted var(--border-blue-51);
 }
 
 .fluid-width-video-wrapper {

@@ -17,17 +17,17 @@
 .text p               { margin-bottom: 1em; }
 .text abbr[title]     { border-bottom: 1px dotted; }
 .text b, .text strong { font-weight: bold; }
-.text blockquote      { margin: 0; padding: 3px 10px; font-style: italic; clear: both; border-left: 3px solid #4ec2ef; }
+.text blockquote      { margin: 0; padding: 3px 10px; font-style: italic; clear: both; border-left: 3px solid var(--border-blue-74); }
 .text dfn             { font-style: italic; }
-.text hr              { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-.text ins             { background: #ff9; color: #000; text-decoration: none; }
-.text mark            { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+.text hr              { display: block; height: 1px; border: 0; border-top: 1px solid var(--border-gray-82); margin: 1em 0; padding: 0; }
+.text ins             { background: var(--bg-green-98-3); color: var(--text-gray-0); text-decoration: none; }
+.text mark            { background: var(--bg-green-97); color: var(--text-gray-0); font-style: italic; font-weight: bold; }
 
 .text pre {
 	margin: 0;
 	padding: 9px 12px;
-	border: 1px dotted #87c5da;
-	background: #f9fafc;
+	border: 1px dotted var(--border-cyan-76);
+	background: var(--bg-gray-98-2);
 	font-size: 11px;
 	line-height: 1.6em;
 	overflow: auto;
@@ -58,6 +58,6 @@
 .text iframe { width: 100%; }
 .text img { max-width: 100%; }
 
-.text .ls-user           { color: #333; }
-.text .ls-user:visited   { color: #333; }
-.text .ls-user:hover     { color: #555; }
+.text .ls-user           { color: var(--text-gray-21); }
+.text .ls-user:visited   { color: var(--text-gray-21); }
+.text .ls-user:hover     { color: var(--text-gray-36); }

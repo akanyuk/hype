@@ -1,6 +1,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#block-events-content').html('<p style="font-size: 11px; color: #818189;">Loading active events...</p>');
+	$('#block-events-content').html('<p class="block-events-date">Loading active events...</p>');
 	
 	$.get('https://events.retroscene.org/api/events/upcoming-current', function(response){
 		if (!$(response).find('Event').length) {
@@ -54,7 +54,7 @@ $(document).ready(function(){
 	</div>
 	<div>
 		<a href="%url%"><strong>%title%</strong></a>
-		<p style="font-size: 11px; color: #818189;">%date%</p>				
+		<p class="block-events-date">%date%</p>				
 	</div>
 	<div style="clear: both; padding-bottom: 15px;"></div>
 </div>

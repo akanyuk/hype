@@ -17,26 +17,26 @@
 	padding: 7px 13px;
 	margin: 0 5px 5px 0;
 	text-align: center;
-	border: 1px solid #d9e3ec;
+	border: 1px solid var(--border-gray-90);
 	font: 600 14px/16px 'Open Sans', Arial;
-	color: #333;
-	background: #f6f8fa;
+	color: var(--text-gray-21);
+	background: var(--bg-gray-97);
 	cursor: pointer;
 	text-decoration: none;
 }
-.button:hover { text-decoration: none; background: #eee; }
+.button:hover { text-decoration: none; background: var(--bg-gray-94); }
 .button:active { 
-	-webkit-box-shadow: 0 0 7px rgba(0, 0, 0, .5) inset; 
+	-webkit-box-shadow: 0 0 7px var(--shadow-black-0-a50) inset; 
 	   -moz-box-shadow: 0 0 7px rgba(0, 0, 0, .5) inset; 
-	        box-shadow: 0 0 7px rgba(0, 0, 0, .5) inset; 
+	        box-shadow: 0 0 7px var(--shadow-black-0-a50) inset; 
 }
 .button.fl-r { *margin-right: 0; }
 
 
 /* Button Primary */
-.button.button-primary        { background: #058be9; color: #fff; border-color: #058be9; }
-.button.button-primary:hover  { background: #0065e2; color: #fff; border-color: #0065e2; }
-.button.button-primary.active { background: #d23e3e; }
+.button.button-primary        { background: var(--bg-blue-56); color: var(--text-gray-100); border-color: var(--border-blue-56); }
+.button.button-primary:hover  { background: var(--bg-blue-45); color: var(--text-gray-100); border-color: var(--border-blue-45); }
+.button.button-primary.active { background: var(--bg-orange-49); }
 
 /* Button Icon (Without text) */
 .button.button-icon 			{ padding: 7px 10px; }

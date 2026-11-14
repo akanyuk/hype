@@ -11,7 +11,7 @@
 	left: 50px;
 	width: 7px;
 	height: 7px;
-	background: #53DE2E;
+	background: var(--bg-green-79);
 	border-radius: 7px;
 }
 
@@ -26,22 +26,22 @@
 
 .profile .user-login                  { width: 270px; font-size: 19px; font-weight: 600; padding-top: 7px; margin-bottom: 7px; }
 .profile .user-login.no-user-name     { padding-top: 18px; }
-.profile .user-name                   { font-size: 14px; color: #788087; }
+.profile .user-name                   { font-size: 14px; color: var(--text-gray-53); }
 
-.profile-actions                      { padding: 9px; background: #fafafa; margin-bottom: 10px; }
+.profile-actions                      { padding: 9px; background: var(--bg-gray-98); margin-bottom: 10px; }
 .profile-actions li                   { float: left; margin-right: 9px; }
 .profile-actions li.vote-result       { float: right; margin-right: 0; }
 
-.profile-page-header                  { font-size: 12px; font-weight: bold; margin-bottom: 20px; background: #f5f5f5; border-top: 1px solid #eee; color: #555; padding: 5px 10px 6px; }
+.profile-page-header                  { font-size: 12px; font-weight: bold; margin-bottom: 20px; background: var(--bg-gray-97-4); border-top: 1px solid var(--border-gray-94); color: var(--text-gray-36); padding: 5px 10px 6px; }
 
-.profile-info-note                    { padding: 10px; background: #fffcd6; color: #000; font-size: 11px; border-bottom: 1px solid #E1E8EF; }
+.profile-info-note                    { padding: 10px; background: var(--bg-green-98); color: var(--text-gray-0); font-size: 11px; border-bottom: 1px solid var(--border-gray-92); }
 .profile-info-note h2                 { margin-bottom: 5px; }
 .profile-info-note .actions           { margin-bottom: 0; padding-top: 5px; font-size: 12px; line-height: 18px; }
-.profile-info-note .actions a         { color: #5055b2; border-color: #5055b2; }
+.profile-info-note .actions a         { color: var(--text-blue-40); border-color: var(--border-blue-40); }
 
-.profile-info-about                   { padding: 20px 0; color: #000; font-size: 11px; border-bottom: 1px solid #E1E8EF; }
+.profile-info-about                   { padding: 20px 0; color: var(--text-gray-0); font-size: 11px; border-bottom: 1px solid var(--border-gray-92); }
 
-.profile-info-photo                   { text-align: center; border-bottom: 1px solid #E1E8EF; }
+.profile-info-photo                   { text-align: center; border-bottom: 1px solid var(--border-gray-92); }
 .profile-info-photo img               { vertical-align: top; max-width: 100%; }
 
 .profile-contacts                          { overflow: hidden; padding-top: 5px; }

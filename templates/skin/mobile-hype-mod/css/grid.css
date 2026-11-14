@@ -16,8 +16,8 @@
 #content { 
 	margin: 0 4px;
 	padding: 9px;
-	background: #fff;
-	border: 1px solid #e1e1e1;
+	background: var(--bg-gray-100);
+	border: 1px solid var(--border-gray-90-2);
 }
 #content.no-bg { 
 	background: transparent;

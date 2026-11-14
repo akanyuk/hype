@@ -6,9 +6,9 @@
 	width: 150px;
 	padding: 7px;
 	font-size: 14px;
-	border: 1px solid #adb3b9;
-	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.07) inset; 
-	        box-shadow: 0 2px 4px rgba(0,0,0,.07) inset;
+	border: 1px solid var(--border-gray-73);
+	-webkit-box-shadow: 0 2px 4px var(--shadow-black-0-a7) inset; 
+	        box-shadow: 0 2px 4px var(--shadow-black-0-a7) inset;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -30,18 +30,18 @@
 .input-holder.input-holder-text { padding-right: 5px; }
 
 
-textarea { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #adb3b9; }
+textarea { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid var(--border-gray-73); }
 
-select 		{ padding: 4px; border: 1px solid #ddd; border-radius: 3px; }
+select 		{ padding: 4px; border: 1px solid var(--border-gray-88); border-radius: 3px; }
 
 fieldset { margin-bottom: 30px; padding-top: 20px; }
-fieldset legend { color: #000; font-size: 18px; padding-right: 10px; }
+fieldset legend { color: var(--text-gray-0); font-size: 18px; padding-right: 10px; }
 
 form p { margin-bottom: 20px; }
 form label { display: block; margin-bottom: 3px; }
 form .icon-question-sign { cursor: help; }
 
-.note { display: block; margin-top: 3px; font-size: 12px; color: #aaa; }
+.note { display: block; margin-top: 3px; font-size: 12px; color: var(--text-gray-70); }
 .note.note-header { margin-bottom: 20px; }
 
 .captcha-image { vertical-align: top; }
@@ -54,13 +54,13 @@ dl.form-item dd { }
 .form-profile .avatar-change { margin-bottom: 20px; }
 .form-profile .link-dotted { margin-right: 10px; }
 
-.js-user-field-item { padding: 10px; background: #fafafa; margin-bottom: 3px; }
+.js-user-field-item { padding: 10px; background: var(--bg-gray-98); margin-bottom: 3px; }
 .js-user-field-item select,
 .js-user-field-item input { margin-bottom: 10px; }
 
 /* Placeholder */
-:-moz-placeholder { color: #aaa; }
-.placeholder { color: #aaa; }
+:-moz-placeholder { color: var(--text-gray-70); }
+.placeholder { color: var(--text-gray-70); }
 
 .mceEditor { display: block; margin-bottom: 20px; }
 
@@ -72,7 +72,7 @@ dl.form-item dd { }
 /* Валидатор 
 ---------------------------------------------------------------*/
 .validate-error-hide { display: none; }
-.validate-error-show { display: block; color: #f00; font-size: 12px; }
+.validate-error-show { display: block; color: var(--text-orange-53); font-size: 12px; }
 
 .validate-item                { position: relative; padding-right: 20px; }
 .validate-item .icon-ok-green { position: absolute; top: 29px; right: 0; }

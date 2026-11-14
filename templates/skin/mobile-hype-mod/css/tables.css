@@ -3,9 +3,9 @@
 ------------------------------------------------------------------- */
 
 .table 					{ width: 100%; }
-.table th 				{ text-align: left; background: #fafafa; }
-.table td, .table th 	{ border-bottom: 1px solid #eee; padding: 10px; }
-.table tr.active td 	{ background: #ACFAFE; }
+.table th 				{ text-align: left; background: var(--bg-gray-98); }
+.table td, .table th 	{ border-bottom: 1px solid var(--border-gray-94); padding: 10px; }
+.table tr.active td 	{ background: var(--bg-cyan-94); }
 
 .table a.asc:after		{ content: "▲"; }
 .table a.desc:after		{ content: "▼"; }
@@ -17,21 +17,21 @@
 .table.table-plugins h3 				{ font-weight: bold; font-size: 17px; line-height: 20px; margin-bottom: 5px; }
 
 /* Table Profile Notes */
-.table.table-profile-notes 					{ border-top: 1px solid #eee; }
+.table.table-profile-notes 					{ border-top: 1px solid var(--border-gray-94); }
 .table.table-profile-notes td 				{ vertical-align: top; }
 .table.table-profile-notes .cell-username 	{ width: 20%; font-weight: bold; }
 .table.table-profile-notes .cell-note 		{ width: 50%; }
 .table.table-profile-notes .cell-date 		{ text-align: right; }
 
 /* Table Profile Info */
-.table-profile-info-wrapper            { padding: 17px 0; border-bottom: 1px solid #e1e8ef; }
+.table-profile-info-wrapper            { padding: 17px 0; border-bottom: 1px solid var(--border-gray-92); }
 .table-profile-info-wrapper:last-child { border: none; padding-bottom: 0; }
 
 .table.table-profile-info 				{ font-size: 11px; }
 .table.table-profile-info td 			{ vertical-align: top; padding: 3px 3px 3px 0; border: none; }
 .table.table-profile-info .cell-label 	{ width: 120px; }
 .table.table-profile-info .cell-latest-post { padding-top: 20px; }
-.table.table-profile-info .cell-latest-post span { color: #788087; }
+.table.table-profile-info .cell-latest-post span { color: var(--text-gray-53); }
 .table.table-profile-info .cell-latest-post a { text-decoration: underline; }
 
 /* Table Users */
@@ -40,7 +40,7 @@
 .table.table-users .cell-name                 {  }
 .table.table-users .cell-name .word-wrap      { width: 180px; }
 .table.table-users .cell-name h3              { font-size: 14px; width: 100%; overflow: hidden; font-weight: 600; }
-.table.table-users .cell-name h3 a            { font-size: 10px; border-bottom: 1px solid #b9cadc; }
+.table.table-users .cell-name h3 a            { font-size: 10px; border-bottom: 1px solid var(--border-blue-81-2); }
 .table.table-users .cell-name h3 a span       { font-size: 14px; }
 .table.table-users .cell-name .user-info      { position: relative; top: -2px; padding-left: 50px; }
 .table.table-users .cell-name .user-info img  { position: absolute; top: 2px; left: 0; width: 40px; }

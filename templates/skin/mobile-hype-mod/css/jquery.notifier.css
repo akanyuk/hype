@@ -19,14 +19,14 @@
 	padding: 10px 15px 11px; 
 	margin-bottom: 1px;
 	
-	color: #fff; 
-	background: #000; 
+	color: var(--text-gray-100); 
+	background: var(--bg-header); 
 	
 	cursor: pointer;
 }
-#notifier .n-box h3 { color: #fff; font-size: 14px; font-weight: bold; margin-bottom: 3px; }
+#notifier .n-box h3 { color: var(--text-gray-100); font-size: 14px; font-weight: bold; margin-bottom: 3px; }
 #notifier .n-box p { margin: 0; }
 
-#notifier .n-box.n-notice { background: #6ac491; color: #333; }
-#notifier .n-box.n-notice h3 { color: #333; }
-#notifier .n-box.n-error { background: #9b0000; color: #fff; }
+#notifier .n-box.n-notice { background: var(--bg-green-73); color: var(--text-gray-21); }
+#notifier .n-box.n-notice h3 { color: var(--text-gray-21); }
+#notifier .n-box.n-error { background: var(--bg-orange-32); color: var(--text-gray-100); }

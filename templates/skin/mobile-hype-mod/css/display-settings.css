@@ -14,14 +14,14 @@
     padding: 0;
     border: 0;
     background: transparent;
-    color: #fff;
+    color: var(--text-gray-100);
     font: bold 17px/1 'Open Sans', Arial, sans-serif;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
 
 .display-toggle:focus-visible {
-    outline: 2px solid #05aae9;
+    outline: 2px solid var(--border-blue-65);
     outline-offset: -4px;
 }
 
