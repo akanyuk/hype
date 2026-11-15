@@ -51,8 +51,8 @@
 			<li class="userbar-item-news"><a href="#" onclick="$(document).scrollTop(0); ls.tools.slide($('#news-block'), $(this).closest('li')); return false;"><div class="holder"><i class="icon-news-white"></i></div>{$oConfig->GetValue('plugin.newsblock.header')}</a></li>
 			<li class="userbar-item-search"><a href="#" onclick="$(document).scrollTop(0); ls.tools.slide($('#search'), $(this).closest('li')); return false;"><div class="holder"><svg class="menu-icon-svg" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 1a5.5 5.5 0 0 1 4.38 8.82l3.9 3.9-1.06 1.06-3.9-3.9A5.5 5.5 0 1 1 6.5 1zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>{$aLang.search}</a></li>
 			<li class="{if $sMenuHeadItemSelect=='blogs'}active{/if}"><a href="{router page='blogs'}"><div class="holder"><i class="icon-blog-white"></i></div>{$aLang.blogs}</a></li>
-			<li class="{if $sMenuHeadItemSelect=='people'}active{/if}"><a href="{router page='people'}"><div class="holder"><i class="icon-profile-friends-white"></i></div>{$aLang.people}</a></li>
-			<li class="{if $sMenuHeadItemSelect=='stream'}active{/if}"><a href="{router page='stream'}all"><div class="holder"><i class="icon-profile-activity-white"></i></div>{$aLang.stream_menu}</a></li>
+			<li class="{if $sMenuHeadItemSelect=='people'}active{/if}"><a href="{router page='people'}online/"><div class="holder"><i class="icon-profile-friends-white"></i></div>{$aLang.people}</a></li>
+			<li class="{if $sMenuHeadItemSelect=='stream'}active{/if}"><a href="{router page='stream'}all/"><div class="holder"><i class="icon-profile-activity-white"></i></div>{$aLang.stream_menu}</a></li>
 
 			{hook run='main_menu_item'}
 			
