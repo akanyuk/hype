@@ -1,3 +1,10 @@
 .idea
 
+/logs/
 *.sql
+
+/public_html/uploads/
+/public_html/templates/cache/
+/public_html/templates/compiled/
+/public_html/tmp/
+/public_html/config/config.local.php
