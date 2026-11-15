@@ -251,7 +251,12 @@ h2.header-table a {
 }
 
 #userbar .userbar-menu-items LI.unread a {
-    color: var(--text-blue-65);
+    color: var(--accent-unread);
+}
+
+/* The item icon keeps its regular color, only the text and the dot turn orange */
+#userbar .userbar-menu-items LI.unread .holder {
+    color: var(--text-gray-100);
 }
 
 #userbar .userbar-menu-items LI.unread a:after,
@@ -261,7 +266,7 @@ h2.header-table a {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--bg-blue-65);
+    background: var(--accent-unread);
 }
 
 #userbar .userbar-menu-items LI.unread a:after {

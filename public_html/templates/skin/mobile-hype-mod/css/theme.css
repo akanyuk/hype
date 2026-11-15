@@ -8,6 +8,8 @@
 	--sprite-icons: url(../images/icons.png);
 	--sprite-icons2-4: url(../images/icons2-4.png);
 	--bg-header: #000000;
+	/* Unread markers in the side menu: same orange in both themes (the menu is dark in both) */
+	--accent-unread: #ff8c1a;
 }
 
 html[data-theme="dark"] {

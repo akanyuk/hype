@@ -74,6 +74,35 @@ for (const role of ['guest', 'user']) {
 			assert.equal(r.trigger, r.stream || r.news);
 		}));
 
+		// Unread markers are orange (#ff8c1a): dot on the menu button and on the items, item text;
+		// the live icon keeps the regular item color
+		for (const theme of ['light', 'dark']) test(`unread-orange ${theme}`, () => withPage({ role, theme }, async (p) => {
+			const r = await p.evaluate(() => {
+				const live = document.querySelector('.userbar-item-live');
+				const news = document.querySelector('.userbar-item-news');
+				const trigger = document.querySelector('#userbar-trigger');
+				const plainIcon = getComputedStyle(live.querySelector('.menu-icon-svg')).color;
+				[live, news, trigger].forEach((e) => e.classList.add('unread'));
+				const cs = (e, pseudo) => getComputedStyle(e, pseudo);
+				return {
+					triggerDot: cs(trigger, '::after').backgroundColor,
+					liveDot: cs(live.querySelector('a'), '::after').backgroundColor,
+					newsDot: cs(news.querySelector('a'), '::after').backgroundColor,
+					liveText: cs(live.querySelector('a')).color,
+					newsText: cs(news.querySelector('a')).color,
+					liveIcon: cs(live.querySelector('.menu-icon-svg')).color,
+					plainIcon,
+					regular: cs(document.querySelector('#userbar .userbar-menu-items li:not(.unread) a')).color,
+				};
+			});
+			const ORANGE = 'rgb(255, 140, 26)';
+			assert.deepEqual(
+				[r.triggerDot, r.liveDot, r.newsDot, r.liveText, r.newsText],
+				[ORANGE, ORANGE, ORANGE, ORANGE, ORANGE]);
+			assert.equal(r.liveIcon, r.plainIcon);
+			assert.equal(r.liveIcon, r.regular);
+		}));
+
 		test('unread-highlight synthetic news', async () => {
 			// Inject an unread marker before jQuery ready handlers run
 			const p = await openPage(browser, {
