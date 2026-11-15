@@ -35,7 +35,7 @@
             </ul>
 
             <div class="comment-content">
-                <div class="text">{$oComment->getText()}</div>
+                <div class="text">{$oComment->getText()|lazy_images}</div>
             </div>
 
             <div class="comment-path">

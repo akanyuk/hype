@@ -18,7 +18,7 @@
 			</ul>
 
 			<div class="comment-content text">
-				{$oWall->getText()}
+				{$oWall->getText()|lazy_images}
 			</div>
 		
 			{if $oUserCurrent and !$aReplyWall}

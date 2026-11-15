@@ -107,8 +107,11 @@ export async function openPage(browser, { skin = 'desktop', role = 'guest', them
 	}, stored, storage === 'blocked');
 	if (beforeLoad) await beforeLoad(page);
 	await page.goto(BASE + path, { waitUntil: 'networkidle2', timeout: 30000 });
+	// Lazy images below the viewport are not fetched until scrolled to: waiting for them never ends
 	await page.evaluate(() => Promise.race([
-		Promise.all([document.fonts.ready, ...[...document.images].map((i) => i.decode().catch(() => {}))]),
+		Promise.all([document.fonts.ready, ...[...document.images]
+			.filter((i) => i.loading !== 'lazy' || i.getBoundingClientRect().top < innerHeight)
+			.map((i) => i.decode().catch(() => {}))]),
 		new Promise((r) => setTimeout(r, 10000)),
 	]));
 	if (volatile) {

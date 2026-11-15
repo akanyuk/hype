@@ -18,7 +18,7 @@
 	<div class="topic-content text">
 		{hook run='topic_preview_content_begin' topic=$oTopic}
 
-		{$oTopic->getText()}
+		{$oTopic->getText()|lazy_images}
 
 		{hook run='topic_preview_content_end' topic=$oTopic}
 	</div>

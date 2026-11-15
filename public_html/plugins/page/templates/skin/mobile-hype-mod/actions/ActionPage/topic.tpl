@@ -8,7 +8,7 @@
 	</header>
 	
 	<div class="topic-content text">
-		{$oTopic->getText()}
+		{$oTopic->getText()|lazy_images}
 	</div>
 	
 	<footer class="topic-footer">

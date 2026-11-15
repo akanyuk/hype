@@ -22,7 +22,7 @@
 <div class="topic-content text">
 	{hook run='topic_content_begin' topic=$oTopic bTopicList=$bTopicList}
 	
-	{$oTopic->getText()}
+	{$oTopic->getText()|lazy_images}
 	
 	{hook run='topic_content_end' topic=$oTopic bTopicList=$bTopicList}
 </div> 

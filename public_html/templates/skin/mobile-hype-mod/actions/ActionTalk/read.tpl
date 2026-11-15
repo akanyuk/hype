@@ -17,7 +17,7 @@
 	
 	
 	<div class="topic-content text">
-		{$oTalk->getText()}
+		{$oTalk->getText()|lazy_images}
 	</div>
 	
 	

@@ -50,6 +50,7 @@ $config['head']['default']['js']  = array(
 );
 
 $config['head']['default']['css'] = array(
+	"___path.static.root___/templates/common/fonts/open-sans.css",
 	"___path.static.skin___/css/reset.css",
 	"___path.static.skin___/css/theme.css",
 	"___path.static.skin___/css/base.css?v=2",

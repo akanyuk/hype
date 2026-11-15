@@ -5,9 +5,9 @@
 	{hook run='topic_content_begin' topic=$oTopic bTopicList=$bTopicList}
 	
 	{if $bTopicList}
-		{$oTopic->getTextShort()}
+		{$oTopic->getTextShort()|lazy_images}
 	{else}
-		{$oTopic->getText()}
+		{$oTopic->getText()|lazy_images}
 	{/if}
 	
 	{hook run='topic_content_end' topic=$oTopic bTopicList=$bTopicList}

@@ -14,7 +14,7 @@
 
 
 	<div class="topic-content text">
-		{$oTalk->getText()}
+		{$oTalk->getText()|lazy_images}
 	</div>
 	
 	{include file='actions/ActionTalk/speakers.tpl'}

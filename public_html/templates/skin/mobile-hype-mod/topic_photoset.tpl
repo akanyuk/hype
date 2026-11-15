@@ -44,7 +44,7 @@
 	{hook run='topic_content_begin' topic=$oTopic bTopicList=$bTopicList}
 	
 	{if $bTopicList}
-		{$oTopic->getTextShort()}
+		{$oTopic->getTextShort()|lazy_images}
 		{if $oTopic->getTextShort()!=$oTopic->getText()}
 			<br />
 			<a href="{$oTopic->getUrl()}#cut" title="{$aLang.topic_read_more}">
@@ -56,7 +56,7 @@
 			</a>
 		{/if}
 	{else}
-		{$oTopic->getText()}
+		{$oTopic->getText()|lazy_images}
 	{/if}
 	
 	{hook run='topic_content_end' topic=$oTopic bTopicList=$bTopicList}

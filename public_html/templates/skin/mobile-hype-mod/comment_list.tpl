@@ -66,7 +66,7 @@
 				
 				
 				<div id="comment_content_id_{$oComment->getId()}" class="comment-content text">
-					{$oComment->getText()}
+					{$oComment->getText()|lazy_images}
 				</div>
 					
 					

@@ -12,7 +12,7 @@
 		</ul>
 		
 		<div class="comment-content text">
-			{$oReplyWall->getText()}
+			{$oReplyWall->getText()|lazy_images}
 		</div>
 	</div>
 {/foreach}

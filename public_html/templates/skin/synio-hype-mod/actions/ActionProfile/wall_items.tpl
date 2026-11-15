@@ -12,7 +12,7 @@
 			</p>
 
 			<div class="wall-item-content text">
-				{$oWall->getText()}
+				{$oWall->getText()|lazy_images}
 			</div>
 			
 			{if $oUserCurrent}
