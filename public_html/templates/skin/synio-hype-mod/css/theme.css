@@ -4,7 +4,7 @@
 	--font-scale: 1;
 	--font-scale-large: 1.35;
 	/* Main text (topic body, comments) grows more than the rest of the content */
-	--font-scale-text-large: 1.6;
+	--font-scale-text-large: 1.45;
 	--sprite-icons: url(../images/icons.png);
 	--bg-header: #000000;
 }

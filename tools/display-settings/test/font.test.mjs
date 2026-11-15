@@ -9,7 +9,7 @@ after(async () => { await browser?.close(); });
 // Large font factors (theme.css): --font-scale-large for the content zone,
 // --font-scale-text-large for the main text (topic body, comments)
 const LARGE = 1.35;
-const LARGE_TEXT = 1.6;
+const LARGE_TEXT = { desktop: 1.45, mobile: 1.6 };
 const TOPIC = '/blog/dev/1092.html';
 const FIXED = {
 	desktop: ['#header', '#nav-main', '#header .auth', '#dropdown-user', '.nav-pills', '.vote', '.vote-count', '#footer'],
@@ -45,8 +45,8 @@ for (const skin of SKINS) {
 			});
 
 			test('main-text-scaled', () => {
-				assert.ok(Math.abs(large.topic / normal.topic - LARGE_TEXT) < 0.01, `topic ${normal.topic} → ${large.topic}`);
-				assert.ok(Math.abs(large.comment / normal.comment - LARGE_TEXT) < 0.01, `comment ${normal.comment} → ${large.comment}`);
+				assert.ok(Math.abs(large.topic / normal.topic - LARGE_TEXT[skin]) < 0.01, `topic ${normal.topic} → ${large.topic}`);
+				assert.ok(Math.abs(large.comment / normal.comment - LARGE_TEXT[skin]) < 0.01, `comment ${normal.comment} → ${large.comment}`);
 			});
 
 			test('other-content-scaled', () => {
