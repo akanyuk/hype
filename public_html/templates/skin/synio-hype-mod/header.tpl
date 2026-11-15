@@ -34,11 +34,6 @@
 	<link rel="manifest" href="/manifest.json">
 	<meta name="msapplication-config" content="/browserconfig.xml"/>
 
-	<meta property="og:image" content="https://hype.retroscene.org/favicon/apple-touch-icon-180x180.png">
-	{if $aHtmlRssAlternate}
-	<meta property="og:description" content="{$aHtmlRssAlternate.title}">
-	{/if}
-
 	{if $aHtmlRssAlternate}
 		<link rel="alternate" type="application/rss+xml" href="{$aHtmlRssAlternate.url}" title="{$aHtmlRssAlternate.title}">
 	{/if}
