@@ -1,6 +1,6 @@
 .idea
-
 /logs/
+/wip/
 *.sql
 
 /public_html/uploads/
